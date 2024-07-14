@@ -1,5 +1,4 @@
-<script lang="ts">
-    import { Button } from "$lib/components/ui/button";
-</script>
+<script lang="ts"></script>
 
-<Button>Click me</Button>
+<title>Sudo-Rahman</title>
+<style></style>
