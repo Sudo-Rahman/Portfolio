@@ -15,7 +15,7 @@
         <div class="w-3/4 flex flex-wrap mr-4 items-center">
             <h2 class="text-2xl font-bold">{entreprise}</h2>
             {#each technologies as tech}
-                <Badge class="ml-2 content-center text-xs h-5">{tech}</Badge>
+                <Badge class="ml-2 mt-1 content-center text-xs h-5">{tech}</Badge>
             {/each}
         </div>
         <div class="mt-1">

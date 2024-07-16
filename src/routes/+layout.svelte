@@ -10,7 +10,7 @@
 <div class="min-h-screen">
     <NavBar/>
     <ModeWatcher/>
-    <div class="p-10">
+    <div class="p-5">
         <slot/>
     </div>
     <div class="sticky top-[100vh]">
