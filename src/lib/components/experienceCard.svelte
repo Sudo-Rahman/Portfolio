@@ -13,13 +13,14 @@
 <div class={`${$$props.class}`}>
     <div class="w-full flex justify-between items-start">
         <div class="w-3/4 flex flex-wrap mr-4 items-center">
-            <h2 class="text-2xl font-bold">{entreprise}</h2>
+            <h2 class="text-2xl font-bold mr-2">{entreprise}</h2>
             {#each technologies as tech}
-                <Badge class="ml-2 mt-1 content-center text-xs h-5">{tech}</Badge>
+                <Badge class="mr-2 mt-1 content-center text-xs h-5">{tech}</Badge>
             {/each}
         </div>
         <div class="mt-1">
-            <span class="content-center whitespace-nowrap text-foreground text-opacity-80 text-justify">{start} - {end}</span>
+            <span class="content-center whitespace-nowrap text-foreground text-opacity-80 text-justify">{start}
+                - {end}</span>
         </div>
     </div>
     <h3 class="text-lg">{poste}</h3>

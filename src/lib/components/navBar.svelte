@@ -6,17 +6,17 @@
     import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
     import {Button} from "$lib/components/ui/button/index.js";
     import {Github} from 'lucide-svelte';
-    import { Mail } from 'lucide-svelte';
+    import {Mail} from 'lucide-svelte';
     import type {ButtonEventHandler} from "bits-ui";
 
     const urlGithub = "https://github.com/sudo-rahman";
-    let openGithub = (event :  ButtonEventHandler<MouseEvent>) => {
+    let openGithub = (event: ButtonEventHandler<MouseEvent>) => {
         event.preventDefault();
         window.open(urlGithub, "_blank");
     };
 
-    const mail ="rahman.yilmaz@sudo-rahman.fr"
-    let openMail =(event :  ButtonEventHandler<MouseEvent>) => {
+    const mail = "rahman.yilmaz@sudo-rahman.fr"
+    let openMail = (event: ButtonEventHandler<MouseEvent>) => {
         event.preventDefault();
         window.open(`mailto: ${mail}`);
     }
@@ -28,27 +28,29 @@
 
         <div class="px-1.5 w-full flex content-center ">
 
-            <a href="/"
-               class="content-center px-2.5 lg:px-4 transition duration-100 ease-in hover:scale-[1.1]">Accueil</a>
-<!--            <a href="/" class="content-center px-2.5 lg:px-4 duration-100 ease-in hover:scale-[1.1]">Projets</a>-->
-<!--            <a href="/" class="content-center px-2.5 lg:px-4 duration-100 ease-in hover:scale-[1.1]">Technologies</a>-->
+            <a class="content-center px-2.5 lg:px-4 transition duration-100 ease-in hover:scale-[1.1]"
+               href="/">Accueil</a>
+            <!--            <a href="/" class="content-center px-2.5 lg:px-4 duration-100 ease-in hover:scale-[1.1]">Projets</a>-->
+            <!--            <a href="/" class="content-center px-2.5 lg:px-4 duration-100 ease-in hover:scale-[1.1]">Technologies</a>-->
 
             <div class="w-full flex justify-end">
 
-                <Button href={urlGithub} on:click={openMail} variant="outline" size="icon" class="border border-accent-foreground border-opacity-10">
+                <Button class="border border-accent-foreground border-opacity-10" href={urlGithub} on:click={openMail} size="icon"
+                        variant="outline">
                     <Mail class="h-[1.2rem] w-[1.2rem]"/>
                     <span class="sr-only">Github</span>
                 </Button>
 
-                <Button href={urlGithub} on:click={openGithub} variant="outline" size="icon" class="mx-2 border border-accent-foreground border-opacity-10">
+                <Button class="mx-2 border border-accent-foreground border-opacity-10" href={urlGithub} on:click={openGithub} size="icon"
+                        variant="outline">
                     <Github class="h-[1.2rem] w-[1.2rem]"/>
                     <span class="sr-only">Github</span>
                 </Button>
 
                 <DropdownMenu.Root>
                     <DropdownMenu.Trigger asChild let:builder>
-                        <Button builders={[builder]} variant="outline" size="icon"
-                                class="border border-accent-foreground border-opacity-10">
+                        <Button builders={[builder]} class="border border-accent-foreground border-opacity-10" size="icon"
+                                variant="outline">
                             <Sun
                                     class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
                             />

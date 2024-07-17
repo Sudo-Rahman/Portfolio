@@ -10,8 +10,8 @@
     const experiences = [
         {
             entreprise: "Sweepin",
-            technologies: ["Java", "kotlin", "Jetpack Compose", "PHP", "MySql"],
-            poste: "Développeur Full Stack",
+            technologies: ["Java", "kotlin", "Android", "Jetpack Compose", "PHP", "MySql"],
+            poste: "Développeur Mobile/Full Stack web",
             description: "Conception et développement d'applications mobiles natives Android pour les villes intelligentes, associés à l'élaboration de solutions backend dans les projets SmartCity et IPS (Indoor Positioning System). Ces missions ont été réalisées dans le cadre d'un contrat d'alternance durant mon Master BDIA (Big Data et Intelligence Artificielle) à l'Université de Bourgogne.",
             start: 2023,
             end: "En cours",
@@ -40,7 +40,7 @@
     ];
 
     const skills = [
-        "C++", "Cmake", "Qt", "Java", "Kotlin", "Android", "Jetpack Compose", "Python", "Svelte", "PHP", "SQL", "Git","Docker"
+        "C++", "Cmake", "Qt", "Java", "Kotlin", "Android", "Jetpack Compose", "Python", "Svelte", "PHP", "SQL", "Git", "Docker"
     ]
 
 
@@ -64,26 +64,26 @@
             title: "Iridium",
             description: "Iridium est une application graphique cross platform pour la gestion de services de stockage distant tels que Google Drive, Dropbox, OneDrive, etc. Écrite en C++, utilisant le framework Qt et rclone.",
             technologies: ["C++", "Qt", "Boost", "Rclone_cpp", "Libcurl", "LibZip", "rclone", "Cmake", "Conan", "CI/CD"],
-            url : "https://github.com/Sudo-Rahman/Iridium",
-            img : "https://github.com/Sudo-Rahman/Iridium/blob/main/resources/Iridium.png?raw=true"
+            url: "https://github.com/Sudo-Rahman/Iridium",
+            img: "https://github.com/Sudo-Rahman/Iridium/blob/main/resources/Iridium.png?raw=true"
         },
         {
             title: "Rclone_cpp",
             description: "Rclone_cpp est une bibliothèque C++ pour rclone. Elle permet d'exécuter des commandes rclone, d'ajouter des parseurs pour transformer la sortie en objets, d'ajouter des options aux commandes, etc.",
             technologies: ["C++", "Boost", "rclone", "Cmake", "Conan"],
-            url : "https://github.com/Sudo-Rahman/rclone_cpp"
+            url: "https://github.com/Sudo-Rahman/rclone_cpp"
         },
         {
             title: "Fractalium",
             description: "Fractalium est une application graphique cross platform pour la génération de fractales avec les calcules qui sont distribués sur plusieurs machines en réseau. Écrite en C++, utilisant le framework Qt et MPI.",
             technologies: ["C++", "Boost", "MPI", "Cmake"],
-            url : "https://github.com/Sudo-Rahman/Fractalium",
+            url: "https://github.com/Sudo-Rahman/Fractalium",
         },
         {
             title: "6 qui prend",
             description: "Projet de systèmes et réseaux du semestre 1 de L3 informatique. Le but était de réaliser un jeu de carte en réseau. Écrit en C avec les sockets. Un ou plusieurs bots peuvent etre ajoutés.",
             technologies: ["C", "Sockets", "Linux"],
-            url : "https://github.com/Sudo-Rahman/6-qui-prend"
+            url: "https://github.com/Sudo-Rahman/6-qui-prend"
         },
         {
             title: "kotlin-meteo",
@@ -95,7 +95,7 @@
         {
             title: "Lichess-Data",
             description: "Projet universitaire de programmation concurrente. Un serveur, gère les connexions d'un ou plusieurs clients, les clients effectuent des requêtes en rapport avec les echecs, le serveur cherchera dans un fichier texte au format pgn les données voulu du client et lui enverra les informations.",
-            technologies: ["Java", "Sockets","Concurrency", "Multithreading"],
+            technologies: ["Java", "Sockets", "Concurrency", "Multithreading"],
             url: "https://github.com/Sudo-Rahman/Lichess-Data"
         },
         {
@@ -114,7 +114,7 @@
         {
             title: "Projet-DAW",
             description: "Projet réalisé dans le cadre du module Développement Applications Web à l'Université de Bourgogne Franche Comté. Ce site a été créé pour aider les apprenants à développer leurs compétences. Il propose des cours en ligne interactifs, des exercices pratiques et des ressources supplémentaires pour renforcer les connaissances acquises.",
-            technologies: ["HTML5", "CSS3","JAVASCRIPT","PHP", "XML/JSON", "JQUERY", "SQL", "Docker"],
+            technologies: ["HTML5", "CSS3", "JAVASCRIPT", "PHP", "XML/JSON", "JQUERY", "SQL", "Docker"],
             url: "https://github.com/Sudo-Rahman/Projet-DAW"
         }
     ]
@@ -127,7 +127,7 @@
 
     <div class="w-full lg:w-3/4">
         <h1 class="text-4xl font-bold mb-2">Rahman Yilmaz</h1>
-        <p class="text-foreground text-opacity-80">Développeur Full Stack</p>
+        <p class="text-foreground text-opacity-80">Développeur Mobile/Full Stack web</p>
         <p class="text-foreground text-opacity-80 mb-5">Dijon, France</p>
 
         <h2 class="text-3xl font-bold mb-2">À propos</h2>
@@ -137,7 +137,7 @@
             j'ai découvert l'informatique en licence et j'ai immédiatement été captivé par ses possibilités
             infinies.
             Aujourd'hui, je suis en contrat d'apprentissage au sein de l'entreprise Sweepin, où je travaille en tant que
-            développeur Full Stack sur les projets SmartCity et IPS.
+            développeur Mobile/Full Stack web sur les projets SmartCity et IPS.
             Vous trouverez ci-dessous mon CV ainsi que des informations détaillées sur mes projets, qui illustrent mon
             parcours et mes compétences en informatique.</p>
 
@@ -161,9 +161,9 @@
         {/each}
 
         <h2 class="text-3xl font-bold">Compétences</h2>
-        <div class="flex flex-wrap space-x-2 mb-5">
+        <div class="flex flex-wrap mb-5">
             {#each skills as skill}
-                <Badge class="mt-2">{skill}</Badge>
+                <Badge class="mt-2 mr-2">{skill}</Badge>
             {/each}
         </div>
 
@@ -171,17 +171,18 @@
         <div class="w-full flex justify-center">
             <div class="w-[80%] lg:w-full">
                 <Carousel.Root bind:api
-                               plugins={[plugin]}
                                class="w-full"
-                               on:mousenter={plugin.stop}
                                on:mouseleave={plugin.reset}
+                               on:mousenter={plugin.stop}
+                               plugins={[plugin]}
                 >
                     <Carousel.Content>
                         {#each projects as project}
                             <Carousel.Item class="max-w-xs sm:max-w-[25rem] lg:max-w-[30rem]">
                                 <div class="p-1">
                                     <ProjectCard class="flex aspect-[4/3] px-2" title={project.title}
-                                                 description={project.description} technologies={project.technologies} url={project.url} image={project.img}/>
+                                                 description={project.description} technologies={project.technologies}
+                                                 url={project.url} image={project.img}/>
                                 </div>
                             </Carousel.Item>
                         {/each}
