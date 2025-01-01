@@ -1,14 +1,18 @@
 <script lang="ts">
 
-    import {Badge} from "$lib/components/ui/badge";
+    type Props = {
+        class?: string,
+        school: string,
+        description: string,
+        start: string | number,
+        end: string | number
+    };
 
-    export let school: string = "";
-    export let description: string = "";
-    export let start: string | number = "";
-    export let end: string | number = "";
+    let {class : className = '', school, description, start, end}: Props = $props();
+
 </script>
 
-<div class={`${$$props.class}`}>
+<div class="{className}">
     <div class="w-full flex justify-between items-start">
         <div class="w-3/4 flex flex-wrap mr-4 items-center">
             <h2 class="text-2xl font-bold">{school}</h2>

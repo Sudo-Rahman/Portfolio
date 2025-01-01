@@ -3,18 +3,18 @@
     import Footer from "$lib/components/footer.svelte";
     import "../app.css";
     import {ModeWatcher} from "mode-watcher";
+
+    let {children} = $props();
 </script>
 
 
-<body class="glassmorphic-background">
 <div class="min-h-screen">
     <NavBar/>
     <ModeWatcher/>
     <div class="px-5 py-10">
-        <slot/>
+        {@render children()}
     </div>
     <div class="sticky top-[100vh]">
         <Footer/>
     </div>
 </div>
-</body>

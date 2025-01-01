@@ -2,15 +2,21 @@
 
     import {Badge} from "$lib/components/ui/badge/index.js";
 
-    export let entreprise: string = "";
-    export let technologies: string[] = [];
-    export let poste: string = "";
-    export let description: string = "";
-    export let start: string | number = "";
-    export let end: string | number = "";
+    type Props = {
+        class?: string,
+        entreprise: string,
+        technologies: string[],
+        poste: string,
+        description: string,
+        start: string | number,
+        end: string | number
+    }
+
+    let {class: className = '', entreprise, technologies, poste, description, start, end}: Props = $props();
+
 </script>
 
-<div class={`${$$props.class}`}>
+<div class="{className}">
     <div class="w-full flex justify-between items-start">
         <div class="w-3/4 flex flex-wrap mr-4 items-center">
             <h2 class="text-2xl font-bold mr-2">{entreprise}</h2>
