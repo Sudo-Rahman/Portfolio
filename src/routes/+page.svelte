@@ -12,7 +12,7 @@
             entreprise: "Sweepin",
             technologies: ["Java", "kotlin", "Android", "Jetpack Compose", "PHP", "MySql"],
             poste: "Développeur Mobile/Full Stack web",
-            description: "Conception et développement d'applications mobiles natives Android pour les villes intelligentes, associés à l'élaboration de solutions backend dans les projets SmartCity et IPS (Indoor Positioning System). Ces missions ont été réalisées dans le cadre d'un contrat d'alternance durant mon Master BDIA (Big Data et Intelligence Artificielle) à l'Université de Bourgogne.",
+            description: "Conception et développement d'applications mobiles natives Android pour les villes intelligentes, associés à l'élaboration de solutions backend dans les projets SmartCity et IPS (Indoor Positioning System). Ces missions ont été réalisées dans le cadre d'un contrat d'alternance durant mon Master BDIA (Base de données et Intelligence Artificielle) à l'Université de Bourgogne.",
             start: 2023,
             end: "En cours",
         }
@@ -116,6 +116,12 @@
             description: "Projet réalisé dans le cadre du module Développement Applications Web à l'Université de Bourgogne Franche Comté. Ce site a été créé pour aider les apprenants à développer leurs compétences. Il propose des cours en ligne interactifs, des exercices pratiques et des ressources supplémentaires pour renforcer les connaissances acquises.",
             technologies: ["HTML5", "CSS3", "JAVASCRIPT", "PHP", "XML/JSON", "JQUERY", "SQL", "Docker"],
             url: "https://github.com/Sudo-Rahman/Projet-DAW"
+        },
+        {
+            title: "Gold-investment",
+            description: "Un site web qui propose un calculateur d'investissement en or. Cet outil permet aux utilisateurs de simuler la croissance potentielle de leurs investissements en or en fonction de plusieurs paramètres, et une page qui permet de suivre le marché des devises modiales.",
+            technologies: ["Typescript", "SvelteKit", "NodeJS", "TailwindCSS", "Github Actions", "CI/CD", "Docker"],
+            url: "https://github.com/Sudo-Rahman/gold-investment"
         }
     ]
 
