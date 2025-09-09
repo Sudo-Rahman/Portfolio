@@ -34,19 +34,16 @@
 
     <div class="w-full lg:w-3/4">
         <h1 class="text-4xl font-bold mb-2">Rahman Yilmaz</h1>
-        <p class="text-foreground text-opacity-80">Développeur Mobile/Full Stack web</p>
-        <p class="text-foreground text-opacity-80 mb-24">Dijon, France</p>
+        <p class="text-foreground text-opacity-80">Freelance - Développeur Mobile/Full Stack web</p>
+        <p class="text-foreground text-opacity-80 mb-24">Chalon sur Saône, France</p>
 
         <h2 class="text-3xl font-bold mb-2">À propos</h2>
-        <p class="text-foreground text-opacity-80 text-justify mb-24">Étudiant de 22 ans, je suis actuellement en
-            deuxième année de Master Informatique, option Bases de Données et
-            Intelligence Artificielle, à l'Université de Bourgogne. Passionné par les technologies depuis mon enfance,
-            j'ai découvert l'informatique en licence et j'ai immédiatement été captivé par ses possibilités
-            infinies.
-            Aujourd'hui, je suis en contrat d'apprentissage au sein de l'entreprise Sweepin, où je travaille en tant que
-            développeur Mobile/Full Stack web sur les projets SmartCity et IPS.
-            Vous trouverez ci-dessous mon CV ainsi que des informations détaillées sur mes projets, qui illustrent mon
-            parcours et mes compétences en informatique.</p>
+        <p class="text-foreground text-opacity-80 text-justify mb-24">
+            Bonjour, je m'appelle Rahman Yilmaz. Actuellement auto-entrepreneur, je conçois et développe des
+            applications desktop, mobiles ainsi que des sites web sur-mesure . Vous pouvez retrouver mes réalisations et
+            en savoir plus sur mon expertise en scrollant vers le bas. N'hésitez pas à me contacter pour discuter de vos
+            projets ou collaborations potentielles !
+        </p>
 
         <h2 class="text-3xl font-bold mb-2">Expériences</h2>
         <p class="text-foreground text-opacity-80 text-justify mb-2"></p>
@@ -81,11 +78,11 @@
         <h2 class="text-3xl font-bold mb-2">Projets</h2>
         <div class="w-full flex justify-center">
             <div class="w-[80%] lg:w-full">
-                <Carousel.Root setApi={(emblaApi) => (api = emblaApi)}
-                               class="w-full"
-                               onmouseleave={plugin.reset}
+                <Carousel.Root class="w-full"
                                onmouseenter={plugin.stop}
+                               onmouseleave={plugin.reset}
                                plugins={[plugin]}
+                               setApi={(emblaApi) => (api = emblaApi)}
                 >
                     <Carousel.Content>
                         {#each projects as project}
@@ -111,13 +108,16 @@
 
 <svelte:head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Rahman Yilmaz - Développeur Mobile/Full Stack Web</title>
-    <meta name="description" content="Portfolio de Rahman Yilmaz, développeur mobile et full stack web basé à Dijon, France. Découvrez mes projets, compétences et expériences professionnelles.">
-    <meta name="keywords" content="Rahman Yilmaz, développeur, mobile, full stack, web, C++, Java, Kotlin, Android, Svelte, PHP, SQL, Docker, Dijon, France">
-    <meta name="author" content="Rahman Yilmaz">
-    <meta property="og:title" content="Rahman Yilmaz - Développeur Mobile/Full Stack Web">
-    <meta property="og:description" content="Découvrez le portfolio de Rahman Yilmaz, développeur mobile et full stack web, incluant ses projets et compétences.">
-    <meta property="og:url" content="https://sudo-rahman.fr/">
-    <meta property="og:type" content="website">
+    <meta content="Portfolio de Rahman Yilmaz, développeur mobile et full stack web basé à Dijon, France. Découvrez mes projets, compétences et expériences professionnelles."
+          name="description">
+    <meta content="Rahman Yilmaz, développeur, mobile, full stack, web, C++, Java, Kotlin, Android, Svelte, PHP, SQL, Docker, Dijon, France"
+          name="keywords">
+    <meta content="Rahman Yilmaz" name="author">
+    <meta content="Rahman Yilmaz - Développeur Mobile/Full Stack Web" property="og:title">
+    <meta content="Découvrez le portfolio de Rahman Yilmaz, développeur mobile et full stack web, incluant ses projets et compétences."
+          property="og:description">
+    <meta content="https://sudo-rahman.fr/" property="og:url">
+    <meta content="website" property="og:type">
 </svelte:head>

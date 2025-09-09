@@ -1,11 +1,19 @@
 export const experiences = [
     {
         entreprise: "Sweepin",
-        technologies: ["Java", "kotlin", "Android", "Jetpack Compose", "PHP", "MySql"],
+        technologies: ["Java", "kotlin", "Android", "Jetpack Compose", "PHP", "MySql", "Docker", "Sveltekit", "Typescript", "JS/HTML/CSS", "Symfony"],
         poste: "Développeur Mobile/Full Stack web",
-        description: "Conception et développement d'applications mobiles natives Android pour les villes intelligentes, associés à l'élaboration de solutions backend dans les projets SmartCity et IPS (Indoor Positioning System). Ces missions ont été réalisées dans le cadre d'un contrat d'alternance durant mon Master BDIA (Base de données et Intelligence Artificielle) à l'Université de Bourgogne.",
+        description: "Conception et développement d'applications mobiles natives Android pour les villes intelligentes, associés à l'élaboration de solutions backend dans les projets SmartCity et IPS (Indoor Positioning System). Ces missions ont été réalisées dans le cadre d'un contrat d'alternance durant mon Master BDIA (Bases de Données et Intelligence Artificielle) à l'Université de Bourgogne.",
         start: 2023,
-        end: "En cours",
+        end: 2025,
+    },
+    {
+        entreprise: "Auto entrepreneur/Freelance",
+        technologies: [],
+        poste: "Développeur Mobile/Full Stack web",
+        description: "Freelance. Creation d'applications desktop/mobile/web.",
+        start: 2025,
+        end: "Présent",
     }
 ]
 
@@ -13,7 +21,7 @@ export const educations = [
     {
         school: "Université de Bourgogne - Dijon",
         start: 2023,
-        end: "En cours",
+        end: 2025,
         description: "Master Informatique option Bases de Données et Intelligence Artificielle"
     },
     {
@@ -31,10 +39,17 @@ export const educations = [
 ];
 
 export const skills = [
-    "C++", "Cmake", "Qt", "Java", "Kotlin", "Android", "Jetpack Compose", "Python", "Svelte", "PHP", "SQL", "Git", "Docker"
+    "C++", "Cmake", "Qt", "Java", "Kotlin", "Android", "Jetpack Compose", "Python", "Sveltekit", "PHP", "SQL", "Git", "Docker", "Rust", "Tauri", "Typescript", "HTML5", "CSS3", "JavaScript"
 ]
 
 export const projects = [
+    {
+        title: "Renamer",
+        description: "Application desktop multi plateforme pour renommer des fichiers en masse. Écrite en Rust, utilisant Tauri pour l'interface graphique et SvelteKit pour le frontend.",
+        technologies: ["Rust", "MongoDb", "Typescript", "Tauri", "SvelteKit", "Docker", "CI/CD"],
+        url: "https://renamer.pro",
+        img: "https://renamer.pro/favicon.svg"
+    },
     {
         title: "Iridium",
         description: "Iridium est une application graphique cross platform pour la gestion de services de stockage distant tels que Google Drive, Dropbox, OneDrive, etc. Écrite en C++, utilisant le framework Qt et rclone.",
