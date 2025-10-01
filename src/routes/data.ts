@@ -1,19 +1,19 @@
 export const experiences = [
     {
-        entreprise: "Sweepin",
-        technologies: ["Java", "kotlin", "Android", "Jetpack Compose", "PHP", "MySql", "Docker", "Sveltekit", "Typescript", "JS/HTML/CSS", "Symfony"],
-        poste: "Développeur Mobile/Full Stack web",
-        description: "Conception et développement d'applications mobiles natives Android pour les villes intelligentes, associés à l'élaboration de solutions backend dans les projets SmartCity et IPS (Indoor Positioning System). Ces missions ont été réalisées dans le cadre d'un contrat d'alternance durant mon Master BDIA (Bases de Données et Intelligence Artificielle) à l'Université de Bourgogne.",
-        start: 2023,
-        end: 2025,
-    },
-    {
         entreprise: "Auto entrepreneur/Freelance",
         technologies: [],
         poste: "Développeur Mobile/Full Stack web",
         description: "Freelance. Creation d'applications desktop/mobile/web.",
         start: 2025,
         end: "Présent",
+    },
+    {
+        entreprise: "Sweepin",
+        technologies: ["Java", "kotlin", "Android", "Jetpack Compose", "PHP", "MySql", "Docker", "Sveltekit", "Typescript", "JS/HTML/CSS", "Symfony"],
+        poste: "Développeur Mobile/Full Stack web",
+        description: "Conception et développement d'applications mobiles natives Android pour les villes intelligentes, associés à l'élaboration de solutions backend dans les projets SmartCity et IPS (Indoor Positioning System). Ces missions ont été réalisées dans le cadre d'un contrat d'alternance durant mon Master BDIA (Bases de Données et Intelligence Artificielle) à l'Université de Bourgogne.",
+        start: 2023,
+        end: 2025,
     }
 ]
 
