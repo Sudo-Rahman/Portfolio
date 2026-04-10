@@ -443,18 +443,7 @@ La séparation en fichiers est logique (objets, fonctions utilitaires, classe m�
    - Démarrer la partie dans le dossier « Partie ».
    - Régler les paramètres de lancer (force, frottement, type de trajectoire) et cliquer sur « lancer ».
 
-## Limites connues et pistes d'amélioration
-
-- **Pas de textures** : les textures de glace et de bois ont été abandonnées à cause de problèmes CORS. L'utilisation d'un bundler (Vite, Webpack) avec des assets inline résoudrait ce problème.
-- **Pas de simulation physique** : les trajectoires et les chocs sont des approximations. L'intégration d'un moteur comme Cannon.js ou Ammo.js donnerait un comportement plus réaliste (friction angulaire, spin de la pierre).
-- **Interface dat.GUI** : fonctionnelle mais peu ergonomique pour un jeu. Une interface HTML/CSS dédiée avec des boutons visuels améliorerait l'expérience joueur.
-- **Variables globales** : l'état est géré par des `var` globales. Une refactorisation en module ES avec un état encapsulé faciliterait la maintenance.
-- **Pas de responsive design** : le canvas et le tableau de score ne s'adaptent pas aux tailles d'écran variables.
-- **Performance des balais** : le nombre de poils (jusqu'à 1000) crée autant de `CylinderGeometry` individuelles. L'utilisation d'`InstancedMesh` améliorerait les performances.
-- **Pas de son** : l'ajout d'effets sonores (friction de la pierre, choc, ambiance) enrichirait l'immersion.
-
 ## Liens
 
-- **Dépôt local :** `/Users/sr-71/Documents/portfolio/repos_to_process/Curling-Three-js`
 - **GitHub :** [https://github.com/Sudo-Rahman/Curling-Three-js](https://github.com/Sudo-Rahman/Curling-Three-js)
 - **GitHub original (mentionné dans le rapport) :** [https://github.com/Sudo-Rahman/projetinfo3B](https://github.com/Sudo-Rahman/projetinfo3B)

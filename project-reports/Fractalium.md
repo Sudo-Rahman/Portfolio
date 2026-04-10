@@ -493,20 +493,7 @@ Le dépôt inclut un fichier `sample.fractalium` importable via le menu *Histori
 
 ---
 
-## Limites connues et pistes d'amélioration
-
-- **Pas de tests automatisés** : l'ajout de tests unitaires sur les algorithmes fractals (Complex, Fractal::pointCheck) serait un gain de confiance important.
-- **Sérialisation texte** : Boost.TextArchive est utilisé pour les snapshots. Un format binaire (`binary_oarchive`) réduirait significativement la taille des fichiers et le temps de (dé)sérialisation, surtout pour les images haute résolution.
-- **Allocation dynamique par pixel** : `Image` utilise un `vector<vector<int>>`, ce qui implique des allocations fragmentées. Un buffer contigu (`vector<int>` linéaire) améliorerait la localité cache et les performances de merge.
-- **Pas de zéro-copy MPI** : les images complètes sont sérialisées et envoyées intégralement. Seuls les pixels modifiés pourraient être transmis.
-- **Constante de Julia codée en dur** : `juliaConstant = {0.285, 0.01}` est statique. La rendre configurable via l'UI permettrait d'explorer l'espace complet des ensembles de Julia.
-- **Types `uint16_t` pour les coordonnées** : cela limite la résolution maximale à 65535×65535. Pour les affichages 8K et au-delà, un passage à `uint32_t` serait nécessaire.
-- **Le thread de réception MPI** tourne dans un `std::async` mais la collection des résultats est séquentielle (boucle `recv` bloquante par processus). Un `MPI_Irecv` ou `MPI_Waitall` permettrait un traitement dans l'ordre d'arrivée.
-
----
-
 ## Liens
 
-- **Dépôt local :** `/Users/sr-71/Documents/portfolio/repos_to_process/Fractalium`
 - **GitHub :** [https://github.com/Sudo-Rahman/Fractalium](https://github.com/Sudo-Rahman/Fractalium)
 - **Documentation Doxygen :** `documentation/Documentation.pdf`

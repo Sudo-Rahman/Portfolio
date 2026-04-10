@@ -1,20 +1,24 @@
-    <script>
-    import NavBar from "$lib/components/navBar.svelte";
-    import Footer from "$lib/components/footer.svelte";
-    import "../app.css";
-    import {ModeWatcher} from "mode-watcher";
+<script>
+	import NavBar from "$lib/components/layout/NavBar.svelte";
+	import Footer from "$lib/components/layout/Footer.svelte";
+	import "../app.css";
+	import { ModeWatcher } from "mode-watcher";
 
-    let {children} = $props();
+	let { children } = $props();
 </script>
 
+<svelte:head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="/favicon.png" />
+</svelte:head>
 
-<div class="min-h-screen">
-    <NavBar/>
-    <ModeWatcher/>
-    <div class="px-5 py-10">
-        {@render children()}
-    </div>
-    <div class="sticky top-[100vh]">
-        <Footer/>
-    </div>
+<ModeWatcher />
+
+<div class="min-h-screen flex flex-col">
+	<NavBar />
+	<main class="flex-1 pt-16">
+		{@render children()}
+	</main>
+	<Footer />
 </div>

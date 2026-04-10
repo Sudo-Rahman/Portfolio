@@ -398,18 +398,8 @@ BeforeAfterImage(
 )
 ```
 
-## Limites connues et pistes d'amélioration
-
-- **Absence de tests** : Aucun test automatisé. Des tests screenshot et des tests Compose UI (assertions sémantiques sur le slider, vérification du clipping) renforceraient la confiance dans les évolutions futures.
-- **Pas de gestion d'erreur réseau** : Le chargement d'images distantes via Coil ne propose ni placeholder ni indication visuelle en cas d'échec. Exposer des paramètres `error` et `placeholder` optionnels serait un ajout peu coûteux.
-- **Slider vertical non supporté** : Le composant est conçu pour un glissement horizontal uniquement. Un paramètre `orientation` pourrait élargir les cas d'usage.
-- **Animation fixe** : La durée (500 ms) et la courbe (`EaseInOutCubic`) ne sont pas paramétrables. Les exposer en tant que paramètres optionnels améliorerait la flexibilité.
-- **Pas de CI** : L'absence de pipeline d'intégration continue signifie qu'aucune vérification automatique n'est effectuée à chaque push. Un workflow GitHub Actions (build, lint, test) serait un investissement modeste pour une maintenance plus sereine.
-- **Versionnage statique** : La version `"1.0"` est en dur dans le script Gradle. L'utilisation d'une variable `VERSION_NAME` dans `gradle.properties` ou d'un plugin de versionnement sémantique faciliterait les releases.
-
 ## Liens
 
-- **Repo local :** `/Users/sr-71/Documents/portfolio/repos_to_process/Before-After-Image`
 - **GitHub :** [https://github.com/Sudo-Rahman/Before-After-Image](https://github.com/Sudo-Rahman/Before-After-Image)
 - **JitPack :** [https://jitpack.io/#Sudo-Rahman/BeforeAfterImage](https://jitpack.io/#Sudo-Rahman/BeforeAfterImage)
 - **Licence :** Apache License 2.0

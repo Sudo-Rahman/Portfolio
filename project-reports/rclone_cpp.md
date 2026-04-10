@@ -600,19 +600,8 @@ auto main() -> int
 }
 ```
 
-## Limites connues et pistes d'amélioration
-
-- **Pas de support natif Windows** : le code contient des branches `_WIN32` (recherche de `rclone.exe`, `bp::windows::hide`), mais la CI ne teste que Linux. La portabilité Windows n'est pas garantie.
-- **Parsing de dates tronquées** : `string_to_mode_time` utilise `diff.total_seconds()`, ce qui perd la précision sous-secondaire des timestamps rclone (nanosecondes).
-- **Gestion mémoire manuelle** : `_process_impl_` et `_process_pool_impl_` sont alloués via `new` brut et détruits via `delete` dans le destructeur. L'utilisation de `std::unique_ptr` améliorerait la sécurité exception-safety.
-- **Pas de retry/resilience** : si une commande rclone échoue (problème réseau, timeout), la bibliothèque ne propose pas de mécanisme de retry natif — il faut l'implémenter côté utilisateur.
-- **Documentation API absente** : les headers sont bien commentés (Doxygen-style) mais aucun site de documentation n'est généré.
-- **Pas de tests unitaires purs pour les parsers** : les parsers sont testés indirectement via les tests d'intégration (avec vrai rclone), mais pas de tests unitaires avec des données JSON en fixture.
-- **`exit(1)` dans le catch de `_process_impl_::execute()`** : un crash au lancement du processus enfant termine brutalement l'application au lieu de propager une exception.
-
 ## Liens
 
-- **Repo local** : `/Users/sr-71/Documents/portfolio/repos_to_process/rclone_cpp`
 - **GitHub** : [https://github.com/Sudo-Rahman/rclone_cpp](https://github.com/Sudo-Rahman/rclone_cpp)
 - **Licence** : MIT © 2024 Rahman Yilmaz
 - **Version** : 0.6.2

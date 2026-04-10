@@ -452,17 +452,6 @@ Ouvrir `Titanium.pro` dans Qt Creator, compiler, puis utiliser `windeployqt.exe`
 ### Exécution
 Lancer l'exécutable `Titanium` généré dans le dossier `build`. La base SQLite est créée automatiquement au premier lancement dans le même répertoire que l'exécutable.
 
-## Limites connues et pistes d'amelioration
-
-- **Pas de tests unitaires** : l'ajout d'un framework de test (Qt Test ou Google Test) couvrant les modèles métier (`StdContact`, `Interaction`, `Tache`), la couche BD et le parsing JSON améliorerait la fiabilité.
-- **Pointeurs nus** : les collections (`std::list<T*>`) avec gestion manuelle de la mémoire pourraient être migrées vers `std::unique_ptr` ou `std::shared_ptr` pour éliminer les risques de fuites.
-- **ID non relocalisables** : les timestamps comme clés primaires rendent la fusion de bases ou la réimportation après suppression délicate. Un UUID ou un identifiant séquentiel serait plus robuste.
-- **Historique en texte brut** : un format structuré (SQLite ou JSON) permettrait des requêtes et un affichage plus riches.
-- **Pas de filtre de dates dans la vue tâches globale** : le `TreeTacheDialog` propose de masquer les tâches passées, mais il manque un filtrage par contact ou par plage de dates.
-- **Validation des entrées limitée** : le téléphone accepte n'importe quelle longueur de chiffres, le mail n'est pas validé par regex.
-- **Internationalisation** : l'interface est intégralement en français, sans système de traduction Qt (`tr()`).
-
 ## Liens
 
-- **Repo local** : `/Users/sr-71/Documents/portfolio/repos_to_process/Titanium`
 - **GitHub** (d'après le README) : `https://github.com/Sudo-Rahman/QT_L3`

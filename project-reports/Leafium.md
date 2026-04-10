@@ -529,20 +529,8 @@ docker-compose down        # Supprimer le conteneur (les données persistent dan
 
 ---
 
-## Limites connues et pistes d'amélioration
-
-- **Absence de tests automatisés** : ajouter des tests unitaires (`pytest`) sur les méthodes de `Database`, notamment les pipelines d'agrégation, améliorerait la confiance dans les évolutions.
-- **Identifiants en dur** : migrer vers des variables d'environnement (`.env` + `python-dotenv`) pour la connexion MongoDB.
-- **Génération de descriptions** : les descriptions de films sont des chaînes aléatoires de 100 caractères. L'utilisation de textes réels ou générés par templates améliorerait la cohérence des données de démo.
-- **Données de cinémas dupliquées** : `data.py` contient plusieurs entrées dupliquées pour les cinémas de Dijon. Un mécanisme de déduplication ou une source de données unique serait plus propre.
-- **Pas d'interface utilisateur** : une interface web (Flask/FastAPI) ou CLI structurée (argparse, Typer) remplacerait avantageusement les `input()` interactifs.
-- **Pas d'index** : la création d'index MongoDB sur les champs fréquemment filtrés (`categories`, `directors`, `address.city`) améliorerait les performances avec de grands volumes.
-- **Visualisations bloquantes** : `plt.show()` bloque l'exécution. Une exportation en fichiers images (`plt.savefig()`) ou un mode non-interactif serait plus adapté à un usage automatisé.
-
----
 
 ## Liens
 
-- **Repo local** : `/Users/sr-71/Documents/portfolio/repos_to_process/Leafium`
 - **GitHub** : [https://github.com/Sudo-Rahman/Leafium](https://github.com/Sudo-Rahman/Leafium)
 - **Auteurs** : [Maxime-Cllt](https://github.com/Maxime-Cllt), [Sudo-Rahman](https://github.com/Sudo-Rahman)
