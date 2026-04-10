@@ -34,11 +34,11 @@
 
     <div class="w-full lg:w-3/4">
         <h1 class="text-4xl font-bold mb-2">Rahman Yilmaz</h1>
-        <p class="text-foreground text-opacity-80">Freelance - Développeur Mobile/Full Stack web</p>
-        <p class="text-foreground text-opacity-80 mb-24">Chalon sur Saône, France</p>
+        <p class="text-foreground/80">Freelance - Développeur Mobile/Full Stack web</p>
+        <p class="text-foreground/80 mb-24">Chalon sur Saône, France</p>
 
         <h2 class="text-3xl font-bold mb-2">À propos</h2>
-        <p class="text-foreground text-opacity-80 text-justify mb-24">
+        <p class="text-foreground/80 text-justify mb-24">
             Bonjour, je m'appelle Rahman Yilmaz. Actuellement auto-entrepreneur, je conçois et développe des
             applications desktop, mobiles ainsi que des sites web sur-mesure . Vous pouvez retrouver mes réalisations et
             en savoir plus sur mon expertise en scrollant vers le bas. N'hésitez pas à me contacter pour discuter de vos
@@ -46,7 +46,7 @@
         </p>
 
         <h2 class="text-3xl font-bold mb-2">Expériences</h2>
-        <p class="text-foreground text-opacity-80 text-justify mb-2"></p>
+        <p class="text-foreground/80 text-justify mb-2"></p>
         <div class="flex flex-col mb-12">
             {#each experiences as exp}
                 <ExperienceCard class={exp === experiences[experiences.length - 1] ? '' : 'mb-4'}

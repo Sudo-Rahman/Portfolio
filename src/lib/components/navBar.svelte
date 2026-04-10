@@ -5,7 +5,7 @@
     import {resetMode, setMode} from "mode-watcher";
     import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
     import {Button} from "$lib/components/ui/button/index.js";
-    import {Github, Mail} from 'lucide-svelte';
+    import {ExternalLink, Mail} from 'lucide-svelte';
     import { buttonVariants } from "$lib/components/ui/button/index.js";
 
 
@@ -24,7 +24,7 @@
 
 
 <div class="w-full flex justify-center opacity-95 sticky top-5 z-50">
-    <nav class="bg-accent rounded-full mx-5 lg:w-3/5 sm:w-3/4 w-[90%] flex p-1 border border-foreground border-opacity-10">
+    <nav class="bg-accent rounded-full mx-5 lg:w-3/5 sm:w-3/4 w-[90%] flex p-1 border border-foreground/10">
 
         <div class="px-1.5 w-full flex content-center ">
 
@@ -35,7 +35,7 @@
 
             <div class="w-full flex justify-end">
 
-                <Button class="border border-accent-foreground border-opacity-10" href={urlGithub} onclick={openMail} size="icon"
+                <Button class="border border-accent-foreground/10" href={urlGithub} onclick={openMail} size="icon"
                         variant="outline">
                     <Mail class="h-[1.2rem] w-[1.2rem]"/>
                     <span class="sr-only">Github</span>
@@ -43,7 +43,7 @@
 
                 <Button class="mx-2 border border-accent-foreground border-opacity-10" href={urlGithub} onclick={openGithub} size="icon"
                         variant="outline">
-                    <Github class="h-[1.2rem] w-[1.2rem]"/>
+                    <ExternalLink class="h-[1.2rem] w-[1.2rem]"/>
                     <span class="sr-only">Github</span>
                 </Button>
 

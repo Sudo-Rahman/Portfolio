@@ -18,9 +18,9 @@
             <h2 class="text-2xl font-bold">{school}</h2>
         </div>
         <div class="mt-1">
-            <span class="content-center whitespace-nowrap text-foreground text-opacity-80 text-justify">{start}
+            <span class="content-center whitespace-nowrap text-foreground/80 text-justify">{start}
                 - {end}</span>
         </div>
     </div>
-    <p class="text-foreground text-opacity-80 text-justify">{description}</p>
+    <p class="text-foreground/80 text-justify">{description}</p>
 </div>
