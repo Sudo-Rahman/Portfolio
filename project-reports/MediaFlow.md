@@ -428,16 +428,6 @@ cargo test          # Tests unitaires
 cargo test -- --ignored  # Tests d'intégration (lents)
 ```
 
-## Limites connues et pistes d'amélioration
-
-- **OCR** : Les modèles PP-OCRv5 ne sont pas packagés automatiquement ; l'utilisateur doit les placer dans le dossier `ocr-models`. Un téléchargement automatisé améliorerait le DX.
-- **Transcription** : Dépendance exclusive à Deepgram. Un support Whisper local (via whisper.cpp) offrirait une option offline.
-- **Single-page routing** : L'état des vues est géré par un système maison (`display:none` toggle) plutôt que par un routeur SvelteKit classique. Cela fonctionne mais complique la gestion du cycle de vie des composants.
-- **Pas de tests frontend** : Aucun test unitaire ou E2E côté Svelte n'est présent dans le repo.
-- **CSP null** : La Content Security Policy est désactivée. Une configuration plus restrictive avec whitelist de domaines d'API améliorerait la posture de sécurité.
-- **Internationalisation** : L'interface est uniquement en anglais. Un système i18n permettrait de toucher un public plus large.
-
 ## Liens
 
-- **Repo local** : `/Users/sr-71/Documents/portfolio/repos_to_process/MediaFlow`
 - **GitHub** : [https://github.com/Sudo-Rahman/MediaFlow](https://github.com/Sudo-Rahman/MediaFlow)

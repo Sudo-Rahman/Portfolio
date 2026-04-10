@@ -425,16 +425,6 @@ Des scripts shell (`Serveur.sh`, `Client.sh`, `Bot.sh`) sont fournis pour compil
 4. Optionnellement, un joueur peut taper `b` pour ajouter un bot.
 5. La partie démarre automatiquement quand le minimum de joueurs est atteint.
 
-## Limites connues et pistes d'amélioration
-
-- **Protocole texte brut** : la communication client-serveur repose sur des chaînes de caractères sans délimiteur de message. Un protocole structuré (TLV, JSON, ou simplement des headers de longueur) améliorerait la robustesse.
-- **Absence de tests automatisés** : l'ajout de tests unitaires sur la logique de jeu (placement de cartes, calcul de pénalités) via un framework comme Unity ou Criterion renforcerait la fiabilité.
-- **Bot à stratégie naïve** : le bot joue aléatoirement. Une IA basée sur l'heuristique (minimiser le risque de ramasser une ligne) enrichirait l'expérience de jeu.
-- **Pas de reconnexion** : si un client est déconnecté en cours de partie, le serveur termine brutalement. Un mécanisme de timeout et de reconnexion serait nécessaire pour un usage en production.
-- **Variables globales** : l'état du jeu (`jeu`, `clients`, `nb_client`, etc.) est stocké dans des variables globales. Un passage par contexte (`struct server_context`) faciliterait l'extensibilité et les tests.
-- **Sécurité réseau** : aucune authentification ni chiffrement. Le nombre magique pour les bots (`0xFFFFF`) est trivialement imitable par un client malveillant.
-
 ## Liens
 
-- **Dépôt local** : `/Users/sr-71/Documents/portfolio/repos_to_process/6-qui-prend`
 - **Dépôt GitHub** : [https://github.com/Sudo-Rahman/6-qui-prend](https://github.com/Sudo-Rahman/6-qui-prend)

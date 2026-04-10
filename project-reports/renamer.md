@@ -559,19 +559,7 @@ docker build -t renamer-website -f renamer-website/Dockerfile renamer-website/
 docker-compose up -d
 ```
 
-## Limites connues et pistes d'amélioration
-
-- **Absence de tests automatisés** : aucun test unitaire ou d'intégration substantiel. L'ajout de tests sur l'ORM, les contrôleurs et les formatters serait le premier investissement qualité.
-- **Rate limiter basique** : l'implémentation actuelle utilise un compteur par fenêtre fixe, qui ne gère pas le burst. Un algorithme de token bucket ou sliding window log serait plus précis.
-- **Pas de base de données transactionnelle** : MongoDB est utilisé en standalone, sans replica set. Pour un usage futur avec plus de données, un replica set avec transactions serait recommandé.
-- **Log middleware trop verbeux** : le logging complet des bodies en production peut poser des problèmes de performance et de confidentialité (PII dans les requêtes). Un filtrage par route ou par niveau serait nécessaire.
-- **Gestion d'erreurs TypeScript** : certains endroits utilisent des `unwrap()` ou des conversions forcées (`as_str().unwrap()`) qui pourraient paniquer. Un renforcement de la gestion d'erreurs côté Rust améliorerait la robustesse.
-- **Support Linux ARM** : le pipeline CI ne build que pour `x86_64-unknown-linux-gnu`. L'ajout d'un build ARM étendrait le support aux Raspberry Pi et serveurs ARM.
-- **Accessibilité (a11y)** : aucune mention d'accessibilité dans les composants Svelte — un audit et l'ajout d'attributs ARIA seraient bénéfiques.
-
 ## Liens
 
-- **Dépôt local :** `/Users/sr-71/Documents/portfolio/repos_to_process/renamer`
-- **Site de production :** `https://renamer.pro`
-- **API de production :** `https://api.renamer.pro`
+- **Site de production :** `https://renamer.sudo-rahman.fr`
 - **Licence :** GNU Affero General Public License v3 (AGPL-3.0)

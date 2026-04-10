@@ -543,21 +543,6 @@ php -S localhost:8080
 
 ---
 
-## Limites connues et pistes d'amélioration
-
-1. **Hashing des mots de passe** : migrer de SHA-256 + salt vers `password_hash()` (bcrypt/Argon2), intégré nativement à PHP.
-2. **Configuration externalisée** : extraire les credentials DB et les paramètres dans un fichier `.env` (via `vlucas/phpdotenv` par exemple).
-3. **Sécurisation du routage** : valider et whitelist les noms de contrôleurs/actions pour éviter les inclusions arbitraires.
-4. **Tests** : ajouter des tests unitaires (PHPUnit) sur les méthodes de `DBManage` et des tests d'intégration sur les contrôleurs.
-5. **ORM ou Query Builder** : remplacer les requêtes SQL écrites manuellement par un Query Builder ou un ORM léger (ex. Eloquent standalone) pour réduire le code boilerplate.
-6. **Séparation des responsabilités** : certaines vues contiennent trop de logique métier ; extraire les requêtes DB des templates vers les contrôleurs.
-7. **API REST** : séparer le backend PHP du frontend pour permettre une évolution vers une SPA (React/Vue) ou une application mobile.
-8. **Internationalisation** : le contenu est entièrement en français dur ; un système d'i18n faciliterait l'ouverture à d'autres langues.
-9. **Upload sécurisé** : la gestion des photos de profil via `exec(ffmpeg ...)` est une surface d'attaque ; privilégier les bibliothèques PHP natives (GD, Imagick).
-
----
-
 ## Liens
 
-- **Repo local** : `/Users/sr-71/Documents/portfolio/repos_to_process/Projet-DAW`
 - **Licence** : MIT (Copyright 2023 Yoan Dusoleil)

@@ -568,20 +568,8 @@ docker compose up -d
 
 L'application est exposée sur le port **3000** en interne, mappé vers **8080** dans le `docker-compose.yml`.
 
-## Limites connues et pistes d'amélioration
-
-- **Absence de tests** : l'ajout de tests unitaires (Vitest) sur le calcul de projection et les conversions de devises améliorerait la confiance dans le code métier.
-- **Pas de gestion d'erreur utilisateur** : si l'API échoue et que le cache est vide, l'interface affiche un état incomplet sans feedback clair. Un mécanisme de toast ou de message d'erreur serait nécessaire.
-- **Cache non partagé** : le cache fichier local ne fonctionne pas en multi-instance. Pour un scaling horizontal, il faudrait migrer vers Redis ou un stockage partagé.
-- **Aucun test E2E** : des tests Playwright ou Cypress couvrant les deux pages principales permettraient de valider les parcours critiques.
-- **Responsive limité** : la page investissement impose une largeur minimale (`min-w-[52rem]`), ce qui peut poser problème sur des écrans de taille réduite (tablette).
-- **Typage `any` dans les options ECharts** : les configurations de graphiques utilisent `any`, perdant le bénéfice du typage TypeScript.
-- **Pas de rate limiting** : aucune protection contre les appels serveur répétés qui épuiseraient le quota API.
-- **CI sans phase de test** : le pipeline GitHub Actions build et déploie directement sans exécuter `pnpm run check` ni de suite de tests.
-
 ## Liens
 
-- **Dépôt local** : `/Users/sr-71/Documents/portfolio/repos_to_process/gold-investment`
 - **GitHub** : [https://github.com/Sudo-Rahman/gold-investment](https://github.com/Sudo-Rahman/gold-investment)
 - **Démo en ligne** : [https://gold-investment.sudo-rahman.fr/](https://gold-investment.sudo-rahman.fr/)
 - **API utilisée** : [https://metals.dev/](https://metals.dev/)

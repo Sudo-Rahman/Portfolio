@@ -454,22 +454,8 @@ cd kotlin-meteo
 
 > **Note** : L'application nécessite une connexion internet active pour fonctionner. Pour la recherche GPS, un appareil physique avec capteur de localisation est recommandé.
 
-## Limites connues et pistes d'amélioration
-
-| Limite | Piste d'amélioration |
-|---|---|
-| Aucune gestion d'erreur réseau (crash silencieux des coroutines) | Encapsuler les appels dans `try/catch`, exposer un état d'erreur via `LiveData`, afficher un message à l'utilisateur. |
-| Clé API Geoapify en dur dans le source | Utiliser `BuildConfig` alimenté par `local.properties` ou les variables d'environnement CI. |
-| `notifyDataSetChanged()` sur chaque mise à jour d'adapter | Migrer vers `DiffUtil` ou `ListAdapter` pour des mises à jour granulaires et animées. |
-| `println()` de debug en production | Remplacer par `Timber` ou `Log` avec un niveau conditionnel `BuildConfig.DEBUG`. |
-| Pas de tests unitaires métier | Ajouter des tests sur le parsing JSON, le calcul de fuseau horaire, et les ViewModels avec `InstantTaskExecutorRule`. |
-| Pas de mode hors-ligne | Mettre en cache les réponses API dans une base Room pour une consultation sans réseau. |
-| `isMinifyEnabled = false` en release | Activer R8/ProGuard pour réduire la taille de l'APK et obfusquer le code. |
-| Typo dans le nom du package (`fagments` → `fragments`) | Correction renommage à faire tôt pour éviter la dette technique. |
-
 ## Liens
 
-- **Dépôt local** : `/Users/sr-71/Documents/portfolio/repos_to_process/kotlin-meteo`
 - **GitHub** : [https://github.com/Sudo-Rahman/kotlin-meteo](https://github.com/Sudo-Rahman/kotlin-meteo)
 - **API Open-Meteo** : [https://open-meteo.com/](https://open-meteo.com/)
 - **API Geoapify** : [https://www.geoapify.com/](https://www.geoapify.com/)

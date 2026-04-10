@@ -362,17 +362,7 @@ cargo test
 6. Le panneau **Public Infos** affiche les valeurs publiques (e, n, message chiffré).
 7. Le bouton **Fake it** altère le chiffré pour démontrer l'échec du déchiffrement.
 
-## Limites connues et pistes d'amelioration
-
-- **Taille des clés limitée à u128** : le produit n = p·q est plafonné à ~3.4×10^38, soit l'équivalent d'une clé RSA d'environ 128 bits. Les clés RSA opérationnelles utilisent 2048+ bits. L'ajout d'une crate big-integer (ex. `num-bigint` ou `rug`) permettrait de démontrer avec des clés réalistes.
-- **Test de Fermat vs Miller-Rabin** : le test probabiliste actuel est sensible aux nombres de Carmichael. Un test de Miller-Rabin serait plus robuste avec un coût marginal.
-- **Pas de padding scheme** : le message est chiffré directement (textbook RSA). Un padding OAEP serait nécessaire pour toute utilisation réelle.
-- **Mutex dans la génération parallèle** : le `Arc<Mutex<HashMap>>` est un goulot d'étranglement potentiel. Une approche lock-free (ex. `DashMap`) ou une partition par thread améliorerait le throughput.
-- **Interface utilisateur** : la vue est construite programmatiquement. Une séparation de la logique de présentation (ex. fichiers de style ou composants réutilisables) améliorerait la maintenabilité.
-- **Gestion d'erreurs** : certaines erreurs sont gérées par `panic!` (pas de nombre premier trouvé, pas d'inverse modulaire). Un retour `Result` avec affichage utilisateur serait plus robuste.
-
 ## Liens
 
-- **Repo local** : `/Users/sr-71/Documents/portfolio/repos_to_process/PrimeShield`
 - **GitHub** : [https://github.com/Maxime-Cllt/PrimeShield](https://github.com/Maxime-Cllt/PrimeShield)
 - **Releases** : [https://github.com/Maxime-Cllt/PrimeShield/releases](https://github.com/Maxime-Cllt/PrimeShield/releases)

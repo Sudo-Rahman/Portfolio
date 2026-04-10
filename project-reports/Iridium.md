@@ -472,18 +472,8 @@ Déclarées dans `conanfile.py` :
 - `libcurl/[>=8.0.0]`
 - `libzip/[>=1.10.0]`
 
-## Limites connues et pistes d'amelioration
-
-- **CI incomplète** : seuls les builds Linux sont automatisés. Les workflows Windows et macOS sont en commentaire.
-- **Pas de suite de tests** : aucune couverture de test unitaire ou d'intégration, ce qui rend les refactorings risqués.
-- **Synchronisation bidirectionnelle (bisync)** : l'enum `Bisync` existe dans le code mais n'est pas exposé dans l'UI (`_types_sync_comboBox` n'a que l'entrée `Sync`).
-- **Gestion mémoire des settings** : l'ensemble de la configuration est chargé en mémoire via une `ptree` statique — acceptable pour un client desktop, mais à surveiller si le nombre de remotes croît significativement.
-- **Cache d'icônes non borné dans certains delegates** : bien que `QCache` ait une taille max, la clé est parfois un `std::pair<int,int>` (row, column) qui ne sera pas invalidé automatiquement quand le modèle change.
-- **Aperçu limité** : seuls les fichiers image disposent d'un aperçu intégré. Les documents, PDF, vidéo ou audio ne sont pas prévisualisables.
-
 ## Liens
 
-- **Dépôt local :** `/Users/sr-71/Documents/portfolio/repos_to_process/Iridium`
 - **GitHub :** [https://github.com/Sudo-Rahman/Iridium](https://github.com/Sudo-Rahman/Iridium)
 - **Bibliothèque rclone_cpp :** [https://github.com/Sudo-Rahman/rclone_cpp](https://github.com/Sudo-Rahman/rclone_cpp)
 - **Icônes Fluent :** [https://github.com/vinceliuice/Fluent-icon-theme](https://github.com/vinceliuice/Fluent-icon-theme)

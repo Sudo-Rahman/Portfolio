@@ -484,20 +484,7 @@ Le client demande un nom d'utilisateur, le port et l'adresse IP du serveur.
 
 ---
 
-## Limites connues et pistes d'amelioration
-
-- **Pas de tests unitaires** — L'absence de tests rend les modifications risquées, surtout sur les algorithmes de parsing PGN et le PageRank.
-- **Sémaphore maison** — Le sémaphore personnalisé fonctionne mais ne gère pas les interruptions de manière robuste. Utiliser `java.util.concurrent.Semaphore` et `CyclicBarrier` améliorerait la fiabilité.
-- **Communication bloquante** — Le protocole socket/serialization Java lie client et serveur à la même version de classe. Un protocole textuel (JSON sur TCP) ou HTTP/REST rendrait l'API plus accessible.
-- **Appels explicites à `System.gc()`** — De nombreux appels manuels au ramasse-miettes parsèment le code. La JVM gère généralement la mémoire de manière optimale sans ces sollicitations.
-- **Typo dans un nom de classe** — `RechereEnFonctionDuPremierCoup` (manque un `ch` à « Recherche »).
-- **Pas de base de données** — Les index sont sérialisés dans des fichiers plats. Pour des volumes très importants, une base de données indexée (SQLite, LevelDB) serait plus robuste face aux corruptions.
-- **Pagination des résultats** — L'affichage de toutes les parties (choix 8) est limité par un seuil fixe (`maxNbParties = 100000`). Un système de pagination côté serveur améliorerait l'expérience utilisateur.
-
----
-
 ## Liens
 
-- **Repo local** : `/Users/sr-71/Documents/portfolio/repos_to_process/Lichess-Data`
 - **Source des données** : [https://database.lichess.org/](https://database.lichess.org/)
 - **Auteurs** : Yilmaz Rahman (développement principal), Colliat Maxime (contribution sur `PartiesFile`)

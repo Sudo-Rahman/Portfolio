@@ -403,18 +403,6 @@ java -jar Projet-GL-<version>.jar
 
 ---
 
-## Limites connues et pistes d'amélioration
-
-- **Persistance** : les données sont stockées uniquement en mémoire. L'ajout d'une couche de sérialisation (JSON, base de données embarquée) permettrait de sauvegarder l'état du panier entre les sessions.
-- **Utilisation d'`Observable` (déprécié)** : `java.util.Observable` est déprécié depuis Java 9. Une migration vers `java.beans.PropertyChangeSupport` ou vers la bibliothèque `RxJava` serait plus pérenne.
-- **Duplication de code entre contenants** : `Panier`, `Jus` et `Macedoine` partagent une grande part de logique (gestion de la `HashMap<Fruit, Double>`, calcul du prix total, boycott, `equals`). La classe abstraite `ContenantFruitAbstract` pourrait absorber davantage de logique commune.
-- **Accessibilité** : l'interface Swing pourrait bénéficier d'une meilleure mise en page (layout manager plus flexible) et d'un redimensionnement fluide.
-- **Internationalisation** : les libellés sont en français en dur dans le code. Un mécanisme de `ResourceBundle` permettrait de supporter d'autres langues.
-- **Tests de vue** : les tests des dialogues Swing sont limités par la difficulté de tester du code GUI de manière automatisée. Un framework comme AssertJ Swing ou FEST améliorerait la couverture fonctionnelle.
-
----
-
 ## Liens
 
-- **Dépôt local** : `/Users/sr-71/Documents/portfolio/repos_to_process/Projet-GL`
 - **GitHub** : [https://github.com/Maxime-Cllt/Projet-GL](https://github.com/Maxime-Cllt/Projet-GL)

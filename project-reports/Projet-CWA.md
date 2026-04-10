@@ -587,23 +587,8 @@ npm run watch          # Build en mode watch (développement)
 
 ---
 
-## Limites connues et pistes d'amelioration
-
-Les limites ci-dessous sont issues à la fois de l'analyse du code et du rapport de projet lui-même (section VI — Conclusion) :
-
-- **Pas de back-end** : les données sont stockées dans `localStorage`, ce qui limite la persistance à un seul navigateur et interdit le partage multi-appareils. L'ajout d'une API REST (Node.js/Express, Spring Boot) avec une base de données serait l'évolution naturelle.
-- **Tests unitaires insuffisants** : seuls les services d'injection sont testés (vérification d'instanciation). Aucun test sur la logique métier du `LocalStorageRepository` (CRUD), du `FilterComponent` (tri/filtrage) ou des composants de page.
-- **Absence de routing pour les tâches individuelles** : les détails, modification et suppression de tâches sont gérés via des modals plutôt que par des routes dédiées. Cela empêche le deep-linking et le partage d'URL vers une tâche spécifique.
-- **Mutation directe des tableaux `@Input()`** : `FilterComponent` modifie directement le tableau `task_list` reçu en entrée via `splice()` et `push()` au lieu de retourner une nouvelle liste filtrée. Cela fonctionne mais rend le flux de données moins prévisible.
-- **Duplication de code** : les méthodes de tri dans `LocalStorageRepository` (annotées `@deprecated`) cohabitent avec celles de `FilterComponent`. Un nettoyage complet des méthodes dépréciées serait souhaitable.
-- **Accessibilité** : aucune attribution ARIA, pas de navigation clavier documentée pour le drag & drop, et la checkbox readonly utilise un `onclick="return false;"` inline — peu robuste.
-- **Pistes d'amélioration identifiées par l'équipe** : ajout d'un bouton de modification depuis la vue détaillée, possibilité de cocher/décocher le statut depuis le détail, date du jour par défaut à la création, système de tâches parent/enfant, et duplication de tâche.
-
----
-
 ## Liens
 
-- **Dépôt local :** `/Users/sr-71/Documents/portfolio/repos_to_process/Projet-CWA`
 - **Dépôt GitHub :** <https://github.com/Phaired/Projet-CWA>
 - **Diagrammes du projet :** <https://github.com/Phaired/Projet-CWA/tree/main/rapport/screenshot/diagramme>
 - **Rapport PDF (inclus dans le dépôt) :** `rapport/Rapport_CWA.pdf`
