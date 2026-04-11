@@ -36,15 +36,9 @@
 
 		<AnimatedSection direction="fade" delay={250}>
 			<p
-				class="text-xl sm:text-2xl text-muted-foreground font-light mb-3 tracking-wide"
+				class="text-xl sm:text-2xl text-muted-foreground font-light mb-12 tracking-wide"
 			>
 				Developpeur Full Stack & Mobile
-			</p>
-		</AnimatedSection>
-
-		<AnimatedSection direction="fade" delay={350}>
-			<p class="text-sm text-muted-foreground/60 mb-12 max-w-md mx-auto leading-relaxed">
-				Master 2 BDIA &middot; Freelance &middot; Chalon-sur-Saone, France
 			</p>
 		</AnimatedSection>
 
@@ -72,9 +66,11 @@
 		</AnimatedSection>
 	</div>
 
-	<div
-		class="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground/30 animate-bounce"
+	<button
+		onclick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+		class="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/50 transition-all duration-300 hover:text-muted-foreground/80 animate-bounce cursor-pointer group"
 	>
+		<span class="text-xs tracking-widest uppercase">Découvrir</span>
 		<ChevronDown class="h-5 w-5" />
-	</div>
+	</button>
 </section>

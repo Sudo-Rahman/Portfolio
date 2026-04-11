@@ -4,7 +4,7 @@
 	import Briefcase from "lucide-svelte/icons/briefcase";
 </script>
 
-<section class="py-24 px-6">
+<section id="about" class="py-24 px-6">
 	<div class="max-w-4xl mx-auto">
 		<AnimatedSection>
 			<h2 class="text-3xl font-bold mb-2">A propos</h2>
