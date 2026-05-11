@@ -4,6 +4,7 @@ export interface Project {
 	summary: string;
 	technologies: string[];
 	url: string;
+	websiteUrl?: string;
 	featured: boolean;
 }
 
@@ -15,6 +16,7 @@ export const projects: Project[] = [
 			"Boite a outils multimedia locale en Tauri 2 (Rust + Svelte 5) regroupant extraction de pistes, merge, OCR video, transcription, traduction IA multi-modeles et renommage en masse, avec pipeline FFmpeg, traitement natif et interface desktop multi-plateforme.",
 		technologies: ["Rust", "Svelte 5", "Tauri 2", "FFmpeg", "TypeScript"],
 		url: "https://github.com/Sudo-Rahman/MediaFlow",
+		websiteUrl: "https://mediaflowtools.com/",
 		featured: true,
 	},
 	{
@@ -33,6 +35,7 @@ export const projects: Project[] = [
 			"Application Apple native iOS/iPadOS/macOS : organisation de signets avec SwiftUI, Core Data/CloudKit, synchronisation iCloud, sante des liens, verrouillage biometrique et site web multilingue SvelteKit.",
 		technologies: ["Swift", "SwiftUI", "Core Data", "CloudKit"],
 		url: "https://github.com/Sudo-Rahman/linkKeep",
+		websiteUrl: "https://linkkeep.sudo-rahman.fr/",
 		featured: true,
 	},
 	{
@@ -42,6 +45,7 @@ export const projects: Project[] = [
 			"Application desktop multiplateforme Tauri 2 : renommage de lots de fichiers avec formatters combinables, apercu temps reel, API Rust/Axum, licences Stripe et auto-update.",
 		technologies: ["Rust", "Tauri 2", "Axum", "TypeScript"],
 		url: "https://github.com/Sudo-Rahman/renamer",
+		websiteUrl: "https://renamer.sudo-rahman.fr/",
 		featured: true,
 	},
 	{
