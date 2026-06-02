@@ -10,13 +10,14 @@
 	import MapPin from "lucide-svelte/icons/map-pin";
 	import Globe from "lucide-svelte/icons/globe";
 	import GithubIcon from "$lib/components/shared/GithubIcon.svelte";
+	import { asset } from "$app/paths";
 </script>
 
 <svelte:head>
 	<title>CV - Rahman YILMAZ</title>
 	<meta
 		name="description"
-		content="Curriculum vitae de Rahman YILMAZ, developpeur full stack et mobile."
+		content="Curriculum vitae de Rahman YILMAZ, ingénieur logiciel full stack orienté data et IA appliquée."
 	/>
 </svelte:head>
 
@@ -29,9 +30,9 @@
 						{profile.name}
 					</h1>
 					<p class="text-lg text-primary font-medium">{profile.headline}</p>
-				</div>
-				<a
-					href="/Rahman_YILMAZ_CV.pdf"
+					</div>
+					<a
+						href={asset("/Rahman_YILMAZ_CV.pdf")}
 					target="_blank"
 					class="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 shrink-0"
 				>
@@ -63,7 +64,7 @@
 						{profile.location}
 					</span>
 					<a
-						href={profile.website}
+						href="https://sudo-rahman.fr/"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
@@ -72,7 +73,7 @@
 						sudo-rahman.fr
 					</a>
 					<a
-						href={profile.github}
+						href="https://github.com/Sudo-Rahman"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
@@ -86,7 +87,7 @@
 
 		<AnimatedSection delay={100}>
 			<h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-				<span class="gradient-text">Experience</span>
+				<span class="gradient-text">Expérience</span>
 				professionnelle
 			</h2>
 		</AnimatedSection>
@@ -95,19 +96,19 @@
 		<AnimatedSection delay={100}>
 			<h2 class="text-2xl font-bold mb-8 mt-20 flex items-center gap-3">
 				<span class="gradient-text">Formation</span>
-				academique
+				académique
 			</h2>
 		</AnimatedSection>
 		<CVTimeline entries={education} type="education" />
 
 		<AnimatedSection delay={100}>
 			<h2 class="text-2xl font-bold mb-8 mt-20">
-				<span class="gradient-text">Competences</span>
+				<span class="gradient-text">Compétences</span>
 				techniques
 			</h2>
 		</AnimatedSection>
 		<div class="space-y-6">
-			{#each skills as group, i}
+			{#each skills as group, i (group.label)}
 				<AnimatedSection delay={i * 60} direction="up">
 					<div>
 						<h3
@@ -116,7 +117,7 @@
 							{group.label}
 						</h3>
 						<div class="flex flex-wrap gap-2">
-							{#each group.details.split(", ") as skill}
+							{#each group.details.split(", ") as skill (skill)}
 								<SkillChip label={skill} />
 							{/each}
 						</div>

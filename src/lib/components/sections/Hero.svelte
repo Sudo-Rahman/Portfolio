@@ -1,8 +1,8 @@
 <script lang="ts">
 	import AnimatedSection from "$lib/components/shared/AnimatedSection.svelte";
 	import ArrowRight from "lucide-svelte/icons/arrow-right";
-	import Download from "lucide-svelte/icons/download";
 	import ChevronDown from "lucide-svelte/icons/chevron-down";
+	import { resolve } from "$app/paths";
 </script>
 
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -38,14 +38,14 @@
 			<p
 				class="text-xl sm:text-2xl text-muted-foreground font-light mb-12 tracking-wide"
 			>
-				Developpeur Full Stack & Mobile
+				Ingénieur logiciel full stack · Data & IA
 			</p>
 		</AnimatedSection>
 
 		<AnimatedSection direction="up" delay={450}>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 				<a
-					href="/projects"
+					href={resolve("/projects")}
 					class="group inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
 				>
 					Voir mes projets
@@ -54,7 +54,7 @@
 					/>
 				</a>
 				<a
-					href="/cv"
+					href={resolve("/cv")}
 					class="group inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg border border-border text-foreground font-medium text-sm transition-all duration-300 hover:bg-accent hover:-translate-y-0.5"
 				>
 					Mon CV

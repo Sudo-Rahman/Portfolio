@@ -2,166 +2,137 @@
 
 - Phone: +33 7 81 38 88 82
 - Email: [contact@rahman.ovh](mailto:contact@rahman.ovh)
-- Location: Chalon-sur-Saone, France
+- Location: Chalon-sur-Saône, France
 - Website: [sudo-rahman.fr](https://sudo-rahman.fr/)
 - GitHub: [Sudo-Rahman](https://github.com/Sudo-Rahman)
 
 
-# Profile
-Developpeur full stack et mobile diplome d'un Master 2 en Bases de Donnees et Intelligence Artificielle. 2 ans d'alternance chez Sweepin puis deux missions freelance pour une startup IA, autour d'un SaaS et de pipelines d'indexation pour LLM. J'aime concevoir des produits de bout en bout, de l'interface a l'infrastructure, avec autonomie et exigence technique.
+# Profil
+Ingénieur logiciel Bac+5 en Bases de Données et Intelligence Artificielle, basé à Chalon-sur-Saône. Deux ans d'alternance chez Sweepin sur des applications mobiles et web multi-clients, avec maintenance corrective/évolutive, analyse d'anomalies, publication de versions, APIs, back-offices et bases de données. Missions freelance autour d'un SaaS et de pipelines IA. J'aime concevoir des produits utiles de bout en bout, de l'interface à la donnée, avec autonomie et exigence technique.
 
-# Experience
-## **Solo Agilis Sweepin**, Developpeur Full Stack et mobile (Alternance)
+# Points forts
+- Applications métier : mobile/web, APIs, back-offices, dashboards et amélioration d'outils existants
+
+- Maintenance applicative : analyse d'anomalies, corrections, évolutions et publication de versions
+
+- Data & BI : SQL/PostgreSQL, ETL Python/Pandas, data warehouse, qualité de données et tableaux de bord
+
+- IA appliquée : pipelines LLM, transcription/traduction IA, analyse de texte, analyse de sentiment et préparation de datasets
+
+# Expérience
+## **Solo Agilis Sweepin**, Développeur Full Stack et mobile (Alternance)
 
 Dijon, France
 
 Sep 2023 – Sep 2025
 
+- Développement d'applications métier mobiles et web pour les solutions SmartCity et e-santé de Sweepin, dans un contexte multi-clients et multi-produits
 
+- Mainteneur principal de la solution Android SmartCity : analyse d'anomalies, maintenance corrective/évolutive, ajout de fonctionnalités, création de modules et publication de versions
 
-2 ans 1 mois
+- Intégration de Jetpack Compose dans l'écosystème Android de Sweepin et contribution à la modernisation des interfaces et outils internes
 
-- Developpement d'applications mobiles et web pour les solutions SmartCity et e-sante de Sweepin, dans un contexte multi-clients et multi-produits
-
-- Mainteneur principal de la solution Android SmartCity : evolution du socle, correction de bugs, ajout de fonctionnalites, creation de modules et publication des versions
-
-- Integration de Jetpack Compose dans l'ecosysteme Android de Sweepin et contribution a la modernisation des interfaces et outils internes
-
-- Elargissement progressif vers un role full stack avec contributions Android, frontend web et backend PHP/Symfony sur les applications, APIs et back-offices
+- Élargissement progressif vers un rôle full stack avec contributions Android, frontend web et backend PHP/Symfony sur les applications, APIs, back-offices et besoins produit
 
 
 
-## **Steerway**, Developpeur Full Stack (Freelance)
+## **Steerway**, Développeur Full Stack (Freelance)
 
 Remote
 
 Nov 2025 – Jan 2026
 
-
-
-3 mois
-
 - Conception et livraison d'une plateforme SaaS monorepo en SvelteKit 5/TypeScript avec authentification, dashboard client, PostgreSQL/Prisma et logique de licences
 
-- Integration du paiement par abonnement, des webhooks et de la synchronisation des etats d'abonnement, avec historique de transactions et gestion de tokens/licences
+- Intégration du paiement par abonnement, des webhooks et de la synchronisation des états d'abonnement, avec historique de transactions et gestion de tokens/licences
 
-- Mise en place d'une architecture evenementielle Redis + BullMQ + Resend pour les emails transactionnels et l'automatisation des rappels
+- Mise en place d'une architecture événementielle Redis + BullMQ + Resend pour les emails transactionnels et l'automatisation des rappels
 
-- Contribution a un pipeline RAG/LLM de bout en bout : scraping multi-sources (sites, documentations, depots Git, llms.txt), normalisation en Markdown, indexation hybride FAISS/BM25, embeddings, reranking et preparation de datasets pour l'evaluation et l'entrainement
-
-
-
-# Education
-## **Universite de Bourgogne Europe**, Informatique - Bases de Donnees et Intelligence Artificielle
-
-**Master 2**
-
-
-Dijon, France
-
-
-Sep 2024 – Sep 2025
+- Contribution à un pipeline LLM de bout en bout : scraping multi-sources, normalisation en Markdown, préparation de textes et de datasets d'évaluation
 
 
 
-## **Universite de Bourgogne**, Informatique - Bases de Donnees et Intelligence Artificielle
+# Formation
+## **Université de Bourgogne / Université de Bourgogne Europe**, Informatique - Bases de Données et Intelligence Artificielle
 
-**Master 1**
+**Master**
 
 
 Dijon, France
 
 
-Sep 2023 – Juin 2024
+Sep 2023 – Sep 2025
+
+- Parcours orienté bases de données, intelligence artificielle, systèmes d'information et exploitation de données
 
 
 
-## **Universite de Bourgogne**, Informatique
+## **Université de Bourgogne**, Informatique
 
-**Licence 3**
-
-
-Dijon, France
-
-
-Sep 2022 – Juin 2023
-
-
-
-## **Universite de Bourgogne**, Sciences et techniques
-
-**DEUG**
+**Licence**
 
 
 Dijon, France
 
 
-Sep 2020 – Juin 2022
+2023
 
 
 
-## **Lycee prive catholique**, Serie S
+## **Lycée privé catholique**, Série scientifique
 
-**Baccalaureat**
-
-
-Chalon-sur-Saone, France
+**Baccalauréat**
 
 
-Sep 2018 – Juin 2020
+Chalon-sur-Saône, France
 
 
-
-# Projects
-## **[MediaFlow](https://github.com/Sudo-Rahman/MediaFlow)**
-
-Boite a outils multimedia locale en Tauri 2 (Rust + Svelte 5) regroupant extraction de pistes, merge, OCR video, transcription, traduction IA multi-modeles et renommage en masse, avec pipeline FFmpeg, traitement natif et interface desktop multi-plateforme
+2020
 
 
 
-## **[Iridium](https://github.com/Sudo-Rahman/Iridium)**
+# Projets
+## **Argon - Data warehouse Yelp**
 
-Client desktop C++23/Qt 6 : centralise plus de 40 types de stockage cloud via rclone, avec exploration, recherche multi-remotes, synchronisation et suivi de progression en temps reel
-
-
-
-## **[linkKeep](https://github.com/Sudo-Rahman/linkKeep)**
-
-Application Apple native iOS/iPadOS/macOS : organisation de signets avec SwiftUI, Core Data/CloudKit, synchronisation iCloud, sante des liens, verrouillage biometrique et site web multilingue SvelteKit
+Projet d'informatique décisionnelle : data warehouse Kimball en étoile, ETL Python/Pandas sur données CSV, JSON et PostgreSQL (~1,8 Go), nettoyage de métadonnées, chargement PostgreSQL via COPY, analyse de sentiment sur ~9 M de commentaires et tableaux de bord Metabase
 
 
 
-## **[renamer](https://github.com/Sudo-Rahman/renamer)**
+## **MediaFlow**
 
-Application desktop multiplateforme Tauri 2 : renommage de lots de fichiers avec formatters combinables, apercu temps reel, API Rust/Axum, licences Stripe et auto-update
-
-
-
-## **[Fractalium](https://github.com/Sudo-Rahman/Fractalium)**
-
-Application C++/Qt de calcul distribue de fractales via MPI : zoom interactif, precision 100 decimales, snapshots de session et execution sur cluster
+Boîte à outils multimédia locale en Tauri 2 (Rust + Svelte 5) regroupant extraction de pistes, OCR vidéo, transcription, traduction IA multi-modèles et renommage en masse, avec pipeline FFmpeg et interface desktop multi-plateforme
 
 
 
-## **[Lichess-Data](https://github.com/Sudo-Rahman/Lichess-Data)**
+## **Iridium**
 
-Serveur Java multi-clients : indexe et interroge des PGN Lichess de plus de 100 Go, avec recherche, statistiques et PageRank
+Client desktop C++23/Qt 6 : centralise plusieurs types de stockage cloud via rclone, avec exploration, recherche multi-remotes, synchronisation et suivi de progression en temps réel
 
 
 
-# Skills
-**Langages:** Kotlin, Swift, Rust, C/C++ (17/20/23), TypeScript, Python, Java, PHP
+## **Fractalium**
 
-**Web & Frontend:** SvelteKit, Svelte 5, Tailwind CSS, HTML/CSS
+Application C++/Qt de calcul distribué via MPI : zoom interactif, précision 100 décimales, snapshots de session et exécution sur cluster
 
-**Mobile & Apple:** Android (Jetpack Compose, MVVM, SDK), iOS/macOS (SwiftUI), Kotlin Multiplatform
+
+
+## **Lichess-Data**
+
+Serveur Java multi-clients : indexe et interroge plus de 100 Go de parties PGN, avec recherche, statistiques et PageRank
+
+
+
+# Compétences
+**Support & applications métier:** Maintenance corrective/évolutive, analyse d'anomalies, documentation, publication de versions, back-offices
 
 **Backend & Data:** Symfony, Node.js, Axum, API REST, Prisma, PostgreSQL, MariaDB, MongoDB, Redis, Neo4j
 
-**Desktop & Systeme:** Tauri 2, Qt 5/6, Iced, MPI, sockets TCP, rclone
+**Data & BI:** SQL, PostgreSQL, ETL Python/Pandas, data warehouse, Metabase, nettoyage de métadonnées
 
-**Outils IA:** Opencode, Codex
+**IA appliquée:** Pipelines LLM, transcription/traduction IA, analyse de texte, analyse de sentiment, préparation de datasets
 
-**DevOps & Outils:** Docker, GitHub Actions, Git, CMake, Conan 2, Gradle, pnpm, uv
+**Langages & outils:** TypeScript, Kotlin, Python, PHP, Java, Rust, C/C++, Git, Docker, GitHub Actions
 
-**Langues:** Francais (natif), Turc (bilingue), Anglais (intermédiaire B1)
+**Desktop & Système:** Tauri 2, Qt 5/6, Iced, MPI, sockets TCP, rclone
+
+**Langues:** Français (natif), Turc (bilingue), Anglais B1 (documentation technique, échanges écrits simples)

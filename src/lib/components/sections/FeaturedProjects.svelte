@@ -4,15 +4,7 @@
 	import SkillChip from "$lib/components/shared/SkillChip.svelte";
 	import ArrowRight from "lucide-svelte/icons/arrow-right";
 	import { featuredProjects } from "$lib/data/projects";
-
-	const techIcons: Record<string, string> = {
-		Rust: "⚙️",
-		Svelte: "🔥",
-		"Svelte 5": "🔥",
-		"C++": "⚡",
-		"Kotlin": "📱",
-		Swift: "🍎",
-	};
+	import { resolve } from "$app/paths";
 </script>
 
 <section class="py-24 px-6">
@@ -24,7 +16,7 @@
 					<div class="section-divider"></div>
 				</div>
 				<a
-					href="/projects"
+					href={resolve("/projects")}
 					class="group inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
 				>
 					Voir tous les projets
@@ -36,9 +28,9 @@
 		</AnimatedSection>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			{#each featuredProjects as project, i}
+			{#each featuredProjects as project, i (project.slug)}
 				<AnimatedSection delay={i * 100} direction="up">
-					<a href="/projects/{project.slug}">
+					<a href={resolve("/projects/[slug]", { slug: project.slug })}>
 						<GlassCard class="p-6 h-full">
 							<div class="flex items-start justify-between mb-3">
 								<h3 class="text-xl font-semibold text-foreground">
@@ -52,7 +44,7 @@
 								{project.summary}
 							</p>
 							<div class="flex flex-wrap gap-1.5">
-								{#each project.technologies.slice(0, 5) as tech}
+								{#each project.technologies.slice(0, 5) as tech (tech)}
 									<SkillChip label={tech} />
 								{/each}
 							</div>

@@ -1,14 +1,9 @@
 <script lang="ts">
 	import AnimatedSection from "$lib/components/shared/AnimatedSection.svelte";
-	import SkillChip from "$lib/components/shared/SkillChip.svelte";
 	import type { Experience, Education } from "$lib/data/cv";
-	import { formatDate } from "$lib/data/cv";
+	import { formatDateRange } from "$lib/data/cv";
 
 	type TimelineEntry = Experience | Education;
-
-	function isExperience(entry: TimelineEntry): entry is Experience {
-		return "highlights" in entry;
-	}
 
 	type Props = {
 		entries: TimelineEntry[];
@@ -19,7 +14,7 @@
 </script>
 
 <div class="relative pl-8 border-l-2 border-border">
-	{#each entries as entry, i}
+	{#each entries as entry, i (`${entry.location}-${type}-${i}`)}
 		<AnimatedSection delay={i * 100} direction="up">
 			<div class="relative mb-10 last:mb-0">
 				<div
@@ -32,7 +27,7 @@
 							{type === "experience" ? (entry as Experience).company : (entry as Education).institution}
 						</h3>
 						<span class="text-xs text-muted-foreground font-medium whitespace-nowrap">
-							{formatDate(entry.startDate)} – {formatDate(entry.endDate)}
+							{formatDateRange(entry)}
 						</span>
 					</div>
 
@@ -44,15 +39,15 @@
 						{entry.location}
 					</p>
 
-					{#if isExperience(entry)}
+					{#if entry.highlights?.length}
 						<ul class="space-y-1.5 mt-3">
-							{#each entry.highlights as highlight}
-								<li class="text-sm text-muted-foreground leading-relaxed flex gap-2">
-									<span class="text-primary mt-1.5 shrink-0">
-										&bull;
-									</span>
-									<span>{highlight}</span>
-								</li>
+							{#each entry.highlights as highlight (highlight)}
+									<li class="text-sm text-muted-foreground leading-relaxed flex gap-2">
+										<span
+											class="mt-[0.72em] h-1.5 w-1.5 rounded-full bg-primary shrink-0"
+										></span>
+										<span>{highlight}</span>
+									</li>
 							{/each}
 						</ul>
 					{/if}

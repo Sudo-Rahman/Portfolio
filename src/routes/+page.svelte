@@ -6,13 +6,13 @@
 </script>
 
 <svelte:head>
-	<title>Rahman YILMAZ - Developpeur Full Stack & Mobile</title>
+	<title>Rahman YILMAZ - Ingénieur logiciel full stack</title>
 	<meta
 		name="description"
-		content="Portfolio de Rahman YILMAZ, developpeur full stack et mobile. Master 2 BDIA, freelance. Projets, competences et experiences."
+		content="Portfolio de Rahman YILMAZ, ingénieur logiciel full stack orienté applications métier, data et IA appliquée."
 	/>
-	<meta property="og:title" content="Rahman YILMAZ - Developpeur Full Stack & Mobile" />
-	<meta property="og:description" content="Portfolio de Rahman YILMAZ, developpeur full stack et mobile." />
+	<meta property="og:title" content="Rahman YILMAZ - Ingénieur logiciel full stack" />
+	<meta property="og:description" content="Portfolio de Rahman YILMAZ : applications métier, data et IA appliquée." />
 	<meta property="og:url" content="https://sudo-rahman.fr/" />
 	<meta property="og:type" content="website" />
 </svelte:head>

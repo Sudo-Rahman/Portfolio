@@ -13,17 +13,26 @@ export const projects: Project[] = [
 		slug: "MediaFlow",
 		title: "MediaFlow",
 		summary:
-			"Boite a outils multimedia locale en Tauri 2 (Rust + Svelte 5) regroupant extraction de pistes, merge, OCR video, transcription, traduction IA multi-modeles et renommage en masse, avec pipeline FFmpeg, traitement natif et interface desktop multi-plateforme.",
+			"Boîte à outils multimédia locale en Tauri 2 (Rust + Svelte 5) regroupant extraction de pistes, OCR vidéo, transcription, traduction IA multi-modèles et renommage en masse, avec pipeline FFmpeg, traitement natif et interface desktop multi-plateforme.",
 		technologies: ["Rust", "Svelte 5", "Tauri 2", "FFmpeg", "TypeScript"],
 		url: "https://github.com/Sudo-Rahman/MediaFlow",
 		websiteUrl: "https://mediaflowtools.com/",
 		featured: true,
 	},
 	{
+		slug: "Argon",
+		title: "Argon",
+		summary:
+			"Projet décisionnel autour du dataset Yelp : data warehouse Kimball, ETL Python/Pandas, chargement PostgreSQL, nettoyage de métadonnées, analyse de sentiment sur les avis et tableaux de bord Metabase.",
+		technologies: ["Python", "Pandas", "PostgreSQL", "Metabase", "Transformers"],
+		url: "https://github.com/Sudo-Rahman/Argon",
+		featured: true,
+	},
+	{
 		slug: "Iridium",
 		title: "Iridium",
 		summary:
-			"Client desktop C++23/Qt 6 : centralise plus de 40 types de stockage cloud via rclone, avec exploration, recherche multi-remotes, synchronisation et suivi de progression en temps reel.",
+			"Client desktop C++23/Qt 6 : centralise plus de 40 types de stockage cloud via rclone, avec exploration, recherche multi-remotes, synchronisation et suivi de progression en temps réel.",
 		technologies: ["C++23", "Qt 6", "rclone", "CMake"],
 		url: "https://github.com/Sudo-Rahman/Iridium",
 		featured: true,
@@ -42,11 +51,11 @@ export const projects: Project[] = [
 		slug: "renamer",
 		title: "renamer",
 		summary:
-			"Application desktop multiplateforme Tauri 2 : renommage de lots de fichiers avec formatters combinables, apercu temps reel, API Rust/Axum, licences Stripe et auto-update.",
+			"Application desktop multiplateforme Tauri 2 : renommage de lots de fichiers avec formatters combinables, aperçu temps réel, API Rust/Axum, licences Stripe et auto-update.",
 		technologies: ["Rust", "Tauri 2", "Axum", "TypeScript"],
 		url: "https://github.com/Sudo-Rahman/renamer",
 		websiteUrl: "https://renamer.sudo-rahman.fr/",
-		featured: true,
+		featured: false,
 	},
 	{
 		slug: "Fractalium",
