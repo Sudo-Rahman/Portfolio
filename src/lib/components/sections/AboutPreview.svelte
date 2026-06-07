@@ -16,8 +16,9 @@
 				Ingénieur logiciel Bac+5 en Bases de Données et Intelligence
 				Artificielle. Deux ans d'alternance chez Sweepin sur des applications
 				mobiles et web multi-clients, puis des missions freelance autour d'un
-				SaaS et de pipelines IA. J'aime concevoir des produits utiles de bout
-				en bout, de l'interface à la donnée.
+				SaaS et de pipelines IA. J'intègre Codex App dans un workflow de
+				développement agentique pour accélérer l'implémentation et itérer sur
+				les choix techniques.
 			</p>
 		</AnimatedSection>
 

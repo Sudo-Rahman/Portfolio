@@ -31,8 +31,9 @@ export const profile = {
 	phone: "+33 7 81 38 88 82",
 	website: "https://sudo-rahman.fr/",
 	github: "https://github.com/Sudo-Rahman",
+	linkedin: "https://www.linkedin.com/in/rahman-yilmaz-9236ab270/",
 	summary:
-		"Ingénieur logiciel Bac+5 en Bases de Données et Intelligence Artificielle. Deux ans d'alternance chez Sweepin sur des applications mobiles et web multi-clients, avec maintenance corrective/évolutive, analyse d'anomalies, publication de versions, APIs, back-offices et bases de données. Missions freelance autour d'un SaaS et de pipelines IA. J'aime concevoir des produits utiles de bout en bout, de l'interface à la donnée, avec autonomie et exigence technique.",
+		"Ingénieur logiciel Bac+5 en Bases de Données et Intelligence Artificielle. Deux ans d'alternance chez Sweepin sur des applications mobiles et web multi-clients, avec maintenance corrective/évolutive, analyse d'anomalies, publication de versions, APIs, back-offices et bases de données. Missions freelance autour d'un SaaS et de pipelines IA. J'intègre Codex App dans un workflow de développement agentique pour accélérer l'implémentation, itérer sur l'architecture et maintenir une forte productivité.",
 };
 
 export const skills: Skill[] = [
@@ -72,23 +73,22 @@ export const skills: Skill[] = [
 	},
 	{
 		label: "Langues",
-		details: "Français natif, Turc bilingue, Anglais B1",
+		details: "Français natif, Turc bilingue, Anglais B2",
 	},
 ];
 
 export const experiences: Experience[] = [
 	{
-		company: "Solo Agilis Sweepin",
-		position:
-			"Développeur Full Stack et mobile (Alternance)",
-		startDate: "2023-09",
-		endDate: "2025-09",
-		location: "Dijon, France",
+		company: "MediaFlow",
+		position: "Développeur produit full stack desktop (Projet indépendant)",
+		startDate: "2026-01",
+		endDate: "présent",
+		location: "Remote",
 		highlights: [
-			"Développement d'applications métier mobiles et web pour les solutions SmartCity et e-santé de Sweepin, dans un contexte multi-clients et multi-produits",
-			"Mainteneur principal de la solution Android SmartCity : analyse d'anomalies, maintenance corrective/évolutive, ajout de fonctionnalités, création de modules et publication de versions",
-			"Intégration de Jetpack Compose dans l'écosystème Android de Sweepin et contribution à la modernisation des interfaces et outils internes",
-			"Élargissement progressif vers un rôle full stack avec contributions Android, frontend web et backend PHP/Symfony sur les applications, APIs, back-offices et besoins produit",
+			"Développement d'une application desktop locale en Tauri 2, Rust et Svelte 5 pour automatiser des traitements multimédias : extraction de pistes, fusion, transcription, OCR, traduction de sous-titres, mediainfo et renommage en masse",
+			"Conception d'un backend Rust orchestrant des traitements longs via FFmpeg/FFprobe, avec gestion de files d'attente, progression temps réel, validation des chemins et annulation des tâches",
+			"Intégration progressive de fonctionnalités IA : transcription audio, traduction multi-fournisseurs, préparation de sous-titres et réutilisation de segments traduits",
+			"Mise en place d'une base produit robuste : état persistant, logs, gestion des erreurs, interface Svelte 5, packaging desktop et CI GitHub Actions pour macOS/Linux/Windows",
 		],
 	},
 	{
@@ -102,6 +102,19 @@ export const experiences: Experience[] = [
 			"Intégration du paiement par abonnement, des webhooks et de la synchronisation des états d'abonnement, avec historique de transactions et gestion de tokens/licences",
 			"Mise en place d'une architecture événementielle Redis + BullMQ + Resend pour les emails transactionnels et l'automatisation des rappels",
 			"Contribution à un pipeline LLM de bout en bout : scraping multi-sources, normalisation en Markdown, préparation de textes et de datasets d'évaluation",
+		],
+	},
+	{
+		company: "Solo Agilis Sweepin",
+		position: "Développeur Full Stack et mobile (Alternance)",
+		startDate: "2023-09",
+		endDate: "2025-09",
+		location: "Dijon, France",
+		highlights: [
+			"Développement d'applications métier mobiles et web pour les solutions SmartCity et e-santé de Sweepin, dans un contexte multi-clients et multi-produits",
+			"Mainteneur principal de la solution Android SmartCity : analyse d'anomalies, maintenance corrective/évolutive, ajout de fonctionnalités, création de modules et publication de versions",
+			"Intégration de Jetpack Compose dans l'écosystème Android de Sweepin et contribution à la modernisation des interfaces et outils internes",
+			"Élargissement progressif vers un rôle full stack avec contributions Android, frontend web et backend PHP/Symfony sur les applications, APIs, back-offices et besoins produit",
 		],
 	},
 ];

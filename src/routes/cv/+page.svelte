@@ -9,6 +9,7 @@
 	import Phone from "lucide-svelte/icons/phone";
 	import MapPin from "lucide-svelte/icons/map-pin";
 	import Globe from "lucide-svelte/icons/globe";
+	import ExternalLink from "lucide-svelte/icons/external-link";
 	import GithubIcon from "$lib/components/shared/GithubIcon.svelte";
 	import { asset } from "$app/paths";
 </script>
@@ -80,6 +81,15 @@
 					>
 						<GithubIcon class="h-3.5 w-3.5 text-primary" />
 						Sudo-Rahman
+					</a>
+					<a
+						href="https://www.linkedin.com/in/rahman-yilmaz-9236ab270/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
+					>
+						<ExternalLink class="h-3.5 w-3.5 text-primary" />
+						LinkedIn
 					</a>
 				</div>
 			</GlassCard>

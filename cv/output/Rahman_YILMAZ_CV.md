@@ -8,7 +8,7 @@
 
 
 # Profil
-Ingénieur logiciel Bac+5 en Bases de Données et Intelligence Artificielle, basé à Chalon-sur-Saône. Deux ans d'alternance chez Sweepin sur des applications mobiles et web multi-clients, avec maintenance corrective/évolutive, analyse d'anomalies, publication de versions, APIs, back-offices et bases de données. Missions freelance autour d'un SaaS et de pipelines IA. J'aime concevoir des produits utiles de bout en bout, de l'interface à la donnée, avec autonomie et exigence technique.
+Ingénieur logiciel Bac+5 en Bases de Données et Intelligence Artificielle, basé à Chalon-sur-Saône. Deux ans d'alternance chez Sweepin sur des applications mobiles et web multi-clients, avec maintenance corrective/évolutive, analyse d'anomalies, publication de versions, APIs, back-offices et bases de données. Missions freelance autour d'un SaaS et de pipelines IA. J'intègre Codex App dans un workflow de développement agentique pour accélérer l'implémentation, itérer sur l'architecture et maintenir une forte productivité.
 
 # Points forts
 - Applications métier : mobile/web, APIs, back-offices, dashboards et amélioration d'outils existants
@@ -20,19 +20,19 @@ Ingénieur logiciel Bac+5 en Bases de Données et Intelligence Artificielle, bas
 - IA appliquée : pipelines LLM, transcription/traduction IA, analyse de texte, analyse de sentiment et préparation de datasets
 
 # Expérience
-## **Solo Agilis Sweepin**, Développeur Full Stack et mobile (Alternance)
+## **MediaFlow**, Développeur produit full stack desktop (Projet indépendant)
 
-Dijon, France
+Remote
 
-Sep 2023 – Sep 2025
+Jan 2026 – présent
 
-- Développement d'applications métier mobiles et web pour les solutions SmartCity et e-santé de Sweepin, dans un contexte multi-clients et multi-produits
+- Développement d'une application desktop locale en Tauri 2, Rust et Svelte 5 pour automatiser des traitements multimédias : extraction de pistes, fusion, transcription, OCR, traduction de sous-titres, mediainfo et renommage en masse
 
-- Mainteneur principal de la solution Android SmartCity : analyse d'anomalies, maintenance corrective/évolutive, ajout de fonctionnalités, création de modules et publication de versions
+- Conception d'un backend Rust orchestrant des traitements longs via FFmpeg/FFprobe, avec gestion de files d'attente, progression temps réel, validation des chemins et annulation des tâches
 
-- Intégration de Jetpack Compose dans l'écosystème Android de Sweepin et contribution à la modernisation des interfaces et outils internes
+- Intégration progressive de fonctionnalités IA : transcription audio, traduction multi-fournisseurs, préparation de sous-titres et réutilisation de segments traduits
 
-- Élargissement progressif vers un rôle full stack avec contributions Android, frontend web et backend PHP/Symfony sur les applications, APIs, back-offices et besoins produit
+- Mise en place d'une base produit robuste : état persistant, logs, gestion des erreurs, interface Svelte 5, packaging desktop et CI GitHub Actions pour macOS/Linux/Windows
 
 
 
@@ -49,6 +49,22 @@ Nov 2025 – Jan 2026
 - Mise en place d'une architecture événementielle Redis + BullMQ + Resend pour les emails transactionnels et l'automatisation des rappels
 
 - Contribution à un pipeline LLM de bout en bout : scraping multi-sources, normalisation en Markdown, préparation de textes et de datasets d'évaluation
+
+
+
+## **Solo Agilis Sweepin**, Développeur Full Stack et mobile (Alternance)
+
+Dijon, France
+
+Sep 2023 – Sep 2025
+
+- Développement d'applications métier mobiles et web pour les solutions SmartCity et e-santé de Sweepin, dans un contexte multi-clients et multi-produits
+
+- Mainteneur principal de la solution Android SmartCity : analyse d'anomalies, maintenance corrective/évolutive, ajout de fonctionnalités, création de modules et publication de versions
+
+- Intégration de Jetpack Compose dans l'écosystème Android de Sweepin et contribution à la modernisation des interfaces et outils internes
+
+- Élargissement progressif vers un rôle full stack avec contributions Android, frontend web et backend PHP/Symfony sur les applications, APIs, back-offices et besoins produit
 
 
 
@@ -92,21 +108,21 @@ Chalon-sur-Saône, France
 
 
 # Projets
-## **Argon - Data warehouse Yelp**
+## **linkKeep**
 
-Projet d'informatique décisionnelle : data warehouse Kimball en étoile, ETL Python/Pandas sur données CSV, JSON et PostgreSQL (~1,8 Go), nettoyage de métadonnées, chargement PostgreSQL via COPY, analyse de sentiment sur ~9 M de commentaires et tableaux de bord Metabase
-
-
-
-## **MediaFlow**
-
-Boîte à outils multimédia locale en Tauri 2 (Rust + Svelte 5) regroupant extraction de pistes, OCR vidéo, transcription, traduction IA multi-modèles et renommage en masse, avec pipeline FFmpeg et interface desktop multi-plateforme
+Application Apple native iOS/iPadOS/macOS : organisation de signets avec SwiftUI, Core Data/CloudKit, synchronisation iCloud, santé des liens, verrouillage biométrique et site web multilingue SvelteKit
 
 
 
 ## **Iridium**
 
 Client desktop C++23/Qt 6 : centralise plusieurs types de stockage cloud via rclone, avec exploration, recherche multi-remotes, synchronisation et suivi de progression en temps réel
+
+
+
+## **Argon - Data warehouse Yelp**
+
+Projet d'informatique décisionnelle : data warehouse Kimball en étoile, ETL Python/Pandas sur données CSV, JSON et PostgreSQL (~1,8 Go), nettoyage de métadonnées, chargement PostgreSQL via COPY, analyse de sentiment sur ~9 M de commentaires et tableaux de bord Metabase
 
 
 
@@ -135,4 +151,4 @@ Serveur Java multi-clients : indexe et interroge plus de 100 Go de parties PGN, 
 
 **Desktop & Système:** Tauri 2, Qt 5/6, Iced, MPI, sockets TCP, rclone
 
-**Langues:** Français (natif), Turc (bilingue), Anglais B1 (documentation technique, échanges écrits simples)
+**Langues:** Français (natif), Turc (bilingue), Anglais B2

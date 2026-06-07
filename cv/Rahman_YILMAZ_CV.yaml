@@ -8,25 +8,29 @@ cv:
   social_networks:
     - network: GitHub
       username: Sudo-Rahman
+  custom_connections:
+    - fontawesome_icon: linkedin
+      placeholder: LinkedIn
+      url: https://www.linkedin.com/in/rahman-yilmaz-9236ab270/
   sections:
     Profil:
-      - Ingénieur logiciel Bac+5 en Bases de Données et Intelligence Artificielle, basé à Chalon-sur-Saône. Deux ans d'alternance chez Sweepin sur des applications mobiles et web multi-clients, avec maintenance corrective/évolutive, analyse d'anomalies, publication de versions, APIs, back-offices et bases de données. Missions freelance autour d'un SaaS et de pipelines IA. J'aime concevoir des produits utiles de bout en bout, de l'interface à la donnée, avec autonomie et exigence technique.
+      - Ingénieur logiciel Bac+5 en Bases de Données et Intelligence Artificielle, basé à Chalon-sur-Saône. Deux ans d'alternance chez Sweepin sur des applications mobiles et web multi-clients, avec maintenance corrective/évolutive, analyse d'anomalies, publication de versions, APIs, back-offices et bases de données. Missions freelance autour d'un SaaS et de pipelines IA. J'intègre Codex App dans un workflow de développement agentique pour accélérer l'implémentation, itérer sur l'architecture et maintenir une forte productivité.
     "Points forts":
       - bullet: "Applications métier : mobile/web, APIs, back-offices, dashboards et amélioration d'outils existants"
       - bullet: "Maintenance applicative : analyse d'anomalies, corrections, évolutions et publication de versions"
       - bullet: "Data & BI : SQL/PostgreSQL, ETL Python/Pandas, data warehouse, qualité de données et tableaux de bord"
       - bullet: "IA appliquée : pipelines LLM, transcription/traduction IA, analyse de texte, analyse de sentiment et préparation de datasets"
     Expérience:
-      - company: Solo Agilis Sweepin
-        position: Développeur Full Stack et mobile (Alternance)
-        start_date: 2023-09
-        end_date: 2025-09
-        location: Dijon, France
+      - company: MediaFlow
+        position: Développeur produit full stack desktop (Projet indépendant)
+        start_date: 2026-01
+        end_date: present
+        location: Remote
         highlights:
-          - "Développement d'applications métier mobiles et web pour les solutions SmartCity et e-santé de Sweepin, dans un contexte multi-clients et multi-produits"
-          - "Mainteneur principal de la solution Android SmartCity : analyse d'anomalies, maintenance corrective/évolutive, ajout de fonctionnalités, création de modules et publication de versions"
-          - "Intégration de Jetpack Compose dans l'écosystème Android de Sweepin et contribution à la modernisation des interfaces et outils internes"
-          - "Élargissement progressif vers un rôle full stack avec contributions Android, frontend web et backend PHP/Symfony sur les applications, APIs, back-offices et besoins produit"
+          - "Développement d'une application desktop locale en Tauri 2, Rust et Svelte 5 pour automatiser des traitements multimédias : extraction de pistes, fusion, transcription, OCR, traduction de sous-titres, mediainfo et renommage en masse"
+          - "Conception d'un backend Rust orchestrant des traitements longs via FFmpeg/FFprobe, avec gestion de files d'attente, progression temps réel, validation des chemins et annulation des tâches"
+          - "Intégration progressive de fonctionnalités IA : transcription audio, traduction multi-fournisseurs, préparation de sous-titres et réutilisation de segments traduits"
+          - "Mise en place d'une base produit robuste : état persistant, logs, gestion des erreurs, interface Svelte 5, packaging desktop et CI GitHub Actions pour macOS/Linux/Windows"
       - company: Steerway
         position: Développeur Full Stack (Freelance)
         start_date: 2025-11
@@ -37,6 +41,16 @@ cv:
           - "Intégration du paiement par abonnement, des webhooks et de la synchronisation des états d'abonnement, avec historique de transactions et gestion de tokens/licences"
           - "Mise en place d'une architecture événementielle Redis + BullMQ + Resend pour les emails transactionnels et l'automatisation des rappels"
           - "Contribution à un pipeline LLM de bout en bout : scraping multi-sources, normalisation en Markdown, préparation de textes et de datasets d'évaluation"
+      - company: Solo Agilis Sweepin
+        position: Développeur Full Stack et mobile (Alternance)
+        start_date: 2023-09
+        end_date: 2025-09
+        location: Dijon, France
+        highlights:
+          - "Développement d'applications métier mobiles et web pour les solutions SmartCity et e-santé de Sweepin, dans un contexte multi-clients et multi-produits"
+          - "Mainteneur principal de la solution Android SmartCity : analyse d'anomalies, maintenance corrective/évolutive, ajout de fonctionnalités, création de modules et publication de versions"
+          - "Intégration de Jetpack Compose dans l'écosystème Android de Sweepin et contribution à la modernisation des interfaces et outils internes"
+          - "Élargissement progressif vers un rôle full stack avec contributions Android, frontend web et backend PHP/Symfony sur les applications, APIs, back-offices et besoins produit"
     Formation:
       - institution: Université de Bourgogne / Université de Bourgogne Europe
         area: Informatique - Bases de Données et Intelligence Artificielle
@@ -57,12 +71,12 @@ cv:
         date: 2020
         location: Chalon-sur-Saône, France
     Projets:
-      - name: "Argon - Data warehouse Yelp"
-        summary: "Projet d'informatique décisionnelle : data warehouse Kimball en étoile, ETL Python/Pandas sur données CSV, JSON et PostgreSQL (~1,8 Go), nettoyage de métadonnées, chargement PostgreSQL via COPY, analyse de sentiment sur ~9 M de commentaires et tableaux de bord Metabase"
-      - name: "MediaFlow"
-        summary: "Boîte à outils multimédia locale en Tauri 2 (Rust + Svelte 5) regroupant extraction de pistes, OCR vidéo, transcription, traduction IA multi-modèles et renommage en masse, avec pipeline FFmpeg et interface desktop multi-plateforme"
+      - name: "linkKeep"
+        summary: "Application Apple native iOS/iPadOS/macOS : organisation de signets avec SwiftUI, Core Data/CloudKit, synchronisation iCloud, santé des liens, verrouillage biométrique et site web multilingue SvelteKit"
       - name: "Iridium"
         summary: "Client desktop C++23/Qt 6 : centralise plusieurs types de stockage cloud via rclone, avec exploration, recherche multi-remotes, synchronisation et suivi de progression en temps réel"
+      - name: "Argon - Data warehouse Yelp"
+        summary: "Projet d'informatique décisionnelle : data warehouse Kimball en étoile, ETL Python/Pandas sur données CSV, JSON et PostgreSQL (~1,8 Go), nettoyage de métadonnées, chargement PostgreSQL via COPY, analyse de sentiment sur ~9 M de commentaires et tableaux de bord Metabase"
       - name: "Fractalium"
         summary: "Application C++/Qt de calcul distribué via MPI : zoom interactif, précision 100 décimales, snapshots de session et exécution sur cluster"
       - name: "Lichess-Data"
@@ -81,7 +95,7 @@ cv:
       - label: "Desktop & Système"
         details: "Tauri 2, Qt 5/6, Iced, MPI, sockets TCP, rclone"
       - label: "Langues"
-        details: "Français (natif), Turc (bilingue), Anglais B1 (documentation technique, échanges écrits simples)"
+        details: "Français (natif), Turc (bilingue), Anglais B2"
 design:
   theme: classic
   page:

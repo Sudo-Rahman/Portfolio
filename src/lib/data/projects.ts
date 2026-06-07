@@ -10,22 +10,13 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
-		slug: "MediaFlow",
-		title: "MediaFlow",
+		slug: "linkKeep",
+		title: "linkKeep",
 		summary:
-			"Boîte à outils multimédia locale en Tauri 2 (Rust + Svelte 5) regroupant extraction de pistes, OCR vidéo, transcription, traduction IA multi-modèles et renommage en masse, avec pipeline FFmpeg, traitement natif et interface desktop multi-plateforme.",
-		technologies: ["Rust", "Svelte 5", "Tauri 2", "FFmpeg", "TypeScript"],
-		url: "https://github.com/Sudo-Rahman/MediaFlow",
-		websiteUrl: "https://mediaflowtools.com/",
-		featured: true,
-	},
-	{
-		slug: "Argon",
-		title: "Argon",
-		summary:
-			"Projet décisionnel autour du dataset Yelp : data warehouse Kimball, ETL Python/Pandas, chargement PostgreSQL, nettoyage de métadonnées, analyse de sentiment sur les avis et tableaux de bord Metabase.",
-		technologies: ["Python", "Pandas", "PostgreSQL", "Metabase", "Transformers"],
-		url: "https://github.com/Sudo-Rahman/Argon",
+			"Application Apple native iOS/iPadOS/macOS : organisation de signets avec SwiftUI, Core Data/CloudKit, synchronisation iCloud, sante des liens, verrouillage biometrique et site web multilingue SvelteKit.",
+		technologies: ["Swift", "SwiftUI", "Core Data", "CloudKit"],
+		url: "https://github.com/Sudo-Rahman/linkKeep",
+		websiteUrl: "https://linkkeep.sudo-rahman.fr/",
 		featured: true,
 	},
 	{
@@ -38,13 +29,30 @@ export const projects: Project[] = [
 		featured: true,
 	},
 	{
-		slug: "linkKeep",
-		title: "linkKeep",
+		slug: "Argon",
+		title: "Argon",
 		summary:
-			"Application Apple native iOS/iPadOS/macOS : organisation de signets avec SwiftUI, Core Data/CloudKit, synchronisation iCloud, sante des liens, verrouillage biometrique et site web multilingue SvelteKit.",
-		technologies: ["Swift", "SwiftUI", "Core Data", "CloudKit"],
-		url: "https://github.com/Sudo-Rahman/linkKeep",
-		websiteUrl: "https://linkkeep.sudo-rahman.fr/",
+			"Projet décisionnel autour du dataset Yelp : data warehouse Kimball, ETL Python/Pandas, chargement PostgreSQL, nettoyage de métadonnées, analyse de sentiment sur les avis et tableaux de bord Metabase.",
+		technologies: ["Python", "Pandas", "PostgreSQL", "Metabase", "Transformers"],
+		url: "https://github.com/Sudo-Rahman/Argon",
+		featured: true,
+	},
+	{
+		slug: "Fractalium",
+		title: "Fractalium",
+		summary:
+			"Application C++/Qt de calcul distribue de fractales via MPI : zoom interactif, precision 100 decimales, snapshots de session et execution sur cluster.",
+		technologies: ["C++", "Qt", "MPI", "CMake"],
+		url: "https://github.com/Sudo-Rahman/Fractalium",
+		featured: true,
+	},
+	{
+		slug: "Lichess-Data",
+		title: "Lichess-Data",
+		summary:
+			"Serveur Java multi-clients : indexe et interroge des PGN Lichess de plus de 100 Go, avec recherche, statistiques et PageRank.",
+		technologies: ["Java", "Sockets", "Concurrency"],
+		url: "https://github.com/Sudo-Rahman/Lichess-Data",
 		featured: true,
 	},
 	{
@@ -55,24 +63,6 @@ export const projects: Project[] = [
 		technologies: ["Rust", "Tauri 2", "Axum", "TypeScript"],
 		url: "https://github.com/Sudo-Rahman/renamer",
 		websiteUrl: "https://renamer.sudo-rahman.fr/",
-		featured: false,
-	},
-	{
-		slug: "Fractalium",
-		title: "Fractalium",
-		summary:
-			"Application C++/Qt de calcul distribue de fractales via MPI : zoom interactif, precision 100 decimales, snapshots de session et execution sur cluster.",
-		technologies: ["C++", "Qt", "MPI", "CMake"],
-		url: "https://github.com/Sudo-Rahman/Fractalium",
-		featured: false,
-	},
-	{
-		slug: "Lichess-Data",
-		title: "Lichess-Data",
-		summary:
-			"Serveur Java multi-clients : indexe et interroge des PGN Lichess de plus de 100 Go, avec recherche, statistiques et PageRank.",
-		technologies: ["Java", "Sockets", "Concurrency"],
-		url: "https://github.com/Sudo-Rahman/Lichess-Data",
 		featured: false,
 	},
 	{
