@@ -18,7 +18,7 @@
 	<title>CV - Rahman YILMAZ</title>
 	<meta
 		name="description"
-		content="Curriculum vitae de Rahman YILMAZ, ingénieur logiciel full stack orienté data et IA appliquée."
+		content="Curriculum vitae de Rahman YILMAZ, développeur Android / Full Stack : Kotlin, Jetpack Compose, SvelteKit, Node.js, APIs, paiements, tests et livraison."
 	/>
 </svelte:head>
 
@@ -31,9 +31,9 @@
 						{profile.name}
 					</h1>
 					<p class="text-lg text-primary font-medium">{profile.headline}</p>
-					</div>
-					<a
-						href={asset("/Rahman_YILMAZ_CV.pdf")}
+				</div>
+				<a
+					href={asset("/Rahman_YILMAZ_CV.pdf")}
 					target="_blank"
 					class="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 shrink-0"
 				>
@@ -96,28 +96,12 @@
 		</AnimatedSection>
 
 		<AnimatedSection delay={100}>
-			<h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
-				<span class="gradient-text">Expérience</span>
-				professionnelle
-			</h2>
-		</AnimatedSection>
-		<CVTimeline entries={experiences} type="experience" />
-
-		<AnimatedSection delay={100}>
-			<h2 class="text-2xl font-bold mb-8 mt-20 flex items-center gap-3">
-				<span class="gradient-text">Formation</span>
-				académique
-			</h2>
-		</AnimatedSection>
-		<CVTimeline entries={education} type="education" />
-
-		<AnimatedSection delay={100}>
-			<h2 class="text-2xl font-bold mb-8 mt-20">
+			<h2 class="text-2xl font-bold mb-8">
 				<span class="gradient-text">Compétences</span>
 				techniques
 			</h2>
 		</AnimatedSection>
-		<div class="space-y-6">
+		<div class="space-y-6 mb-20">
 			{#each skills as group, i (group.label)}
 				<AnimatedSection delay={i * 60} direction="up">
 					<div>
@@ -135,5 +119,21 @@
 				</AnimatedSection>
 			{/each}
 		</div>
+
+		<AnimatedSection delay={100}>
+			<h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+				<span class="gradient-text">Expérience</span>
+				professionnelle
+			</h2>
+		</AnimatedSection>
+		<CVTimeline entries={experiences} type="experience" />
+
+		<AnimatedSection delay={100}>
+			<h2 class="text-2xl font-bold mb-8 mt-20 flex items-center gap-3">
+				<span class="gradient-text">Formation</span>
+				académique
+			</h2>
+		</AnimatedSection>
+		<CVTimeline entries={education} type="education" />
 	</div>
 </div>

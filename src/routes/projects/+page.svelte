@@ -8,7 +8,7 @@
 	<title>Projets - Rahman YILMAZ</title>
 	<meta
 		name="description"
-		content="Découvrez les projets de Rahman YILMAZ : applications web, mobile, desktop, data et IA appliquée."
+		content="Découvrez les projets de Rahman YILMAZ : applications Android, logiciels desktop, produits SaaS, paiements, tests, data et automatisation."
 	/>
 </svelte:head>
 
@@ -20,16 +20,16 @@
 					Mes <span class="gradient-text">Projets</span>
 				</h1>
 				<p class="text-muted-foreground text-lg leading-relaxed">
-					Applications web, mobile, desktop, data et IA appliquée — de l'idée à
-					la livraison. {projects.length} projets réalisés.
+					Applications Android, logiciels desktop, produits SaaS, paiements,
+					tests, data et automatisation. {projects.length} projets réalisés.
 				</p>
 			</div>
-			</AnimatedSection>
+		</AnimatedSection>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				{#each projects as project, i (project.slug)}
-					<AnimatedSection delay={Math.min(i * 60, 300)} direction="up">
-						<ProjectCard {project} />
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			{#each projects as project, i (project.slug)}
+				<AnimatedSection delay={Math.min(i * 60, 300)} direction="up">
+					<ProjectCard {project} />
 				</AnimatedSection>
 			{/each}
 		</div>

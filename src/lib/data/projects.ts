@@ -10,23 +10,50 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
-		slug: "linkKeep",
-		title: "linkKeep",
+		slug: "MediaFlow",
+		title: "MediaFlow",
 		summary:
-			"Application Apple native iOS/iPadOS/macOS : organisation de signets avec SwiftUI, Core Data/CloudKit, synchronisation iCloud, sante des liens, verrouillage biometrique et site web multilingue SvelteKit.",
-		technologies: ["Swift", "SwiftUI", "Core Data", "CloudKit"],
-		url: "https://github.com/Sudo-Rahman/linkKeep",
-		websiteUrl: "https://linkkeep.sudo-rahman.fr/",
+			"Application desktop locale : Tauri 2, Rust, Svelte 5, FFmpeg, OCR, transcription, traduction IA, tests unitaires Rust, tests d'intégration OCR/merge et CI multi-OS.",
+		technologies: ["Rust", "Tauri 2", "Svelte 5", "FFmpeg", "GitHub Actions"],
+		url: "https://github.com/Sudo-Rahman/MediaFlow",
 		featured: true,
 	},
 	{
 		slug: "Iridium",
 		title: "Iridium",
 		summary:
-			"Client desktop C++23/Qt 6 : centralise plus de 40 types de stockage cloud via rclone, avec exploration, recherche multi-remotes, synchronisation et suivi de progression en temps réel.",
-		technologies: ["C++23", "Qt 6", "rclone", "CMake"],
+			"Client desktop C++23/Qt 6 pour rclone : gestion multi-cloud, exploration, recherche multi-remotes, synchronisation, progression temps réel, packaging multi-plateforme et releases GitHub.",
+		technologies: ["C++23", "Qt 6", "rclone", "CMake", "Conan"],
 		url: "https://github.com/Sudo-Rahman/Iridium",
 		featured: true,
+	},
+	{
+		slug: "linkKeep",
+		title: "linkKeep",
+		summary:
+			"Application Apple native iOS/iPadOS/macOS : SwiftUI, Core Data/CloudKit, synchronisation iCloud, architecture Domain/Data/Services, tests unitaires Swift et site multilingue SvelteKit.",
+		technologies: ["Swift", "SwiftUI", "Core Data", "CloudKit", "Swift Testing"],
+		url: "https://github.com/Sudo-Rahman/linkKeep",
+		websiteUrl: "https://linkkeep.sudo-rahman.fr/",
+		featured: true,
+	},
+	{
+		slug: "kotlin-meteo",
+		title: "Kotlin Météo",
+		summary:
+			"Application Android native de prévisions météo en Kotlin : Open-Meteo, Geoapify, géolocalisation GPS, recherche de ville, prévisions 24 h/10 jours et persistance locale.",
+		technologies: ["Kotlin", "Java", "Android", "Gradle"],
+		url: "https://github.com/Sudo-Rahman/kotlin-meteo",
+		featured: true,
+	},
+	{
+		slug: "Before-After-Image",
+		title: "Before-After-Image",
+		summary:
+			"Bibliothèque Android Jetpack Compose : composant before/after réutilisable, API simple, personnalisation du composant, démonstration et publication Gradle.",
+		technologies: ["Kotlin", "Jetpack Compose", "Android", "Gradle"],
+		url: "https://github.com/Sudo-Rahman/Before-After-Image",
+		featured: false,
 	},
 	{
 		slug: "Argon",
@@ -35,16 +62,16 @@ export const projects: Project[] = [
 			"Projet décisionnel autour du dataset Yelp : data warehouse Kimball, ETL Python/Pandas, chargement PostgreSQL, nettoyage de métadonnées, analyse de sentiment sur les avis et tableaux de bord Metabase.",
 		technologies: ["Python", "Pandas", "PostgreSQL", "Metabase", "Transformers"],
 		url: "https://github.com/Sudo-Rahman/Argon",
-		featured: true,
+		featured: false,
 	},
 	{
 		slug: "Fractalium",
 		title: "Fractalium",
 		summary:
-			"Application C++/Qt de calcul distribue de fractales via MPI : zoom interactif, precision 100 decimales, snapshots de session et execution sur cluster.",
+			"Application C++/Qt de calcul distribué de fractales via MPI : zoom interactif, précision 100 décimales, snapshots de session et exécution sur cluster.",
 		technologies: ["C++", "Qt", "MPI", "CMake"],
 		url: "https://github.com/Sudo-Rahman/Fractalium",
-		featured: true,
+		featured: false,
 	},
 	{
 		slug: "Lichess-Data",
@@ -53,7 +80,7 @@ export const projects: Project[] = [
 			"Serveur Java multi-clients : indexe et interroge des PGN Lichess de plus de 100 Go, avec recherche, statistiques et PageRank.",
 		technologies: ["Java", "Sockets", "Concurrency"],
 		url: "https://github.com/Sudo-Rahman/Lichess-Data",
-		featured: true,
+		featured: false,
 	},
 	{
 		slug: "renamer",
@@ -102,30 +129,12 @@ export const projects: Project[] = [
 		featured: false,
 	},
 	{
-		slug: "Before-After-Image",
-		title: "Before-After-Image",
-		summary:
-			"Bibliotheque Android (Jetpack Compose) permettant de comparer visuellement deux images a l'aide d'un slider interactif superpose.",
-		technologies: ["Kotlin", "Jetpack Compose", "Android"],
-		url: "https://github.com/Sudo-Rahman/Before-After-Image",
-		featured: false,
-	},
-	{
 		slug: "Curling-Three-js",
 		title: "Curling-Three-js",
 		summary:
 			"Projet academique — partie de curling interactive en 3D dans le navigateur, construite avec Three.js et WebGL.",
 		technologies: ["JavaScript", "Three.js", "WebGL", "GLSL"],
 		url: "https://github.com/Sudo-Rahman/Curling-Three-js",
-		featured: false,
-	},
-	{
-		slug: "kotlin-meteo",
-		title: "kotlin-meteo",
-		summary:
-			"Application Android native de previsions meteorologiques, ecrite en Kotlin avec l'API Open-Meteo.",
-		technologies: ["Kotlin", "Android", "Retrofit"],
-		url: "https://github.com/Sudo-Rahman/kotlin-meteo",
 		featured: false,
 	},
 	{

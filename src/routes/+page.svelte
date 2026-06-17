@@ -6,13 +6,13 @@
 </script>
 
 <svelte:head>
-	<title>Rahman YILMAZ - Ingénieur logiciel full stack</title>
+	<title>Rahman YILMAZ - Développeur Android / Full Stack</title>
 	<meta
 		name="description"
-		content="Portfolio de Rahman YILMAZ, ingénieur logiciel full stack orienté applications métier, data et IA appliquée."
+		content="Portfolio de Rahman YILMAZ, développeur Android / Full Stack : Kotlin, Jetpack Compose, SvelteKit, Node.js, SaaS, desktop, paiements, tests et APIs."
 	/>
-	<meta property="og:title" content="Rahman YILMAZ - Ingénieur logiciel full stack" />
-	<meta property="og:description" content="Portfolio de Rahman YILMAZ : applications métier, data et IA appliquée." />
+	<meta property="og:title" content="Rahman YILMAZ - Développeur Android / Full Stack" />
+	<meta property="og:description" content="Portfolio de Rahman YILMAZ : Android, Full Stack, projets SaaS, desktop, paiements, tests et APIs." />
 	<meta property="og:url" content="https://sudo-rahman.fr/" />
 	<meta property="og:type" content="website" />
 </svelte:head>

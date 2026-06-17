@@ -1,5 +1,6 @@
 <script lang="ts">
 	import GithubIcon from "$lib/components/shared/GithubIcon.svelte";
+	import { resolve } from "$app/paths";
 	import Mail from "lucide-svelte/icons/mail";
 
 	const currentYear = new Date().getFullYear();
@@ -9,9 +10,9 @@
 	<div class="max-w-6xl mx-auto px-6 py-12">
 		<div class="flex flex-col md:flex-row justify-between items-center gap-6">
 			<div class="flex flex-col items-center md:items-start gap-1">
-				<a href="/" class="text-lg font-bold gradient-text">R.</a>
+				<a href={resolve("/")} class="text-lg font-bold gradient-text">R.</a>
 				<p class="text-sm text-muted-foreground">
-					Developpeur Full Stack & Mobile
+					Développeur Android / Full Stack
 				</p>
 			</div>
 

@@ -13,12 +13,12 @@
 
 		<AnimatedSection delay={100}>
 			<p class="text-lg text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-				Ingénieur logiciel Bac+5 en Bases de Données et Intelligence
-				Artificielle. Deux ans d'alternance chez Sweepin sur des applications
-				mobiles et web multi-clients, puis des missions freelance autour d'un
-				SaaS et de pipelines IA. J'intègre Codex App dans un workflow de
-				développement agentique pour accélérer l'implémentation et itérer sur
-				les choix techniques.
+				Développeur Android / Full Stack, Bac+5 en informatique, avec deux ans
+				d'expérience chez Sweepin sur des applications SmartCity et e-santé.
+				Passionné par l'informatique depuis jeune, je suis curieux, autonome et
+				j'aime apprendre vite lorsqu'un projet demande une nouvelle technologie.
+				Je développe aussi mes propres logiciels, de l'architecture au paiement,
+				avec tests, CI, packaging et suivi des releases.
 			</p>
 		</AnimatedSection>
 

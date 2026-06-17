@@ -8,63 +8,69 @@
 
 
 # Profil
-Ingénieur logiciel Bac+5 en Bases de Données et Intelligence Artificielle, basé à Chalon-sur-Saône. Deux ans d'alternance chez Sweepin sur des applications mobiles et web multi-clients, avec maintenance corrective/évolutive, analyse d'anomalies, publication de versions, APIs, back-offices et bases de données. Missions freelance autour d'un SaaS et de pipelines IA. J'intègre Codex App dans un workflow de développement agentique pour accélérer l'implémentation, itérer sur l'architecture et maintenir une forte productivité.
+Développeur Android / Full Stack, Bac+5 en informatique, avec deux ans d'expérience chez Sweepin sur des applications mobiles SmartCity et e-santé.
 
-# Points forts
-- Applications métier : mobile/web, APIs, back-offices, dashboards et amélioration d'outils existants
+Passionné par l'informatique depuis jeune, j'aime comprendre comment les choses fonctionnent, apprendre de nouvelles technologies et progresser en continu. Curieux et autonome, je sais monter en compétence rapidement lorsqu'un projet demande d'explorer un nouvel outil, un nouveau framework ou un environnement technique différent.
 
-- Maintenance applicative : analyse d'anomalies, corrections, évolutions et publication de versions
+# Compétences
+**Android:** Kotlin, Java, Jetpack Compose, Clean Architecture, Gradle
 
-- Data & BI : SQL/PostgreSQL, ETL Python/Pandas, data warehouse, qualité de données et tableaux de bord
+**Web & backend:** Node.js, SvelteKit, TypeScript, PHP/Symfony, APIs REST, PostgreSQL, MySQL, Prisma, Redis, Paddle, Stripe, webhooks
 
-- IA appliquée : pipelines LLM, transcription/traduction IA, analyse de texte, analyse de sentiment et préparation de datasets
+**Tests & livraison:** Tests unitaires, tests d'intégration, CI/CD, GitHub Actions, Docker, debugging, documentation
+
+**Logiciel & desktop:** Rust, Tauri 2, C++23, Qt 6, FFmpeg, rclone, CMake, Conan
+
+**Data, IA & automatisation:** Python, Pandas, SQL, OCR, transcription, traduction IA, pipelines LLM, BullMQ
+
+**Langues:** Français (natif), Turc (bilingue), Anglais B2
 
 # Expérience
-## **MediaFlow**, Développeur produit full stack desktop (Projet indépendant)
-
-Remote
-
-Jan 2026 – présent
-
-- Développement d'une application desktop locale en Tauri 2, Rust et Svelte 5 pour automatiser des traitements multimédias : extraction de pistes, fusion, transcription, OCR, traduction de sous-titres, mediainfo et renommage en masse
-
-- Conception d'un backend Rust orchestrant des traitements longs via FFmpeg/FFprobe, avec gestion de files d'attente, progression temps réel, validation des chemins et annulation des tâches
-
-- Intégration progressive de fonctionnalités IA : transcription audio, traduction multi-fournisseurs, préparation de sous-titres et réutilisation de segments traduits
-
-- Mise en place d'une base produit robuste : état persistant, logs, gestion des erreurs, interface Svelte 5, packaging desktop et CI GitHub Actions pour macOS/Linux/Windows
-
-
-
-## **Steerway**, Développeur Full Stack (Freelance)
-
-Remote
-
-Nov 2025 – Jan 2026
-
-- Conception et livraison d'une plateforme SaaS monorepo en SvelteKit 5/TypeScript avec authentification, dashboard client, PostgreSQL/Prisma et logique de licences
-
-- Intégration du paiement par abonnement, des webhooks et de la synchronisation des états d'abonnement, avec historique de transactions et gestion de tokens/licences
-
-- Mise en place d'une architecture événementielle Redis + BullMQ + Resend pour les emails transactionnels et l'automatisation des rappels
-
-- Contribution à un pipeline LLM de bout en bout : scraping multi-sources, normalisation en Markdown, préparation de textes et de datasets d'évaluation
-
-
-
-## **Solo Agilis Sweepin**, Développeur Full Stack et mobile (Alternance)
+## **Solo Agilis Sweepin**, Développeur Android & Full Stack
 
 Dijon, France
 
 Sep 2023 – Sep 2025
 
-- Développement d'applications métier mobiles et web pour les solutions SmartCity et e-santé de Sweepin, dans un contexte multi-clients et multi-produits
+- Maintenu la solution Android SmartCity : analyse d'anomalies, corrections, évolutions, création de modules et publication de versions
 
-- Mainteneur principal de la solution Android SmartCity : analyse d'anomalies, maintenance corrective/évolutive, ajout de fonctionnalités, création de modules et publication de versions
+- Intégré Jetpack Compose dans l'écosystème Android de Sweepin pour moderniser des interfaces mobiles et outils internes
 
-- Intégration de Jetpack Compose dans l'écosystème Android de Sweepin et contribution à la modernisation des interfaces et outils internes
+- Développé des fonctionnalités mobiles et web pour les solutions SmartCity et e-santé dans un contexte multi-clients
 
-- Élargissement progressif vers un rôle full stack avec contributions Android, frontend web et backend PHP/Symfony sur les applications, APIs, back-offices et besoins produit
+- Connecté les écrans Android aux APIs REST, back-offices et services PHP/Symfony
+
+
+
+## **Steerway**, Développeur logiciel freelance
+
+Remote
+
+Nov 2025 – Jan 2026
+
+- Développé une plateforme SaaS SvelteKit/TypeScript avec authentification, dashboard client, PostgreSQL/Prisma et gestion de licences
+
+- Intégré Paddle : abonnements, webhooks, synchronisation d'états, historique de transactions et tokens/licences
+
+- Mis en place une architecture événementielle Redis + BullMQ + Resend pour les emails transactionnels et les rappels
+
+- Contribué à un pipeline documentaire : scraping multi-sources, normalisation Markdown, recherche hybride et contenus exploitables
+
+
+
+## **Indépendant**, Développeur & éditeur de logiciels
+
+Remote
+
+Sep 2025 – présent
+
+- Conçu et commercialisé des logiciels destinés aux particuliers : architecture, développement, paiements Stripe (abonnements/achats uniques), tests, packaging et maintenance
+
+- Développé des applications desktop, mobile et sites produit avec Tauri/Rust, SvelteKit, SwiftUI ou Kotlin selon le besoin
+
+- Mis en place des tests unitaires, tests d'intégration, CI GitHub Actions, documentation et suivi des releases
+
+- Piloté l'acquisition produit : SEO technique, pages produit, tracking, Google Ads, Apple Ads et suivi des conversions
 
 
 
@@ -78,8 +84,6 @@ Dijon, France
 
 
 Sep 2023 – Sep 2025
-
-- Parcours orienté bases de données, intelligence artificielle, systèmes d'information et exploitation de données
 
 
 
@@ -108,47 +112,26 @@ Chalon-sur-Saône, France
 
 
 # Projets
-## **linkKeep**
+## **MediaFlow**
 
-Application Apple native iOS/iPadOS/macOS : organisation de signets avec SwiftUI, Core Data/CloudKit, synchronisation iCloud, santé des liens, verrouillage biométrique et site web multilingue SvelteKit
+Application desktop locale : Tauri 2, Rust, Svelte 5, FFmpeg, OCR, transcription, traduction IA, tests unitaires Rust, tests d'intégration OCR/merge et CI multi-OS
 
 
 
 ## **Iridium**
 
-Client desktop C++23/Qt 6 : centralise plusieurs types de stockage cloud via rclone, avec exploration, recherche multi-remotes, synchronisation et suivi de progression en temps réel
+Client desktop C++23/Qt 6 pour rclone : gestion multi-cloud, exploration, recherche multi-remotes, synchronisation, progression temps réel, packaging multi-plateforme et releases GitHub
 
 
 
-## **Argon - Data warehouse Yelp**
+## **linkKeep**
 
-Projet d'informatique décisionnelle : data warehouse Kimball en étoile, ETL Python/Pandas sur données CSV, JSON et PostgreSQL (~1,8 Go), nettoyage de métadonnées, chargement PostgreSQL via COPY, analyse de sentiment sur ~9 M de commentaires et tableaux de bord Metabase
-
-
-
-## **Fractalium**
-
-Application C++/Qt de calcul distribué via MPI : zoom interactif, précision 100 décimales, snapshots de session et exécution sur cluster
+Application Apple native iOS/iPadOS/macOS : SwiftUI, Core Data/CloudKit, synchronisation iCloud, architecture Domain/Data/Services, tests unitaires Swift et site multilingue
 
 
 
-## **Lichess-Data**
+## **Kotlin Météo**
 
-Serveur Java multi-clients : indexe et interroge plus de 100 Go de parties PGN, avec recherche, statistiques et PageRank
+Application Android native de prévisions météo : Kotlin, Open-Meteo, Geoapify, géolocalisation GPS, recherche de ville, prévisions 24 h/10 jours et persistance locale
 
 
-
-# Compétences
-**Support & applications métier:** Maintenance corrective/évolutive, analyse d'anomalies, documentation, publication de versions, back-offices
-
-**Backend & Data:** Symfony, Node.js, Axum, API REST, Prisma, PostgreSQL, MariaDB, MongoDB, Redis, Neo4j
-
-**Data & BI:** SQL, PostgreSQL, ETL Python/Pandas, data warehouse, Metabase, nettoyage de métadonnées
-
-**IA appliquée:** Pipelines LLM, transcription/traduction IA, analyse de texte, analyse de sentiment, préparation de datasets
-
-**Langages & outils:** TypeScript, Kotlin, Python, PHP, Java, Rust, C/C++, Git, Docker, GitHub Actions
-
-**Desktop & Système:** Tauri 2, Qt 5/6, Iced, MPI, sockets TCP, rclone
-
-**Langues:** Français (natif), Turc (bilingue), Anglais B2
