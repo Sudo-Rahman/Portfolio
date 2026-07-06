@@ -4,7 +4,7 @@
 
 - **Application Android native** de prévisions météorologiques, écrite en Kotlin, exploitant l'API gratuite **Open-Meteo**.
 - Affiche les prévisions **horaire (24 h)** et **journalière (10 jours)** avec icônes météo adaptées jour/nuit.
-- Architecture **MVVM** avec `ViewModel`, `LiveData`, Navigation Component et ViewBinding.
+- Architecture en couches avec séparation réseau, modèles, logique de présentation et interface.
 - Géolocalisation GPS ou recherche de ville via l'API **Geoapify** avec auto-complétion en temps réel.
 - Thème dynamique jour/nuit basé sur le code météo renvoyé par l'API (dégradé de fond, couleur de la barre d'état).
 
@@ -28,7 +28,7 @@ Le public cible est un utilisateur final souhaitant une application légère, sa
 
 ## Architecture (vue d'ensemble)
 
-Le projet suit l'architecture **MVVM** (Model – View – ViewModel) encouragée par Android Jetpack. Le module unique `app` contient quatre couches principales :
+Le projet est structuré en couches lisibles pour isoler les responsabilités : accès réseau, modèles de données, logique de présentation et interface. Le module unique `app` contient quatre zones principales :
 
 ```
 com.sr_71.meteo/
@@ -38,7 +38,7 @@ com.sr_71.meteo/
 ├── model/                   # Modèles de données (Parcelable + mapping météo)
 │   ├── Weather.kt           # Weather, WeatherDaily, WeatherHourly, WeatherCode, weatherCodeToImg
 │   └── City.kt              # Citys, Properties, Propertie (Geoapify)
-├── view_model/              # ViewModels (logique de présentation)
+├── view_model/              # Logique de présentation
 │   ├── HomeViewModel.kt     # Données météo + localisation + état jour/nuit
 │   └── CitySearchViewModel.kt # Recherche de ville
 └── view/
@@ -60,14 +60,14 @@ com.sr_71.meteo/
 **Flux de données typique** :
 
 1. `NavHostFragment` initialise les sous-fragments et vérifie les `SharedPreferences` pour restaurer la dernière localisation.
-2. `HomeViewModel` expose des `LiveData` pour `weatherHourly`, `weatherDaily`, `locationGps`, `isDay`, `elevation`.
-3. Les fragments observent ces `LiveData` et mettent à jour leurs adapters RecyclerView.
-4. Le `HomeViewModel` lance des coroutines (`viewModelScope.launch`) pour appeler Retrofit, désérialiser la réponse JSON brute avec Gson, et peupler les `LiveData`.
-5. La navigation entre écrans utilise le **Navigation Component** avec Safe Args pour passer les objets `Weather` (Parcelable) entre fragments.
+2. La couche de présentation expose les prévisions, la localisation, l'état jour/nuit et l'altitude aux écrans.
+3. Les fragments réagissent aux changements d'état et mettent à jour leurs adapters RecyclerView.
+4. Les appels réseau sont lancés via coroutines pour appeler Retrofit, désérialiser la réponse JSON brute avec Gson et propager l'état à l'interface.
+5. La navigation entre écrans reste typée et transporte les objets `Weather` (Parcelable) entre fragments.
 
 ```
  MainActivity
-   └── NavHostFragment (Navigation Component)
+   └── NavHostFragment (graphe de navigation)
          ├── HourlyWeatherFragment (enfant)
          ├── DailyWeatherFragment  (enfant)
          ├── DailyDetailWeatherFragment (destination nav_graph)
@@ -78,15 +78,15 @@ com.sr_71.meteo/
 
 1. **Retrofit + `ScalarsConverterFactory` + Gson manuel** : L'API Open-Meteo retourne du JSON. Plutôt que d'utiliser un convertisseur Gson intégré à Retrofit, la réponse est récupérée en `String` brute puis désérialisée manuellement via `Gson().fromJson()`. Ce pattern, moins automatisé, offre un contrôle total sur le mapping et facilite le débogage (la réponse brute est disponible avant parsing).
 
-2. **Coroutines Kotlin** (`viewModelScope.launch`) : Les appels réseau sont suspendables et automatiquement annulés lorsque le `ViewModel` est nettoyé, évitant les fuites mémoire et les crashes sur des callbacks obsolètes.
+2. **Coroutines Kotlin** : Les appels réseau sont suspendables et rattachés au cycle de vie de la couche de présentation, limitant les fuites mémoire et les callbacks obsolètes.
 
-3. **Navigation Component + Safe Args** : Le graphe de navigation (`nav_graph.xml`) définit les destinations et les actions. Le plugin `androidx.navigation.safeargs.kotlin` génère des classes typesafe (`NavHostFragmentDirections`) pour passer des arguments entre fragments, éliminant les erreurs de clés string.
+3. **Navigation typée** : Le graphe de navigation (`nav_graph.xml`) définit les destinations et les actions. Les arguments sont générés de façon typesafe, ce qui évite les erreurs de clés string.
 
 4. **`kotlin-parcelize`** : Les data classes `Weather`, `WeatherDaily`, `WeatherHourly` sont annotées `@Parcelize` pour pouvoir traverser les `Bundle` de navigation de manière performante (Parcelable vs Serializable).
 
 5. **ViewBinding** : Activé dans le build.gradle (`viewBinding = true`), il génère des classes de binding typesafe (ex. `FragmentNavHostBinding`), remplaçant les `findViewById` par un accès direct aux vues.
 
-6. **Fragments enfants imbriqués** : `NavHostFragment` utilise `childFragmentManager` pour héberger `HourlyWeatherFragment` et `DailyWeatherFragment`. Cela isole le cycle de vie de ces sous-fragments du graphe de navigation principal, tout en partageant le `HomeViewModel` au scope `activityViewModels()`.
+6. **Fragments enfants imbriqués** : `NavHostFragment` utilise `childFragmentManager` pour héberger `HourlyWeatherFragment` et `DailyWeatherFragment`. Cela isole le cycle de vie de ces sous-fragments du graphe de navigation principal, tout en partageant le même état de présentation entre les fragments.
 
 7. **Géolocalisation native** (`LocationManager` + `Geocoder`) : Pas de dépendance à Google Play Services pour la localisation, ce qui rend l'application compatible avec les appareils ne disposant pas des services Google (ROM AOSP, appareils Huawei récents).
 
@@ -136,7 +136,7 @@ object WeatherApiManager {
 }
 ```
 
-**Pourquoi c'est intéressant** : L'enum interne `DAYS` sert de discriminateur dans le `HomeViewModel` pour choisir l'endpoint. Les paramètres par défaut des queries Kotlin rendent l'appel concis côté ViewModel. Le singleton `WeatherApiManager` via `lazy` garantit une seule instance Retrofit.
+**Pourquoi c'est intéressant** : L'enum interne `DAYS` sert de discriminateur pour choisir l'endpoint. Les paramètres par défaut des queries Kotlin rendent l'appel concis côté présentation. Le singleton `WeatherApiManager` via `lazy` garantit une seule instance Retrofit.
 
 ---
 
@@ -188,7 +188,7 @@ val weatherCodeToImg = mapOf<WeatherCode, WeatherImg>(
 
 ---
 
-### 3. HomeViewModel – logique métier et gestion de la localisation
+### 3. Logique de présentation et gestion de la localisation
 
 **Fichier** : `app/src/main/java/com/sr_71/meteo/view_model/HomeViewModel.kt`
 
@@ -247,7 +247,7 @@ class HomeViewModel : ViewModel() {
 }
 ```
 
-**Pourquoi c'est intéressant** : Le ViewModel centralise toute la logique de récupération et d'exposition des données. La méthode `getTime()` est particulièrement remarquable : elle calcule l'heure locale du lieu consulté à partir du décalage UTC retourné par l'API, permettant de déterminer `isDay` pour n'importe quel fuseau horaire. La séparation `_location` (privée, mutable) / `locationGps` (publique, immutable) suit la convention LiveData recommandée par Google.
+**Pourquoi c'est intéressant** : La classe centralise la récupération et l'exposition des données météo. La méthode `getTime()` est particulièrement remarquable : elle calcule l'heure locale du lieu consulté à partir du décalage UTC retourné par l'API, permettant de déterminer `isDay` pour n'importe quel fuseau horaire. L'état mutable reste privé, tandis que l'interface consomme uniquement des valeurs exposées.
 
 ---
 
@@ -312,7 +312,7 @@ class NavHostFragment : Fragment() {
 }
 ```
 
-**Pourquoi c'est intéressant** : Ce fragment est le chef d'orchestre de l'écran principal. Il gère la restauration de position via `SharedPreferences` (ville par défaut : Paris), le reverse-geocoding avec `Geocoder` pour afficher le nom de la ville, et le changement de thème dynamique. L'utilisation de la delegation `by activityViewModels()` garantit un seul `HomeViewModel` partagé entre tous les fragments de l'activité.
+**Pourquoi c'est intéressant** : Ce fragment est le chef d'orchestre de l'écran principal. Il gère la restauration de position via `SharedPreferences` (ville par défaut : Paris), le reverse-geocoding avec `Geocoder` pour afficher le nom de la ville, et le changement de thème dynamique. L'état est partagé entre les fragments pour éviter les rechargements inutiles.
 
 ---
 
@@ -358,7 +358,7 @@ class SearchCityFragment() : Fragment(), AdapterCityOnClick {
 }
 ```
 
-**Pourquoi c'est intéressant** : Le pattern `TextWatcher` → appel API → `LiveData` observée illustre un flux réactif simple. La recherche est déclenchée à chaque frappe. Le callback `AdapterCityOnClick` implémenté par le fragment permet de communiquer la ville sélectionnée au `HomeViewModel` partagé, puis de revenir à l'écran principal via `popBackStack()`.
+**Pourquoi c'est intéressant** : Le flux `TextWatcher` → appel API → mise à jour de l'état illustre une recherche réactive simple. La recherche est déclenchée à chaque frappe. Le callback `AdapterCityOnClick` implémenté par le fragment permet de transmettre la ville sélectionnée à l'écran principal, puis de revenir via `popBackStack()`.
 
 ---
 
@@ -402,7 +402,7 @@ holder.view.setOnClickListener {
 ## Qualité, sécurité, maintenance
 
 ### Tests
-Le projet contient les tests Android par défaut (`ExampleUnitTest`, `ExampleInstrumentedTest`) sans couverture métier réelle. Il n'y a pas de tests unitaires pour les ViewModels, les adapters ou les parsers.
+Le projet contient les tests Android par défaut (`ExampleUnitTest`, `ExampleInstrumentedTest`) sans couverture métier réelle. Il n'y a pas de tests unitaires pour la couche de présentation, les adapters ou les parsers.
 
 ### Lint / Format
 Aucune configuration de lint ou de formatage personnalisée n'est présente (pas de `detekt.yml`, `lint.xml` ou `editorconfig`). Le style Kotlin suit les conventions officielles (`kotlin.code.style=official` dans `gradle.properties`).
@@ -411,7 +411,7 @@ Aucune configuration de lint ou de formatage personnalisée n'est présente (pas
 Aucun pipeline CI/CD n'est configuré (pas de `.github/workflows`, `GitLab CI`, etc.).
 
 ### Gestion d'erreurs
-Les appels réseau dans les ViewModels ne sont pas encapsulés dans des blocs `try/catch`. Une erreur réseau ou un parsing JSON défectueux provoquerait un crash silencieux de la coroutine. Aucun mécanisme de retry ni d'état d'erreur n'est exposé à l'UI.
+Les appels réseau ne sont pas encapsulés dans des blocs `try/catch`. Une erreur réseau ou un parsing JSON défectueux provoquerait un crash silencieux de la coroutine. Aucun mécanisme de retry ni d'état d'erreur n'est exposé à l'UI.
 
 ### Sécurité
 - **Clé API Geoapify codée en dur** dans `GeoapifyAPI.kt` (paramètre `apiKey` de la requête). Cette clé est visible dans le code source et sera incluse dans l'APK. La pratique recommandée serait de la stocker dans `BuildConfig` via `local.properties` ou un keystore sécurisé.

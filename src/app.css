@@ -257,6 +257,15 @@
 	opacity: 0.8;
 }
 
+.prose-custom img {
+	width: min(100%, 22rem);
+	margin: 1.5rem auto;
+	border: 1px solid hsl(var(--border));
+	border-radius: 1.25rem;
+	background: hsl(var(--muted));
+	box-shadow: 0 24px 80px hsl(var(--foreground) / 0.12);
+}
+
 .prose-custom code {
 	font-size: 0.875rem;
 	padding: 0.15rem 0.4rem;

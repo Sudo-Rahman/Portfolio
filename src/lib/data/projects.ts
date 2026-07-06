@@ -3,12 +3,23 @@ export interface Project {
 	title: string;
 	summary: string;
 	technologies: string[];
-	url: string;
+	url?: string;
 	websiteUrl?: string;
+	appStoreUrl?: string;
 	featured: boolean;
 }
 
 export const projects: Project[] = [
+	{
+		slug: "Nymbra",
+		title: "Nymbra",
+		summary:
+			"Application iPhone publiee sur l'App Store : coffre-fort chiffre pour documents, photos, videos, scans, archives et audio, avec Face ID, verrouillage automatique, recherche et synchronisation iCloud optionnelle.",
+		technologies: ["iOS", "iCloud", "Face ID", "App Store", "Closed source"],
+		websiteUrl: "https://nymbra.sudo-rahman.fr/",
+		appStoreUrl: "https://apps.apple.com/us/app/nymbra/id6783014745",
+		featured: true,
+	},
 	{
 		slug: "MediaFlow",
 		title: "MediaFlow",

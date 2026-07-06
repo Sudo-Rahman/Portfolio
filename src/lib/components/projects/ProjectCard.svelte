@@ -2,6 +2,7 @@
 	import GlassCard from "$lib/components/shared/GlassCard.svelte";
 	import SkillChip from "$lib/components/shared/SkillChip.svelte";
 	import ArrowUpRight from "lucide-svelte/icons/arrow-up-right";
+	import Download from "lucide-svelte/icons/download";
 	import Globe from "lucide-svelte/icons/globe";
 	import GithubIcon from "$lib/components/shared/GithubIcon.svelte";
 	import { goto } from "$app/navigation";
@@ -69,16 +70,30 @@
 						<Globe class="h-4 w-4" />
 					</a>
 				{/if}
-				<a
-					href={project.url}
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label="Ouvrir le GitHub de {project.title}"
-					class="text-muted-foreground/60 hover:text-foreground transition-colors"
-					onclick={(event) => event.stopPropagation()}
-				>
-					<GithubIcon class="h-4 w-4" />
-				</a>
+				{#if project.appStoreUrl}
+					<a
+						href={project.appStoreUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Ouvrir la page App Store de {project.title}"
+						class="text-muted-foreground/60 hover:text-foreground transition-colors"
+						onclick={(event) => event.stopPropagation()}
+					>
+						<Download class="h-4 w-4" />
+					</a>
+				{/if}
+				{#if project.url}
+					<a
+						href={project.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Ouvrir le GitHub de {project.title}"
+						class="text-muted-foreground/60 hover:text-foreground transition-colors"
+						onclick={(event) => event.stopPropagation()}
+					>
+						<GithubIcon class="h-4 w-4" />
+					</a>
+				{/if}
 			</div>
 		</div>
 	</GlassCard>

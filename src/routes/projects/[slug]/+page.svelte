@@ -3,6 +3,7 @@
 	import MarkdownRenderer from "$lib/components/projects/MarkdownRenderer.svelte";
 	import SkillChip from "$lib/components/shared/SkillChip.svelte";
 	import ArrowLeft from "lucide-svelte/icons/arrow-left";
+	import Download from "lucide-svelte/icons/download";
 	import Globe from "lucide-svelte/icons/globe";
 	import GithubIcon from "$lib/components/shared/GithubIcon.svelte";
 	import { resolve } from "$app/paths";
@@ -45,15 +46,28 @@
 							Site web
 						</a>
 					{/if}
-					<a
-						href={data.project.url}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border text-sm font-medium transition-all duration-300 hover:bg-accent hover:-translate-y-0.5 shrink-0"
-					>
-						<GithubIcon class="h-4 w-4" />
-						Voir sur GitHub
-					</a>
+					{#if data.project.appStoreUrl}
+						<a
+							href={data.project.appStoreUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border text-sm font-medium transition-all duration-300 hover:bg-accent hover:-translate-y-0.5 shrink-0"
+						>
+							<Download class="h-4 w-4" />
+							App Store
+						</a>
+					{/if}
+					{#if data.project.url}
+						<a
+							href={data.project.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border text-sm font-medium transition-all duration-300 hover:bg-accent hover:-translate-y-0.5 shrink-0"
+						>
+							<GithubIcon class="h-4 w-4" />
+							Voir sur GitHub
+						</a>
+					{/if}
 				</div>
 			</div>
 		</AnimatedSection>

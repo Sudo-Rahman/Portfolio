@@ -60,11 +60,11 @@ Before-After-Image/
 
 - Le module `Before-After-Image` est la bibliothèque distribuable. Il ne contient qu'un unique fichier source (`BeforeAfterImage.kt`) qui expose les composants publics.
 - Le module `app` est une application Android minimale qui consomme la bibliothèque via `implementation(project(":Before-After-Image"))` et affiche un écran de démonstration.
-- Le thème Material3 (couleurs dynamiques, typographie) appartient exclusivement au module démo et n'est pas imposé aux consommateurs de la bibliothèque.
+- Le thème de l'application démo reste isolé et n'est pas imposé aux consommateurs de la bibliothèque.
 
 ## Choix techniques et raisons
 
-1. **Jetpack Compose + Material3** — Le composant est un `@Composable` pur. Compose est aujourd'hui le toolkit UI recommandé par Google pour Android. Material3 fournit les primitives de `Slider` et les tokens de thème, ce qui garantit une intégration cohérente dans toute application Material3.
+1. **Jetpack Compose comme API publique** — Le composant est un `@Composable` pur. L'intégration repose sur les primitives Compose standard, ce qui permet d'utiliser la bibliothèque dans une application existante sans imposer de design system.
 
 2. **`clipRect` pour le masquage** — La technique centrale consiste à superposer deux `Box` occupant toute la surface, chacune masquée par `drawWithContent { clipRect(...) { drawContent() } }`. Le paramètre `left` ou `right` du `clipRect` est proportionnel à la position du slider. C'est une approche performante car elle opère au niveau du canvas GPU, sans recours à des transformations de bitmap.
 
@@ -318,7 +318,7 @@ private fun CustomThumb() {
 }
 ```
 
-**Pourquoi c'est intéressant :** Le thumb par défaut réutilise `SliderDefaults.Thumb` de Material3, garantissant une apparence cohérente avec le design système. Les couleurs semi-transparentes (blanc 60 %, bordure noire 60 %) assurent la lisibilité sur n'importe quel fond d'image. Puisque `thumb` est un paramètre `@Composable () -> Unit`, le consommateur peut fournir son propre design sans modifier la bibliothèque.
+**Pourquoi c'est intéressant :** Le thumb par défaut réutilise les primitives Compose standard, ce qui donne un rendu cohérent sans imposer un design system. Les couleurs semi-transparentes (blanc 60 %, bordure noire 60 %) assurent la lisibilité sur n'importe quel fond d'image. Puisque `thumb` est un paramètre `@Composable () -> Unit`, le consommateur peut fournir son propre design sans modifier la bibliothèque.
 
 ## Qualité, sécurité, maintenance
 
