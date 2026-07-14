@@ -1,7 +1,6 @@
 <script lang="ts">
 	import AnimatedSection from "$lib/components/shared/AnimatedSection.svelte";
 	import MapPin from "lucide-svelte/icons/map-pin";
-	import Briefcase from "lucide-svelte/icons/briefcase";
 </script>
 
 <section id="about" class="py-24 px-6">
@@ -27,10 +26,6 @@
 				<span class="inline-flex items-center gap-2">
 					<MapPin class="h-4 w-4 text-primary" />
 					Chalon-sur-Saône, France
-				</span>
-				<span class="inline-flex items-center gap-2">
-					<Briefcase class="h-4 w-4 text-primary" />
-					Freelance &middot; Disponible
 				</span>
 			</div>
 		</AnimatedSection>
