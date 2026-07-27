@@ -25,15 +25,17 @@ export interface Education {
 
 export const profile = {
 	name: "Rahman YILMAZ",
-	headline: "Développeur Android / Full Stack",
+	headline: "Développeur Full Stack / Android",
 	location: "Chalon-sur-Saône, France",
 	email: "contact@rahman.ovh",
 	phone: "+33 7 81 38 88 82",
 	website: "https://sudo-rahman.fr/",
 	github: "https://github.com/Sudo-Rahman",
 	linkedin: "https://www.linkedin.com/in/rahman-yilmaz-9236ab270/",
-	summary:
-		"Développeur Android / Full Stack, Bac+5 en informatique, avec deux ans d'expérience chez Sweepin sur des applications SmartCity et e-santé. Passionné par l'informatique depuis jeune, curieux et autonome, j'aime apprendre vite lorsqu'un projet demande une nouvelle technologie.",
+	summary: [
+		"Développeur Full Stack / Android, Bac+5 en informatique, avec deux ans d'expérience chez Sweepin sur des applications SmartCity et e-santé, du front-end SvelteKit/Android au back-end PHP/Symfony et aux APIs REST.",
+		"Développeur de métier et bricoleur par tempérament, je m'intéresse autant au logiciel qu'au matériel, aux serveurs personnels ou à la maison connectée. J'aime comprendre comment les systèmes fonctionnent, les mettre en place moi-même et apprendre ce qui me manque pour aller au bout d'un projet.",
+	],
 };
 
 export const skills: Skill[] = [
@@ -42,14 +44,14 @@ export const skills: Skill[] = [
 		details: "Kotlin, Java, Jetpack Compose, Clean Architecture, Gradle",
 	},
 	{
-		label: "Web & backend",
+		label: "Full Stack web",
 		details:
-			"Node.js, SvelteKit, TypeScript, PHP/Symfony, APIs REST, PostgreSQL, MySQL, Prisma, Redis, Paddle, Stripe, webhooks",
+			"PHP, Symfony, Doctrine ORM, APIs REST, MariaDB/MySQL, PostgreSQL, JavaScript/TypeScript, SvelteKit, HTML/CSS, Node.js, Prisma, Redis",
 	},
 	{
 		label: "Tests & livraison",
 		details:
-			"Tests unitaires, tests d'intégration, CI/CD, GitHub Actions, Docker, debugging, documentation",
+			"Tests unitaires et d'intégration, Docker, CI/CD, GitHub Actions, Linux/Unix, debugging, documentation, mise en production",
 	},
 	{
 		label: "Logiciel & desktop",
@@ -75,10 +77,10 @@ export const experiences: Experience[] = [
 		endDate: "2025-09",
 		location: "Dijon, France",
 		highlights: [
-			"Maintenu la solution Android SmartCity : analyse d'anomalies, corrections, évolutions, création de modules et publication de versions",
-			"Intégré Jetpack Compose dans l'écosystème Android de Sweepin pour moderniser des interfaces mobiles et outils internes",
-			"Développé des fonctionnalités mobiles et web pour les solutions SmartCity et e-santé dans un contexte multi-clients",
-			"Connecté les écrans Android aux APIs REST, back-offices et services PHP/Symfony",
+			"Maintenance et évolution des applications Android SmartCity en tant que mainteneur principal : intégration de nouveaux clients, création de modules, correction d'anomalies et publication de versions",
+			"Développement et maintenance des back-offices et APIs SmartCity et e-santé avec PHP/Symfony, Doctrine ORM, MariaDB, JavaScript, HTML et CSS",
+			"Amélioration et maintenance du viewer e-santé, ainsi que développement d'interfaces web avec JavaScript/TypeScript et SvelteKit",
+			"Intervention sur l'ensemble du cycle applicatif : analyse des besoins, chiffrage, développement, tests, recette, documentation et mise en production, en collaboration avec les équipes métier, mobile et backend",
 		],
 	},
 	{
@@ -88,10 +90,10 @@ export const experiences: Experience[] = [
 		endDate: "2026-01",
 		location: "Remote",
 		highlights: [
-			"Développé une plateforme SaaS SvelteKit/TypeScript avec authentification, dashboard client, PostgreSQL/Prisma et gestion de licences",
-			"Intégré Paddle : abonnements, webhooks, synchronisation d'états, historique de transactions et tokens/licences",
-			"Mis en place une architecture événementielle Redis + BullMQ + Resend pour les emails transactionnels et les rappels",
-			"Contribué à un pipeline documentaire : scraping multi-sources, normalisation Markdown, recherche hybride et contenus exploitables",
+			"Développement d'une plateforme SaaS avec SvelteKit/TypeScript, authentification, tableau de bord client, PostgreSQL/Prisma et gestion de licences",
+			"Intégration des paiements Paddle et mise en place d'une architecture événementielle avec Redis, BullMQ et Resend",
+			"Développement en Python d'un pipeline de collecte et de normalisation de documentations techniques issues de npm/PyPI, de dépôts Git, de README, de sites web et de fichiers llms.txt, avec prise en charge des monorepos",
+			"Conception en Python d'un système de benchmark et de traitement par lots : jeux de référence, métriques de validation, parallélisation, délais maximums, reprise sur erreur et optimisation des ressources",
 		],
 	},
 	{
@@ -101,10 +103,10 @@ export const experiences: Experience[] = [
 		endDate: "présent",
 		location: "Remote",
 		highlights: [
-			"Conçu et commercialisé des logiciels destinés aux particuliers : architecture, développement, paiements Stripe (abonnements/achats uniques), tests, packaging et maintenance",
-			"Développé des applications desktop, mobile et sites produit avec Tauri/Rust, SvelteKit, SwiftUI ou Kotlin selon le besoin",
-			"Mis en place des tests unitaires, tests d'intégration, CI GitHub Actions, documentation et suivi des releases",
-			"Piloté l'acquisition produit : SEO technique, pages produit, tracking, Google Ads, Apple Ads et suivi des conversions",
+			"Conception, développement et commercialisation de logiciels destinés aux particuliers, de l'architecture à la maintenance",
+			"Développement d'applications desktop, mobiles et web avec Tauri/Rust, SvelteKit, SwiftUI et Kotlin selon les besoins",
+			"Mise en place des tests, de l'intégration continue, du packaging, de la documentation et du suivi des versions",
+			"Gestion de la commercialisation des produits : paiements Stripe, pages produit, SEO technique, campagnes publicitaires et suivi des conversions",
 		],
 	},
 ];

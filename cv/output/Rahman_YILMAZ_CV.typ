@@ -6,7 +6,7 @@
   name: "Rahman YILMAZ",
   title: "Rahman YILMAZ - CV",
   footer: context { [#emph[Rahman YILMAZ -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Dernière mise à jour Juin 2026] ],
+  top-note: [ #emph[Dernière mise à jour Juil 2026] ],
   locale-catalog-language: "fr",
   text-direction: ltr,
   page-size: "a4",
@@ -80,15 +80,15 @@
   entries-highlights-space-between-bullet-and-text: 0.5em,
   date: datetime(
     year: 2026,
-    month: 6,
-    day: 17,
+    month: 7,
+    day: 27,
   ),
 )
 
 
 = Rahman YILMAZ
 
-  #headline([Développeur Android \/ Full Stack])
+  #headline([Développeur Full Stack \/ Android])
 
 #connections(
   [#connection-with-icon("location-dot")[Chalon-sur-Saône, France]],
@@ -102,17 +102,17 @@
 
 == Profil
 
-Développeur Android \/ Full Stack, Bac+5 en informatique, avec deux ans d'expérience chez Sweepin sur des applications mobiles SmartCity et e-santé.
+Développeur Full Stack \/ Android, Bac+5 en informatique, avec deux ans d'expérience chez Sweepin sur des applications SmartCity et e-santé, du front-end SvelteKit\/Android au back-end PHP\/Symfony et aux APIs REST.
 
-Passionné par l'informatique depuis jeune, j'aime comprendre comment les choses fonctionnent, apprendre de nouvelles technologies et progresser en continu. Curieux et autonome, je sais monter en compétence rapidement lorsqu'un projet demande d'explorer un nouvel outil, un nouveau framework ou un environnement technique différent.
+Développeur de métier et bricoleur par tempérament, je m'intéresse autant au logiciel qu'au matériel, aux serveurs personnels ou à la maison connectée. J'aime comprendre comment les systèmes fonctionnent, les mettre en place moi-même et apprendre ce qui me manque pour aller au bout d'un projet.
 
 == Compétences
 
 #strong[Android:] Kotlin, Java, Jetpack Compose, Clean Architecture, Gradle
 
-#strong[Web & backend:] Node.js, SvelteKit, TypeScript, PHP\/Symfony, APIs REST, PostgreSQL, MySQL, Prisma, Redis, Paddle, Stripe, webhooks
+#strong[Full Stack web:] PHP, Symfony, Doctrine ORM, APIs REST, MariaDB\/MySQL, PostgreSQL, JavaScript\/TypeScript, SvelteKit, HTML\/CSS, Node.js, Prisma, Redis
 
-#strong[Tests & livraison:] Tests unitaires, tests d'intégration, CI\/CD, GitHub Actions, Docker, debugging, documentation
+#strong[Tests & livraison:] Tests unitaires et d'intégration, Docker, CI\/CD, GitHub Actions, Linux\/Unix, debugging, documentation, mise en production
 
 #strong[Logiciel & desktop:] Rust, Tauri 2, C++23, Qt 6, FFmpeg, rclone, CMake, Conan
 
@@ -126,13 +126,13 @@ Passionné par l'informatique depuis jeune, j'aime comprendre comment les choses
   [
     #strong[Solo Agilis Sweepin], Développeur Android & Full Stack
 
-    - Maintenu la solution Android SmartCity : analyse d'anomalies, corrections, évolutions, création de modules et publication de versions
+    - Maintenance et évolution des applications Android SmartCity en tant que mainteneur principal : intégration de nouveaux clients, création de modules, correction d'anomalies et publication de versions
 
-    - Intégré Jetpack Compose dans l'écosystème Android de Sweepin pour moderniser des interfaces mobiles et outils internes
+    - Développement et maintenance des back-offices et APIs SmartCity et e-santé avec PHP\/Symfony, Doctrine ORM, MariaDB, JavaScript, HTML et CSS
 
-    - Développé des fonctionnalités mobiles et web pour les solutions SmartCity et e-santé dans un contexte multi-clients
+    - Amélioration et maintenance du viewer e-santé, ainsi que développement d'interfaces web avec JavaScript\/TypeScript et SvelteKit
 
-    - Connecté les écrans Android aux APIs REST, back-offices et services PHP\/Symfony
+    - Intervention sur l'ensemble du cycle applicatif : analyse des besoins, chiffrage, développement, tests, recette, documentation et mise en production, en collaboration avec les équipes métier, mobile et backend
 
   ],
   [
@@ -147,13 +147,13 @@ Passionné par l'informatique depuis jeune, j'aime comprendre comment les choses
   [
     #strong[Steerway], Développeur logiciel freelance
 
-    - Développé une plateforme SaaS SvelteKit\/TypeScript avec authentification, dashboard client, PostgreSQL\/Prisma et gestion de licences
+    - Développement d'une plateforme SaaS avec SvelteKit\/TypeScript, authentification, tableau de bord client, PostgreSQL\/Prisma et gestion de licences
 
-    - Intégré Paddle : abonnements, webhooks, synchronisation d'états, historique de transactions et tokens\/licences
+    - Intégration des paiements Paddle et mise en place d'une architecture événementielle avec Redis, BullMQ et Resend
 
-    - Mis en place une architecture événementielle Redis + BullMQ + Resend pour les emails transactionnels et les rappels
+    - Développement en Python d'un pipeline de collecte et de normalisation de documentations techniques issues de npm\/PyPI, de dépôts Git, de README, de sites web et de fichiers llms.txt, avec prise en charge des monorepos
 
-    - Contribué à un pipeline documentaire : scraping multi-sources, normalisation Markdown, recherche hybride et contenus exploitables
+    - Conception en Python d'un système de benchmark et de traitement par lots : jeux de référence, métriques de validation, parallélisation, délais maximums, reprise sur erreur et optimisation des ressources
 
   ],
   [
@@ -168,13 +168,13 @@ Passionné par l'informatique depuis jeune, j'aime comprendre comment les choses
   [
     #strong[Indépendant], Développeur & éditeur de logiciels
 
-    - Conçu et commercialisé des logiciels destinés aux particuliers : architecture, développement, paiements Stripe (abonnements\/achats uniques), tests, packaging et maintenance
+    - Conception, développement et commercialisation de logiciels destinés aux particuliers, de l'architecture à la maintenance
 
-    - Développé des applications desktop, mobile et sites produit avec Tauri\/Rust, SvelteKit, SwiftUI ou Kotlin selon le besoin
+    - Développement d'applications desktop, mobiles et web avec Tauri\/Rust, SvelteKit, SwiftUI et Kotlin selon les besoins
 
-    - Mis en place des tests unitaires, tests d'intégration, CI GitHub Actions, documentation et suivi des releases
+    - Mise en place des tests, de l'intégration continue, du packaging, de la documentation et du suivi des versions
 
-    - Piloté l'acquisition produit : SEO technique, pages produit, tracking, Google Ads, Apple Ads et suivi des conversions
+    - Gestion de la commercialisation des produits : paiements Stripe, pages produit, SEO technique, campagnes publicitaires et suivi des conversions
 
   ],
   [
@@ -239,9 +239,31 @@ Passionné par l'informatique depuis jeune, j'aime comprendre comment les choses
 
 #regular-entry(
   [
+    #strong[KARA]
+
+    #summary[Écosystème de gestion et de valorisation de métaux précieux : application iOS Swift\/SwiftUI et services web SvelteKit\/TypeScript, avec APIs sécurisées, Redis, extraction assistée par IA, pipeline de données, tests automatisés et CI]
+
+  ],
+  [
+  ],
+)
+
+#regular-entry(
+  [
     #strong[MediaFlow]
 
-    #summary[Application desktop locale : Tauri 2, Rust, Svelte 5, FFmpeg, OCR, transcription, traduction IA, tests unitaires Rust, tests d'intégration OCR\/merge et CI multi-OS]
+    #summary[Suite desktop de traitement multimédia : interface Svelte 5\/TypeScript et backend Rust\/Tauri 2 pour l'extraction, l'OCR, la transcription et le traitement par lots avec FFmpeg, tests automatisés et CI multi-OS]
+
+  ],
+  [
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[Neptune]
+
+    #summary[Plateforme d'apprentissage en ligne : architecture PHP MVC, interface JavaScript et base PostgreSQL réunissant gestion des utilisateurs, cours, évaluations par QCM, forum communautaire et administration]
 
   ],
   [
@@ -252,29 +274,7 @@ Passionné par l'informatique depuis jeune, j'aime comprendre comment les choses
   [
     #strong[Iridium]
 
-    #summary[Client desktop C++23\/Qt 6 pour rclone : gestion multi-cloud, exploration, recherche multi-remotes, synchronisation, progression temps réel, packaging multi-plateforme et releases GitHub]
-
-  ],
-  [
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[linkKeep]
-
-    #summary[Application Apple native iOS\/iPadOS\/macOS : SwiftUI, Core Data\/CloudKit, synchronisation iCloud, architecture Domain\/Data\/Services, tests unitaires Swift et site multilingue]
-
-  ],
-  [
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[Kotlin Météo]
-
-    #summary[Application Android native de prévisions météo : Kotlin, Open-Meteo, Geoapify, géolocalisation GPS, recherche de ville, prévisions 24 h\/10 jours et persistance locale]
+    #summary[Gestionnaire desktop multi-cloud : client C++23\/Qt 6 pilotant rclone pour explorer, rechercher et synchroniser des stockages distants, avec transferts asynchrones, progression en temps réel, packaging multiplateforme et releases GitHub]
 
   ],
   [

@@ -7,9 +7,46 @@ export interface Project {
 	websiteUrl?: string;
 	appStoreUrl?: string;
 	featured: boolean;
+	detailsAvailable?: boolean;
 }
 
 export const projects: Project[] = [
+	{
+		slug: "KARA",
+		title: "KARA",
+		summary:
+			"Écosystème de gestion et de valorisation de métaux précieux : application iOS Swift/SwiftUI et services web SvelteKit/TypeScript, avec APIs sécurisées, Redis, extraction assistée par IA, pipeline de données, tests automatisés et CI.",
+		technologies: ["Swift", "SwiftUI", "SvelteKit", "TypeScript", "Redis"],
+		featured: true,
+		detailsAvailable: false,
+	},
+	{
+		slug: "MediaFlow",
+		title: "MediaFlow",
+		summary:
+			"Suite desktop de traitement multimédia : interface Svelte 5/TypeScript et backend Rust/Tauri 2 pour l'extraction, l'OCR, la transcription et le traitement par lots avec FFmpeg, tests automatisés et CI multi-OS.",
+		technologies: ["Rust", "Tauri 2", "Svelte 5", "FFmpeg", "GitHub Actions"],
+		url: "https://github.com/Sudo-Rahman/MediaFlow",
+		featured: true,
+	},
+	{
+		slug: "Projet-DAW",
+		title: "Neptune",
+		summary:
+			"Plateforme d'apprentissage en ligne : architecture PHP MVC, interface JavaScript et base PostgreSQL réunissant gestion des utilisateurs, cours, évaluations par QCM, forum communautaire et administration.",
+		technologies: ["PHP", "PostgreSQL", "JavaScript", "Docker"],
+		url: "https://github.com/Sudo-Rahman/Projet-DAW",
+		featured: true,
+	},
+	{
+		slug: "Iridium",
+		title: "Iridium",
+		summary:
+			"Gestionnaire desktop multi-cloud : client C++23/Qt 6 pilotant rclone pour explorer, rechercher et synchroniser des stockages distants, avec transferts asynchrones, progression en temps réel, packaging multiplateforme et releases GitHub.",
+		technologies: ["C++23", "Qt 6", "rclone", "CMake", "Conan"],
+		url: "https://github.com/Sudo-Rahman/Iridium",
+		featured: true,
+	},
 	{
 		slug: "Nymbra",
 		title: "Nymbra",
@@ -18,25 +55,7 @@ export const projects: Project[] = [
 		technologies: ["iOS", "iCloud", "Face ID", "App Store", "Closed source"],
 		websiteUrl: "https://nymbra.sudo-rahman.fr/",
 		appStoreUrl: "https://apps.apple.com/us/app/nymbra/id6783014745",
-		featured: true,
-	},
-	{
-		slug: "MediaFlow",
-		title: "MediaFlow",
-		summary:
-			"Application desktop locale : Tauri 2, Rust, Svelte 5, FFmpeg, OCR, transcription, traduction IA, tests unitaires Rust, tests d'intégration OCR/merge et CI multi-OS.",
-		technologies: ["Rust", "Tauri 2", "Svelte 5", "FFmpeg", "GitHub Actions"],
-		url: "https://github.com/Sudo-Rahman/MediaFlow",
-		featured: true,
-	},
-	{
-		slug: "Iridium",
-		title: "Iridium",
-		summary:
-			"Client desktop C++23/Qt 6 pour rclone : gestion multi-cloud, exploration, recherche multi-remotes, synchronisation, progression temps réel, packaging multi-plateforme et releases GitHub.",
-		technologies: ["C++23", "Qt 6", "rclone", "CMake", "Conan"],
-		url: "https://github.com/Sudo-Rahman/Iridium",
-		featured: true,
+		featured: false,
 	},
 	{
 		slug: "linkKeep",
@@ -46,7 +65,7 @@ export const projects: Project[] = [
 		technologies: ["Swift", "SwiftUI", "Core Data", "CloudKit", "Swift Testing"],
 		url: "https://github.com/Sudo-Rahman/linkKeep",
 		websiteUrl: "https://linkkeep.sudo-rahman.fr/",
-		featured: true,
+		featured: false,
 	},
 	{
 		slug: "kotlin-meteo",
@@ -55,7 +74,7 @@ export const projects: Project[] = [
 			"Application Android native de prévisions météo en Kotlin : Open-Meteo, Geoapify, géolocalisation GPS, recherche de ville, prévisions 24 h/10 jours et persistance locale.",
 		technologies: ["Kotlin", "Java", "Android", "Gradle"],
 		url: "https://github.com/Sudo-Rahman/kotlin-meteo",
-		featured: true,
+		featured: false,
 	},
 	{
 		slug: "Before-After-Image",
@@ -167,15 +186,6 @@ export const projects: Project[] = [
 		featured: false,
 	},
 	{
-		slug: "Projet-DAW",
-		title: "Projet-DAW (Neptune)",
-		summary:
-			"Plateforme d'apprentissage en ligne : cours, QCM et forum de discussion communautaire (PHP/PostgreSQL).",
-		technologies: ["PHP", "PostgreSQL", "JavaScript", "Docker"],
-		url: "https://github.com/Sudo-Rahman/Projet-DAW",
-		featured: false,
-	},
-	{
 		slug: "Projet-GL",
 		title: "Projet-GL",
 		summary:
@@ -196,6 +206,10 @@ export const projects: Project[] = [
 ];
 
 export const featuredProjects = projects.filter((p) => p.featured);
+
+export function hasProjectDetails(project: Project): boolean {
+	return project.detailsAvailable !== false;
+}
 
 export function getProject(slug: string): Project | undefined {
 	return projects.find((p) => p.slug === slug);

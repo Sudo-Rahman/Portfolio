@@ -12,7 +12,7 @@
 			<div class="flex flex-col items-center md:items-start gap-1">
 				<a href={resolve("/")} class="text-lg font-bold gradient-text">R.</a>
 				<p class="text-sm text-muted-foreground">
-					Développeur Android / Full Stack
+					Développeur Full Stack / Android
 				</p>
 			</div>
 

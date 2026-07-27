@@ -1,5 +1,6 @@
 <script lang="ts">
 	import AnimatedSection from "$lib/components/shared/AnimatedSection.svelte";
+	import { profile } from "$lib/data/cv";
 	import MapPin from "lucide-svelte/icons/map-pin";
 </script>
 
@@ -11,14 +12,11 @@
 		</AnimatedSection>
 
 		<AnimatedSection delay={100}>
-			<p class="text-lg text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-				Développeur Android / Full Stack, Bac+5 en informatique, avec deux ans
-				d'expérience chez Sweepin sur des applications SmartCity et e-santé.
-				Passionné par l'informatique depuis jeune, je suis curieux, autonome et
-				j'aime apprendre vite lorsqu'un projet demande une nouvelle technologie.
-				Je développe aussi mes propres logiciels, de l'architecture au paiement,
-				avec tests, CI, packaging et suivi des releases.
-			</p>
+			<div class="text-lg text-muted-foreground leading-relaxed mb-8 max-w-3xl space-y-4">
+				{#each profile.summary as paragraph (paragraph)}
+					<p>{paragraph}</p>
+				{/each}
+			</div>
 		</AnimatedSection>
 
 		<AnimatedSection delay={200}>

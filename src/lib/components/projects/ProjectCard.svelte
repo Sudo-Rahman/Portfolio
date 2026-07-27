@@ -1,48 +1,33 @@
 <script lang="ts">
 	import GlassCard from "$lib/components/shared/GlassCard.svelte";
 	import SkillChip from "$lib/components/shared/SkillChip.svelte";
+	import { Badge } from "$lib/components/ui/badge";
 	import ArrowUpRight from "lucide-svelte/icons/arrow-up-right";
 	import Download from "lucide-svelte/icons/download";
 	import Globe from "lucide-svelte/icons/globe";
 	import GithubIcon from "$lib/components/shared/GithubIcon.svelte";
 	import { goto } from "$app/navigation";
 	import { resolve } from "$app/paths";
-	import type { Project } from "$lib/data/projects";
+	import { hasProjectDetails, type Project } from "$lib/data/projects";
 
-	type Props = {
+	let { project }: {
 		project: Project;
-	};
-
-	let { project }: Props = $props();
-
-	function openProject() {
-		void goto(resolve("/projects/[slug]", { slug: project.slug }));
-	}
-
-	function handleCardKeydown(event: KeyboardEvent) {
-		if (event.key === "Enter" || event.key === " ") {
-			event.preventDefault();
-			openProject();
-		}
-	}
+	} = $props();
 </script>
 
-<div
-	role="link"
-	tabindex="0"
-	aria-label="Voir le projet {project.title}"
-	class="h-full rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-	onclick={openProject}
-	onkeydown={handleCardKeydown}
->
-	<GlassCard class="p-6 h-full flex flex-col">
+{#snippet projectContent()}
+	<GlassCard hover={hasProjectDetails(project)} class="p-6 h-full flex flex-col">
 		<div class="flex items-start justify-between mb-4">
 			<span class="text-xs font-mono text-muted-foreground/50">
 				{project.slug}
 			</span>
-			<ArrowUpRight
-				class="h-4 w-4 text-muted-foreground/50 transition-all group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-			/>
+			{#if hasProjectDetails(project)}
+				<ArrowUpRight
+					class="h-4 w-4 text-muted-foreground/50 transition-all group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+				/>
+			{:else}
+				<Badge variant="secondary">En développement</Badge>
+			{/if}
 		</div>
 
 		<h3 class="text-lg font-semibold text-foreground mb-2">{project.title}</h3>
@@ -97,4 +82,26 @@
 			</div>
 		</div>
 	</GlassCard>
-</div>
+{/snippet}
+
+{#if hasProjectDetails(project)}
+	<div
+		role="link"
+		tabindex="0"
+		aria-label="Voir le projet {project.title}"
+		class="group h-full rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+		onclick={() => void goto(resolve("/projects/[slug]", { slug: project.slug }))}
+		onkeydown={(event) => {
+			if (event.key === "Enter" || event.key === " ") {
+				event.preventDefault();
+				void goto(resolve("/projects/[slug]", { slug: project.slug }));
+			}
+		}}
+	>
+		{@render projectContent()}
+	</div>
+{:else}
+	<div class="h-full" aria-label="{project.title}, en développement">
+		{@render projectContent()}
+	</div>
+{/if}

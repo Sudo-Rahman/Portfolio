@@ -38,15 +38,7 @@
 			<p
 				class="text-xl sm:text-2xl text-muted-foreground font-light mb-4 tracking-wide"
 			>
-				Développeur Android / Full Stack
-			</p>
-		</AnimatedSection>
-
-		<AnimatedSection direction="fade" delay={320}>
-			<p class="mx-auto mb-10 max-w-2xl text-sm sm:text-base text-muted-foreground leading-relaxed">
-				Kotlin, Jetpack Compose, SvelteKit et Node.js. Je développe des
-				applications mobiles, des outils desktop et des produits SaaS avec APIs,
-				paiements, tests et livraison.
+				Développeur Full Stack / Android
 			</p>
 		</AnimatedSection>
 

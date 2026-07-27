@@ -18,7 +18,7 @@
 	<title>CV - Rahman YILMAZ</title>
 	<meta
 		name="description"
-		content="Curriculum vitae de Rahman YILMAZ, développeur Android / Full Stack : Kotlin, Jetpack Compose, SvelteKit, Node.js, APIs, paiements, tests et livraison."
+		content="Curriculum vitae de Rahman YILMAZ, développeur Full Stack / Android : PHP, Symfony, JavaScript, SvelteKit, Python, APIs, tests et livraison."
 	/>
 </svelte:head>
 
@@ -45,9 +45,11 @@
 
 		<AnimatedSection delay={50}>
 			<GlassCard hover={false} class="p-6 mb-12">
-				<p class="text-muted-foreground leading-relaxed mb-5">
-					{profile.summary}
-				</p>
+				<div class="text-muted-foreground leading-relaxed mb-5 space-y-3">
+					{#each profile.summary as paragraph (paragraph)}
+						<p>{paragraph}</p>
+					{/each}
+				</div>
 				<div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted-foreground">
 					<a
 						href="mailto:{profile.email}"

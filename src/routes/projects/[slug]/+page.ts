@@ -1,9 +1,15 @@
-import { getProject, projects } from "$lib/data/projects";
+import {
+	getProject,
+	hasProjectDetails,
+	projects,
+} from "$lib/data/projects";
 import { error } from "@sveltejs/kit";
 import type { PageLoad, EntryGenerator } from "./$types";
 
 export const entries: EntryGenerator = () => {
-	return projects.map((p) => ({ slug: p.slug }));
+	return projects
+		.filter(hasProjectDetails)
+		.map((project) => ({ slug: project.slug }));
 };
 
 export const prerender = true;
@@ -16,7 +22,7 @@ const reportModules = import.meta.glob("../../../../project-reports/*.md", {
 
 export const load: PageLoad = ({ params }) => {
 	const project = getProject(params.slug);
-	if (!project) {
+	if (!project || !hasProjectDetails(project)) {
 		error(404, "Projet non trouve");
 	}
 

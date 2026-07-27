@@ -8,7 +8,7 @@
 	<title>Projets - Rahman YILMAZ</title>
 	<meta
 		name="description"
-		content="Découvrez les projets de Rahman YILMAZ : applications Android, logiciels desktop, produits SaaS, paiements, tests, data et automatisation."
+		content="Découvrez les projets de Rahman YILMAZ : applications full stack, mobiles et desktop, APIs, tests, data, automatisation et livraison multi-plateforme."
 	/>
 </svelte:head>
 
@@ -20,8 +20,8 @@
 					Mes <span class="gradient-text">Projets</span>
 				</h1>
 				<p class="text-muted-foreground text-lg leading-relaxed">
-					Applications Android, logiciels desktop, produits SaaS, paiements,
-					tests, data et automatisation. {projects.length} projets réalisés.
+					Applications full stack, mobiles et desktop, APIs, tests, data et
+					automatisation. {projects.length} projets réalisés.
 				</p>
 			</div>
 		</AnimatedSection>
