@@ -26,6 +26,7 @@ This directory contains comprehensive technical reports for each project in the 
 | 16 | **rclone_cpp** | Bibliothèque C++ encapsulant rclone en tant que sous-processus, exposant une API orientée objet pour le stockage cloud. | [View report](rclone_cpp.md) |
 | 17 | **renamer** | Application de renommage de fichiers en masse, multi-plateforme, avec système de licences payantes. | [View report](renamer.md) |
 | 18 | **Titanium** | Application bureautique de gestion de contacts développée en C++17/23 avec Qt 5/6 (Widgets + SQL). | [View report](Titanium.md) |
+| 19 | **Ultra Explorer** | Gestionnaire de fichiers multi-cloud commercialisé : client graphique rclone en Rust, desktop Tauri 2 et serveur Docker auto-hébergé. | [View report](UltraExplorer.md) |
 
 ---
 

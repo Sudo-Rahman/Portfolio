@@ -12,6 +12,15 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
+		slug: "UltraExplorer",
+		title: "Ultra Explorer",
+		summary:
+			"Gestionnaire de fichiers multi-cloud commercialisé : client graphique rclone avec cœur Rust partagé entre une application desktop Tauri 2 et un serveur Axum auto-hébergeable via Docker, interface SvelteKit, explorateur double panneau, file de transferts durable, synchronisations planifiées et licences Pro via Stripe.",
+		technologies: ["Rust", "Tauri 2", "SvelteKit", "Axum", "rclone", "SQLite", "Docker", "Stripe"],
+		websiteUrl: "https://ultra-explorer.app/",
+		featured: true,
+	},
+	{
 		slug: "KARA",
 		title: "KARA",
 		summary:
@@ -45,7 +54,7 @@ export const projects: Project[] = [
 			"Gestionnaire desktop multi-cloud : client C++23/Qt 6 pilotant rclone pour explorer, rechercher et synchroniser des stockages distants, avec transferts asynchrones, progression en temps réel, packaging multiplateforme et releases GitHub.",
 		technologies: ["C++23", "Qt 6", "rclone", "CMake", "Conan"],
 		url: "https://github.com/Sudo-Rahman/Iridium",
-		featured: true,
+		featured: false,
 	},
 	{
 		slug: "Nymbra",
