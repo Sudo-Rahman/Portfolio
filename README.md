@@ -13,9 +13,18 @@ Mon portfolio est disponible en ligne à l'adresse suivante : [https://sudo-rahm
 - **Compétences** : Technologies et langages de programmation maîtrisés.
 - **Expériences professionnelles** : Historique de mes expériences en entreprise.
 
+## Direction artistique
+
+Le site est un **tableau périodique** : chaque projet est un élément (symbole, numéro atomique chronologique, famille colorée d'après un test de flamme). La page d'accueil fait exploser une goutte de métal liquide iridescent (shader WebGL) en particules qui se recomposent en tableau ; les technologies forment une molécule 3D et le parcours est lu comme un spectre d'émission.
+
 ## Technologies utilisées
 
-- **Frontend** : HTML5, CSS3, TypeScript, Svelte
+- **Framework** : SvelteKit 3, Svelte 5 (runes, attachments), TypeScript 6, Vite 8
+- **Style** : Tailwind CSS 4, Mona Sans & Martian Mono (polices variables)
+- **Animation** : GSAP 3.15 (ScrollTrigger, SplitText, ScrambleText), Lenis, View Transitions API
+- **3D** : Three.js r186 et shaders GLSL écrits à la main
+- **Contenu** : `src/lib/data/*.ts` et `project-reports/*.md` (rendu avec marked)
+- **Déploiement** : site statique pré-généré dans `portfolio/` (Node ≥ 22.17)
 
 ## Installation locale
 

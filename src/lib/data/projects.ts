@@ -1,5 +1,13 @@
+import type { Family, ProjectState } from "./elements.ts";
+
 export interface Project {
 	slug: string;
+	/** Atomic number: chronological order of the project. */
+	number: number;
+	symbol: string;
+	family: Family;
+	year: number;
+	state: ProjectState;
 	title: string;
 	summary: string;
 	technologies: string[];
@@ -13,6 +21,11 @@ export interface Project {
 export const projects: Project[] = [
 	{
 		slug: "UltraExplorer",
+		number: 22,
+		symbol: "Ue",
+		family: "desktop",
+		year: 2026,
+		state: "product",
 		title: "Ultra Explorer",
 		summary:
 			"Gestionnaire de fichiers multi-cloud commercialisé : client graphique rclone avec cœur Rust partagé entre une application desktop Tauri 2 et un serveur Axum auto-hébergeable via Docker, interface SvelteKit, explorateur double panneau, file de transferts durable, synchronisations planifiées et licences Pro via Stripe.",
@@ -22,6 +35,11 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "KARA",
+		number: 21,
+		symbol: "Ka",
+		family: "mobile",
+		year: 2026,
+		state: "confidential",
 		title: "KARA",
 		summary:
 			"Écosystème de gestion et de valorisation de métaux précieux : application iOS Swift/SwiftUI et services web SvelteKit/TypeScript, avec APIs sécurisées, Redis, extraction assistée par IA, pipeline de données, tests automatisés et CI.",
@@ -31,6 +49,11 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "MediaFlow",
+		number: 18,
+		symbol: "Mf",
+		family: "desktop",
+		year: 2025,
+		state: "open-source",
 		title: "MediaFlow",
 		summary:
 			"Suite desktop de traitement multimédia : interface Svelte 5/TypeScript et backend Rust/Tauri 2 pour l'extraction, l'OCR, la transcription et le traitement par lots avec FFmpeg, tests automatisés et CI multi-OS.",
@@ -40,6 +63,11 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "Projet-DAW",
+		number: 6,
+		symbol: "Np",
+		family: "web",
+		year: 2023,
+		state: "academic",
 		title: "Neptune",
 		summary:
 			"Plateforme d'apprentissage en ligne : architecture PHP MVC, interface JavaScript et base PostgreSQL réunissant gestion des utilisateurs, cours, évaluations par QCM, forum communautaire et administration.",
@@ -49,6 +77,11 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "Iridium",
+		number: 5,
+		symbol: "Ir",
+		family: "desktop",
+		year: 2023,
+		state: "open-source",
 		title: "Iridium",
 		summary:
 			"Gestionnaire desktop multi-cloud : client C++23/Qt 6 pilotant rclone pour explorer, rechercher et synchroniser des stockages distants, avec transferts asynchrones, progression en temps réel, packaging multiplateforme et releases GitHub.",
@@ -58,9 +91,14 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "Nymbra",
+		number: 20,
+		symbol: "Ny",
+		family: "mobile",
+		year: 2026,
+		state: "product",
 		title: "Nymbra",
 		summary:
-			"Application iPhone publiee sur l'App Store : coffre-fort chiffre pour documents, photos, videos, scans, archives et audio, avec Face ID, verrouillage automatique, recherche et synchronisation iCloud optionnelle.",
+			"Application iPhone publiée sur l'App Store : coffre-fort chiffré pour documents, photos, vidéos, scans, archives et audio, avec Face ID, verrouillage automatique, recherche et synchronisation iCloud optionnelle.",
 		technologies: ["iOS", "iCloud", "Face ID", "App Store", "Closed source"],
 		websiteUrl: "https://nymbra.sudo-rahman.fr/",
 		appStoreUrl: "https://apps.apple.com/us/app/nymbra/id6783014745",
@@ -68,6 +106,11 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "linkKeep",
+		number: 19,
+		symbol: "Lk",
+		family: "mobile",
+		year: 2026,
+		state: "product",
 		title: "linkKeep",
 		summary:
 			"Application Apple native iOS/iPadOS/macOS : SwiftUI, Core Data/CloudKit, synchronisation iCloud, architecture Domain/Data/Services, tests unitaires Swift et site multilingue SvelteKit.",
@@ -78,6 +121,11 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "kotlin-meteo",
+		number: 7,
+		symbol: "Km",
+		family: "mobile",
+		year: 2023,
+		state: "open-source",
 		title: "Kotlin Météo",
 		summary:
 			"Application Android native de prévisions météo en Kotlin : Open-Meteo, Geoapify, géolocalisation GPS, recherche de ville, prévisions 24 h/10 jours et persistance locale.",
@@ -87,6 +135,11 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "Before-After-Image",
+		number: 8,
+		symbol: "Ba",
+		family: "mobile",
+		year: 2023,
+		state: "open-source",
 		title: "Before-After-Image",
 		summary:
 			"Bibliothèque Android Jetpack Compose : composant before/after réutilisable, API simple, personnalisation du composant, démonstration et publication Gradle.",
@@ -96,6 +149,11 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "Argon",
+		number: 17,
+		symbol: "Ar",
+		family: "data",
+		year: 2025,
+		state: "open-source",
 		title: "Argon",
 		summary:
 			"Projet décisionnel autour du dataset Yelp : data warehouse Kimball, ETL Python/Pandas, chargement PostgreSQL, nettoyage de métadonnées, analyse de sentiment sur les avis et tableaux de bord Metabase.",
@@ -105,6 +163,11 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "Fractalium",
+		number: 9,
+		symbol: "Fr",
+		family: "desktop",
+		year: 2023,
+		state: "academic",
 		title: "Fractalium",
 		summary:
 			"Application C++/Qt de calcul distribué de fractales via MPI : zoom interactif, précision 100 décimales, snapshots de session et exécution sur cluster.",
@@ -114,6 +177,11 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "Lichess-Data",
+		number: 2,
+		symbol: "Li",
+		family: "system",
+		year: 2022,
+		state: "academic",
 		title: "Lichess-Data",
 		summary:
 			"Serveur Java multi-clients : indexe et interroge des PGN Lichess de plus de 100 Go, avec recherche, statistiques et PageRank.",
@@ -123,6 +191,11 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "renamer",
+		number: 14,
+		symbol: "Rn",
+		family: "desktop",
+		year: 2024,
+		state: "product",
 		title: "renamer",
 		summary:
 			"Application desktop multiplateforme Tauri 2 : renommage de lots de fichiers avec formatters combinables, aperçu temps réel, API Rust/Axum, licences Stripe et auto-update.",
@@ -133,69 +206,109 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "rclone_cpp",
+		number: 12,
+		symbol: "Rc",
+		family: "system",
+		year: 2024,
+		state: "open-source",
 		title: "rclone_cpp",
 		summary:
-			"Bibliotheque C++ encapsulant rclone en tant que sous-processus, exposant une API orientee objet pour le stockage cloud.",
+			"Bibliothèque C++ encapsulant rclone en tant que sous-processus, exposant une API orientée objet pour le stockage cloud.",
 		technologies: ["C++", "Boost", "rclone", "CMake", "Conan"],
 		url: "https://github.com/Sudo-Rahman/rclone_cpp",
 		featured: false,
 	},
 	{
 		slug: "PrimeShield",
+		number: 16,
+		symbol: "Ps",
+		family: "desktop",
+		year: 2025,
+		state: "open-source",
 		title: "PrimeShield",
 		summary:
-			"Demonstration interactive des primitives cryptographiques RSA avec interface graphique (Alice & Bob), construite en Rust avec Iced.",
+			"Démonstration interactive des primitives cryptographiques RSA avec interface graphique (Alice & Bob), construite en Rust avec Iced.",
 		technologies: ["Rust", "Iced", "RSA"],
 		url: "https://github.com/Sudo-Rahman/PrimeShield",
 		featured: false,
 	},
 	{
 		slug: "gold-investment",
+		number: 15,
+		symbol: "Au",
+		family: "web",
+		year: 2024,
+		state: "open-source",
 		title: "gold-investment",
 		summary:
-			"Calculateur d'investissement or en ligne : estime les gains potentiels selon la quantite, la duree et les contributions. Site SvelteKit avec suivi du marche des devises.",
+			"Calculateur d'investissement dans l'or en ligne : estime les gains potentiels selon la quantité, la durée et les contributions. Site SvelteKit avec suivi du marché des devises.",
 		technologies: ["TypeScript", "SvelteKit", "Tailwind CSS", "Docker"],
 		url: "https://github.com/Sudo-Rahman/gold-investment",
 		featured: false,
 	},
 	{
 		slug: "6-qui-prend",
+		number: 4,
+		symbol: "Qp",
+		family: "system",
+		year: 2022,
+		state: "academic",
 		title: "6-qui-prend",
 		summary:
-			"Jeu de cartes multijoueur en reseau implemente en C natif avec communication par sockets TCP.",
+			"Jeu de cartes multijoueur en réseau implémenté en C natif avec communication par sockets TCP.",
 		technologies: ["C", "Sockets TCP", "Linux"],
 		url: "https://github.com/Sudo-Rahman/6-qui-prend",
 		featured: false,
 	},
 	{
 		slug: "Curling-Three-js",
+		number: 1,
+		symbol: "Cu",
+		family: "web",
+		year: 2021,
+		state: "academic",
 		title: "Curling-Three-js",
 		summary:
-			"Projet academique — partie de curling interactive en 3D dans le navigateur, construite avec Three.js et WebGL.",
+			"Projet académique : partie de curling interactive en 3D dans le navigateur, construite avec Three.js et WebGL.",
 		technologies: ["JavaScript", "Three.js", "WebGL", "GLSL"],
 		url: "https://github.com/Sudo-Rahman/Curling-Three-js",
 		featured: false,
 	},
 	{
 		slug: "Leafium",
+		number: 11,
+		symbol: "Lf",
+		family: "data",
+		year: 2024,
+		state: "academic",
 		title: "Leafium",
 		summary:
-			"Centralisation et analyse de donnees cinematographiques dans une base NoSQL pour en extraire des indicateurs decisionnels.",
+			"Centralisation et analyse de données cinématographiques dans une base NoSQL pour en extraire des indicateurs décisionnels.",
 		technologies: ["MongoDB", "NoSQL", "Python"],
 		url: "https://github.com/Sudo-Rahman/Leafium",
 		featured: false,
 	},
 	{
 		slug: "Projet-CWA",
+		number: 13,
+		symbol: "Cd",
+		family: "web",
+		year: 2024,
+		state: "academic",
 		title: "Projet-CWA (Cadmium)",
 		summary:
-			"Application web de gestion de taches (CRUD complet) construite avec Angular 16 et TypeScript.",
+			"Application web de gestion de tâches (CRUD complet) construite avec Angular 16 et TypeScript.",
 		technologies: ["TypeScript", "Angular", "Tailwind CSS"],
 		url: "https://github.com/Sudo-Rahman/Projet-CWA",
 		featured: false,
 	},
 	{
 		slug: "Projet-GL",
+		number: 10,
+		symbol: "Gl",
+		family: "desktop",
+		year: 2023,
+		state: "academic",
 		title: "Projet-GL",
 		summary:
 			"Application Java Swing de gestion d'achat de fruits avec interface graphique desktop.",
@@ -205,9 +318,14 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "Titanium",
+		number: 3,
+		symbol: "Ti",
+		family: "desktop",
+		year: 2022,
+		state: "academic",
 		title: "Titanium",
 		summary:
-			"Application bureautique de gestion de contacts developpee en C++17/23 avec Qt 5/6 (Widgets + SQL).",
+			"Application bureautique de gestion de contacts développée en C++17/23 avec Qt 5/6 (Widgets + SQL).",
 		technologies: ["C++", "Qt", "SQL"],
 		url: "https://github.com/Sudo-Rahman/Titanium",
 		featured: false,
@@ -216,10 +334,28 @@ export const projects: Project[] = [
 
 export const featuredProjects = projects.filter((p) => p.featured);
 
+/** Projects in atomic order (oldest first). */
+export const elements = [...projects].sort((a, b) => a.number - b.number);
+
 export function hasProjectDetails(project: Project): boolean {
 	return project.detailsAvailable !== false;
 }
 
 export function getProject(slug: string): Project | undefined {
 	return projects.find((p) => p.slug === slug);
+}
+
+/** Previous / next element in atomic order that has a detail page. */
+export function neighbours(project: Project): { prev?: Project; next?: Project } {
+	const browsable = elements.filter(hasProjectDetails);
+	const i = browsable.findIndex((p) => p.slug === project.slug);
+	return { prev: browsable[i - 1], next: browsable[i + 1] };
+}
+
+export function projectHref(project: Project): string | undefined {
+	return hasProjectDetails(project) ? `/projects/${project.slug}` : undefined;
+}
+
+export function pad(n: number, size = 2): string {
+	return String(n).padStart(size, "0");
 }

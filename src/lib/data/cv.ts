@@ -10,6 +10,8 @@ export interface Experience {
 	endDate: string;
 	location: string;
 	highlights: string[];
+	/** Applications and products shipped during this experience. */
+	products?: string[];
 }
 
 export interface Education {
@@ -82,6 +84,17 @@ export const experiences: Experience[] = [
 			"Amélioration et maintenance du viewer e-santé, ainsi que développement d'interfaces web avec JavaScript/TypeScript et SvelteKit",
 			"Intervention sur l'ensemble du cycle applicatif : analyse des besoins, chiffrage, développement, tests, recette, documentation et mise en production, en collaboration avec les équipes métier, mobile et backend",
 		],
+		products: [
+			"Vitaboucle",
+			"Vercors",
+			"Dole",
+			"Ampi",
+			"Chor",
+			"Ma Ville Facile !",
+			"Corsaire !",
+			"ToolBox v2",
+			"Floween",
+		],
 	},
 	{
 		company: "Steerway",
@@ -108,6 +121,7 @@ export const experiences: Experience[] = [
 			"Mise en place des tests, de l'intégration continue, du packaging, de la documentation et du suivi des versions",
 			"Gestion de la commercialisation des produits : paiements Stripe, pages produit, SEO technique, campagnes publicitaires et suivi des conversions",
 		],
+		products: ["Ultra Explorer", "renamer", "Nymbra", "linkKeep", "MediaFlow"],
 	},
 ];
 
