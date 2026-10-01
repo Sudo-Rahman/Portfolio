@@ -22,3 +22,8 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 .idea
+.claude
+tmp/
+output/
+interview/
+cv/Rahman_YILMAZ_CV_*
