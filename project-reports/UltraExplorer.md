@@ -1,4 +1,4 @@
-# Ultra Explorer | Fiche produit
+# Ultra Explorer
 
 ![Explorateur double panneau d'Ultra Explorer](https://ultra-explorer.app/screenshots/hero-explorer.webp)
 
@@ -8,7 +8,7 @@
 - **Deux modes de déploiement, un seul produit** : application desktop native (Tauri 2) ou application web auto-hébergée sur un serveur ou un NAS via Docker.
 - **Cœur applicatif en Rust** partagé entre les deux modes, interface SvelteKit commune.
 - **Produit commercialisé** : offre gratuite, abonnement Pro et licence à vie, avec site web, documentation, paiement Stripe et activation des licences par installation.
-- **Version 1.0 publiée** en septembre 2026 (macOS disponible, Windows et Linux en préparation).
+- **Version 1.0.1** publiée en septembre 2026 (macOS disponible, Windows et Linux en préparation).
 - **Code source privé** : cette fiche présente le produit et ses choix d'architecture, sans extraits de code.
 
 ## Liens publics
@@ -89,7 +89,7 @@ Ultra Explorer est la troisième itération de mon travail autour de rclone, apr
 ```
 
 - **Un seul cœur, deux transports.** Toute la logique métier (validation, orchestration, états des transferts, événements) vit dans un cœur Rust commun. L'application Tauri et le serveur Axum ne sont que des adaptateurs minces, ce qui empêche le desktop et le web de diverger.
-- **Contrats typés de bout en bout.** Les objets échangés sont définis en Rust puis générés automatiquement en TypeScript : l'interface n'a aucune connaissance de l'API interne de rclone et le compilateur détecte toute rupture de contrat.
+- **Contrats typés entre Rust et TypeScript.** Les objets échangés sont définis en Rust puis générés automatiquement en TypeScript : l'interface n'a aucune connaissance de l'API interne de rclone et le compilateur détecte toute rupture de contrat.
 - **rclone comme moteur embarqué.** rclone est piloté via son API de contrôle distant, livré en sidecar vérifié par empreinte SHA-256, à partir d'un fork maintenu qui ajoute un correctif d'annulation des parcours d'arborescence.
 - **Secrets hors de l'interface.** Les identifiants restent dans la configuration privée de rclone et ne sont jamais envoyés au frontend.
 - **Conteneur durci.** L'image Docker s'exécute sans privilèges, avec capacités Linux retirées et système de fichiers racine en lecture seule.
@@ -111,9 +111,9 @@ J'ai développé l'ensemble de la chaîne commerciale dans un second projet, le 
 - Builds desktop signés et mises à jour signées, profils de distribution par plateforme.
 - Audit automatisé des traductions (parité des catalogues, placeholders ICU, détection de textes non traduits).
 
-## Ce que le projet démontre
+## Ce que le projet montre
 
-- Conception d'une architecture hexagonale en Rust partagée entre une application desktop et un service web.
-- Maîtrise de la chaîne Tauri 2 / SvelteKit / Axum, de la programmation asynchrone avec Tokio et de l'intégration d'un outil tiers complexe comme rclone.
-- Attention portée à la sûreté des données : aucune opération destructrice sans confirmation, aperçus obligatoires, plafonds de suppression.
-- Capacité à mener un produit jusqu'à la vente : site, documentation, tarification, paiement, licences, distribution et support.
+- Un cœur Rust unique servi par deux applications : desktop avec Tauri, web avec Axum.
+- L'intégration d'un outil tiers complexe (rclone), jusqu'à maintenir un fork pour corriger l'annulation.
+- Des garde-fous sur les données : aucune suppression sans confirmation, aperçu obligatoire avant un miroir, plafond de suppressions.
+- Un produit mené jusqu'à la vente : site, documentation, tarifs, paiement, licences, distribution et support.

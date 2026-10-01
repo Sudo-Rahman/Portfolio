@@ -39,13 +39,15 @@ export const projects: Project[] = [
 		symbol: "Ka",
 		family: "mobile",
 		year: 2026,
-		state: "confidential",
+		state: "product",
 		title: "KARA",
 		summary:
-			"Écosystème de gestion et de valorisation de métaux précieux : application iOS Swift/SwiftUI et services web SvelteKit/TypeScript, avec APIs sécurisées, Redis, extraction assistée par IA, pipeline de données, tests automatisés et CI.",
-		technologies: ["Swift", "SwiftUI", "SvelteKit", "TypeScript", "Redis"],
+			"Application iPhone d'inventaire de métaux précieux (lingots, pièces, bijoux) : valeur estimée au cours du marché, suivi dans le temps, simulation de vente, pièces jointes, rapports PDF et widgets. SwiftUI/SwiftData avec iCloud, API SvelteKit sécurisée par App Attest, sans compte utilisateur.",
+		technologies: ["Swift", "SwiftUI", "SwiftData", "CloudKit", "WidgetKit", "SvelteKit", "Redis"],
+		url: "https://github.com/Sudo-Rahman/KARA",
+		websiteUrl: "https://kara.sudo-rahman.fr/",
+		appStoreUrl: "https://apps.apple.com/app/id6795243977",
 		featured: true,
-		detailsAvailable: false,
 	},
 	{
 		slug: "MediaFlow",
@@ -53,12 +55,13 @@ export const projects: Project[] = [
 		symbol: "Mf",
 		family: "desktop",
 		year: 2025,
-		state: "open-source",
+		state: "product",
 		title: "MediaFlow",
 		summary:
-			"Suite desktop de traitement multimédia : interface Svelte 5/TypeScript et backend Rust/Tauri 2 pour l'extraction, l'OCR, la transcription et le traitement par lots avec FFmpeg, tests automatisés et CI multi-OS.",
+			"Application desktop de traitement vidéo et audio basée sur FFmpeg : extraction et muxage de pistes, transcodage, sous-titres générés depuis la parole, OCR des sous-titres incrustés, traduction et renommage par lots. Rust/Tauri 2 et Svelte 5, distribuée sur le Microsoft Store et en téléchargement direct.",
 		technologies: ["Rust", "Tauri 2", "Svelte 5", "FFmpeg", "GitHub Actions"],
 		url: "https://github.com/Sudo-Rahman/MediaFlow",
+		websiteUrl: "https://mediaflowtools.com/",
 		featured: true,
 	},
 	{
@@ -115,8 +118,8 @@ export const projects: Project[] = [
 		summary:
 			"Application Apple native iOS/iPadOS/macOS : SwiftUI, Core Data/CloudKit, synchronisation iCloud, architecture Domain/Data/Services, tests unitaires Swift et site multilingue SvelteKit.",
 		technologies: ["Swift", "SwiftUI", "Core Data", "CloudKit", "Swift Testing"],
-		url: "https://github.com/Sudo-Rahman/linkKeep",
 		websiteUrl: "https://linkkeep.sudo-rahman.fr/",
+		appStoreUrl: "https://apps.apple.com/app/id6760005462",
 		featured: false,
 	},
 	{
@@ -153,7 +156,7 @@ export const projects: Project[] = [
 		symbol: "Ar",
 		family: "data",
 		year: 2025,
-		state: "open-source",
+		state: "academic",
 		title: "Argon",
 		summary:
 			"Projet décisionnel autour du dataset Yelp : data warehouse Kimball, ETL Python/Pandas, chargement PostgreSQL, nettoyage de métadonnées, analyse de sentiment sur les avis et tableaux de bord Metabase.",
@@ -198,10 +201,11 @@ export const projects: Project[] = [
 		state: "product",
 		title: "renamer",
 		summary:
-			"Application desktop multiplateforme Tauri 2 : renommage de lots de fichiers avec formatters combinables, aperçu temps réel, API Rust/Axum, licences Stripe et auto-update.",
-		technologies: ["Rust", "Tauri 2", "Axum", "TypeScript"],
+			"Logiciel de renommage de fichiers par lots avec règles combinables et aperçu en direct. La v1 (Tauri 2, API Rust/Axum, licences Stripe) était vendue en direct ; la v2 est publiée sur le Mac App Store sous le nom Renamer Pro.",
+		technologies: ["Rust", "Tauri 2", "SvelteKit", "Axum", "Stripe"],
 		url: "https://github.com/Sudo-Rahman/renamer",
 		websiteUrl: "https://renamer.sudo-rahman.fr/",
+		appStoreUrl: "https://apps.apple.com/us/app/renamer-pro/id6753810633?mt=12",
 		featured: false,
 	},
 	{
@@ -333,6 +337,9 @@ export const projects: Project[] = [
 ];
 
 export const featuredProjects = projects.filter((p) => p.featured);
+
+/** Projects shipped to users: stores, paid licences or public downloads. */
+export const publishedProjects = projects.filter((p) => p.state === "product");
 
 /** Projects in atomic order (oldest first). */
 export const elements = [...projects].sort((a, b) => a.number - b.number);

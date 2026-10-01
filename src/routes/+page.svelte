@@ -9,7 +9,7 @@
 	<title>Rahman Yilmaz — Développeur Full Stack / Android</title>
 	<meta
 		name="description"
-		content="Portfolio de Rahman Yilmaz, développeur Full Stack / Android : un tableau périodique de 22 projets, du mobile au desktop, du cœur Rust à l'interface SvelteKit."
+		content="Portfolio de Rahman Yilmaz, développeur Full Stack / Android à Chalon-sur-Saône : applications Android et iOS, logiciels desktop Rust/Tauri, sites et APIs web."
 	/>
 	<meta property="og:title" content="Rahman Yilmaz — Développeur Full Stack / Android" />
 	<meta property="og:description" content="Un tableau périodique de 22 projets : mobile, desktop, web, data et système." />

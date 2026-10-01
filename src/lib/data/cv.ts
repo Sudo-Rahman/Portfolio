@@ -35,8 +35,8 @@ export const profile = {
 	github: "https://github.com/Sudo-Rahman",
 	linkedin: "https://www.linkedin.com/in/rahman-yilmaz-9236ab270/",
 	summary: [
-		"Développeur Full Stack / Android, Bac+5 en informatique, avec deux ans d'expérience chez Sweepin sur des applications SmartCity et e-santé, du front-end SvelteKit/Android au back-end PHP/Symfony et aux APIs REST.",
-		"Développeur de métier et bricoleur par tempérament, je m'intéresse autant au logiciel qu'au matériel, aux serveurs personnels ou à la maison connectée. J'aime comprendre comment les systèmes fonctionnent, les mettre en place moi-même et apprendre ce qui me manque pour aller au bout d'un projet.",
+		"Développeur Full Stack / Android, titulaire d'un Master en informatique. J'ai passé deux ans en alternance chez Sweepin sur des applications SmartCity et e-santé : apps Android, back-offices PHP/Symfony, APIs REST et interfaces SvelteKit. Depuis septembre 2025, je développe et je vends mes propres logiciels.",
+		"En dehors du code, je m'occupe aussi du matériel : serveur et NAS à la maison, réseau, domotique. J'aime comprendre comment les choses fonctionnent et les installer moi-même.",
 	],
 };
 

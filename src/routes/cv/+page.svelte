@@ -94,7 +94,7 @@
 					{/if}
 					{#if line.products.length}
 						<div class="products">
-							<p class="label text-dust">Produits livrés</p>
+							<p class="label text-dust">Quelques projets</p>
 							<ul>
 								{#each line.products as name (name)}
 									{@const p = projectByTitle.get(name)}
@@ -149,7 +149,6 @@
 <style>
 	.head {
 		padding-top: calc(var(--nav-h) + clamp(3rem, 8vw, 6rem));
-		padding-bottom: clamp(2.5rem, 5vw, 4rem);
 	}
 	.title {
 		margin-top: 1.5rem;
@@ -203,7 +202,6 @@
 		z-index: 20;
 		padding-top: calc(var(--nav-h) + 0.25rem);
 		padding-bottom: 0.5rem;
-		margin-top: calc(-1 * var(--nav-h));
 		background: var(--color-ink);
 	}
 	.meter::after {
@@ -244,6 +242,7 @@
 		text-shadow: 0 0 40px color-mix(in oklab, var(--c) 60%, transparent);
 	}
 	.nm small {
+		white-space: nowrap;
 		font-family: var(--font-mono);
 		font-size: 0.9rem;
 		font-weight: 400;

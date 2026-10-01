@@ -33,8 +33,7 @@
 
 		<div class="cta">
 			<p class="pitch">
-				Un poste, une mission, un produit à faire naître&nbsp;? Ajoutez le réactif manquant&nbsp;: je réponds
-				vite.
+				Un poste, une mission freelance, une question sur un projet&nbsp;? Ajoutez le réactif manquant.
 			</p>
 			<div class="actions">
 				<a

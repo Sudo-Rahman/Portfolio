@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { familyById } from "#lib/data/elements.ts";
-	import { elements } from "#lib/data/projects.ts";
+	import { elements, publishedProjects } from "#lib/data/projects.ts";
 	import { profile } from "#lib/data/cv.ts";
 	import { ReactionScene, type TargetRect } from "#lib/gl/ReactionScene.ts";
 	import { gsap, ScrollTrigger } from "#lib/motion/gsap.ts";
@@ -193,7 +193,8 @@
 						Développeur Full Stack / Android
 					</p>
 					<p class="tagline out intro">
-						Je synthétise des logiciels, du noyau Rust à l'interface&nbsp;: mobile, desktop et web.
+						J'écris des applications Android et iOS, des logiciels desktop en Rust et des sites web.
+						{publishedProjects.length} sont publiés.
 					</p>
 					<p class="label hint out intro">
 						<Icon name="arrow-down" size={14} />

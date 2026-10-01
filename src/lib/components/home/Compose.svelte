@@ -1,12 +1,7 @@
 <script lang="ts">
 	import { profile } from "#lib/data/cv.ts";
-	import { projects } from "#lib/data/projects.ts";
+	import { projects, publishedProjects } from "#lib/data/projects.ts";
 	import { countUp, reveal, splitLines } from "#lib/motion/attachments.ts";
-
-	// The headline already says it: drop the repeated opening of the second paragraph.
-	const paragraphs = profile.summary.map((p) =>
-		p.replace(/^Développeur de métier et bricoleur par tempérament, je/, "Je"),
-	);
 
 	const properties = [
 		["Symbole", "Ry"],
@@ -19,13 +14,13 @@
 
 	const stats = [
 		{ value: projects.length, label: "éléments synthétisés", note: "projets, de 2021 à aujourd'hui" },
-		{ value: 7, label: "apps SmartCity", note: "maintenues pour des collectivités chez Sweepin" },
 		{
-			value: projects.filter((p) => p.state === "product").length,
+			value: publishedProjects.length,
 			label: "produits publiés",
-			note: "Ultra Explorer, renamer, Nymbra, linkKeep",
+			note: publishedProjects.map((p) => p.title).join(", "),
 		},
-		{ value: 24, label: "mois d'alternance", note: "Android puis Full Stack, 2023 → 2025" },
+		{ value: 24, label: "mois d'alternance", note: "chez Sweepin, Android puis Full Stack" },
+		{ value: 3, label: "langues parlées", note: "français, turc, anglais" },
 	];
 </script>
 
@@ -59,10 +54,10 @@
 
 		<div class="text">
 			<h2 id="compose-title" class="statement" {@attach splitLines()}>
-				Développeur de métier, <em>bricoleur</em> par tempérament.
+				Développeur Android et web, aujourd'hui <em>à mon compte</em>.
 			</h2>
 			<div class="paras" {@attach reveal({ children: true, delay: 0.2 })}>
-				{#each paragraphs as para (para)}
+				{#each profile.summary as para (para)}
 					<p>{para}</p>
 				{/each}
 			</div>
