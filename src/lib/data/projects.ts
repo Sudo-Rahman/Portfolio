@@ -76,7 +76,7 @@ export const projects: Project[] = [
 			"Plateforme d'apprentissage en ligne : architecture PHP MVC, interface JavaScript et base PostgreSQL réunissant gestion des utilisateurs, cours, évaluations par QCM, forum communautaire et administration.",
 		technologies: ["PHP", "PostgreSQL", "JavaScript", "Docker"],
 		url: "https://github.com/Sudo-Rahman/Projet-DAW",
-		featured: true,
+		featured: false,
 	},
 	{
 		slug: "Iridium",
@@ -90,7 +90,7 @@ export const projects: Project[] = [
 			"Gestionnaire desktop multi-cloud : client C++23/Qt 6 pilotant rclone pour explorer, rechercher et synchroniser des stockages distants, avec transferts asynchrones, progression en temps réel, packaging multiplateforme et releases GitHub.",
 		technologies: ["C++23", "Qt 6", "rclone", "CMake", "Conan"],
 		url: "https://github.com/Sudo-Rahman/Iridium",
-		featured: false,
+		featured: true,
 	},
 	{
 		slug: "Nymbra",
