@@ -1,23 +1,23 @@
-<script>
-	import Hero from "$lib/components/sections/Hero.svelte";
-	import AboutPreview from "$lib/components/sections/AboutPreview.svelte";
-	import FeaturedProjects from "$lib/components/sections/FeaturedProjects.svelte";
-	import SkillsPreview from "$lib/components/sections/SkillsPreview.svelte";
+<script lang="ts">
+	import Reaction from "#lib/components/home/Reaction.svelte";
+	import Compose from "#lib/components/home/Compose.svelte";
+	import Molecules from "#lib/components/home/Molecules.svelte";
+	import SpectrumTeaser from "#lib/components/home/SpectrumTeaser.svelte";
 </script>
 
 <svelte:head>
-	<title>Rahman YILMAZ - Développeur Full Stack / Android</title>
+	<title>Rahman Yilmaz — Développeur Full Stack / Android</title>
 	<meta
 		name="description"
-		content="Portfolio de Rahman YILMAZ, développeur Full Stack / Android : PHP, Symfony, JavaScript, SvelteKit, Python, APIs, applications mobiles et logiciels desktop."
+		content="Portfolio de Rahman Yilmaz, développeur Full Stack / Android à Chalon-sur-Saône : applications Android et iOS, logiciels desktop Rust/Tauri, sites et APIs web."
 	/>
-	<meta property="og:title" content="Rahman YILMAZ - Développeur Full Stack / Android" />
-	<meta property="og:description" content="Portfolio de Rahman YILMAZ : développement Full Stack, Android, APIs, tests, livraison et projets logiciels." />
+	<meta property="og:title" content="Rahman Yilmaz — Développeur Full Stack / Android" />
+	<meta property="og:description" content="Un tableau périodique de 22 projets : mobile, desktop, web, data et système." />
 	<meta property="og:url" content="https://sudo-rahman.fr/" />
 	<meta property="og:type" content="website" />
 </svelte:head>
 
-<Hero />
-<AboutPreview />
-<FeaturedProjects />
-<SkillsPreview />
+<Reaction />
+<Compose />
+<Molecules />
+<SpectrumTeaser />

@@ -1,20 +1,12 @@
-import {
-	getProject,
-	hasProjectDetails,
-	projects,
-} from "$lib/data/projects";
 import { error } from "@sveltejs/kit";
-import type { PageLoad, EntryGenerator } from "./$types";
+import { getProject, hasProjectDetails, neighbours, projects } from "#lib/data/projects.ts";
+import { renderReport } from "#lib/data/report.ts";
+import type { EntryGenerator, PageLoad } from "./$types";
 
-export const entries: EntryGenerator = () => {
-	return projects
-		.filter(hasProjectDetails)
-		.map((project) => ({ slug: project.slug }));
-};
+export const entries: EntryGenerator = () =>
+	projects.filter(hasProjectDetails).map((project) => ({ slug: project.slug }));
 
-export const prerender = true;
-
-const reportModules = import.meta.glob("../../../../project-reports/*.md", {
+const reports = import.meta.glob("../../../../project-reports/*.md", {
 	eager: true,
 	query: "?raw",
 	import: "default",
@@ -22,21 +14,10 @@ const reportModules = import.meta.glob("../../../../project-reports/*.md", {
 
 export const load: PageLoad = ({ params }) => {
 	const project = getProject(params.slug);
-	if (!project || !hasProjectDetails(project)) {
-		error(404, "Projet non trouve");
-	}
+	if (!project || !hasProjectDetails(project)) error(404, "Élément introuvable");
 
-	let content: string | undefined;
-	for (const [path, raw] of Object.entries(reportModules)) {
-		if (path.endsWith(`/${params.slug}.md`)) {
-			content = raw;
-			break;
-		}
-	}
+	const raw = Object.entries(reports).find(([path]) => path.endsWith(`/${params.slug}.md`))?.[1];
+	if (!raw) error(404, "Rapport introuvable");
 
-	if (!content) {
-		error(404, "Rapport non trouve");
-	}
-
-	return { project, content };
+	return { project, ...neighbours(project), ...renderReport(raw) };
 };

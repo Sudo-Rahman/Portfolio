@@ -14,8 +14,8 @@ cv:
       url: https://www.linkedin.com/in/rahman-yilmaz-9236ab270/
   sections:
     Profil:
-      - "Développeur Full Stack / Android, Bac+5 en informatique, avec deux ans d'expérience chez Sweepin sur des applications SmartCity et e-santé, du front-end SvelteKit/Android au back-end PHP/Symfony et aux APIs REST."
-      - "Développeur de métier et bricoleur par tempérament, je m'intéresse autant au logiciel qu'au matériel, aux serveurs personnels ou à la maison connectée. J'aime comprendre comment les systèmes fonctionnent, les mettre en place moi-même et apprendre ce qui me manque pour aller au bout d'un projet."
+      - "Développeur Full Stack / Android, titulaire d'un Master en informatique. J'ai passé deux ans en alternance chez Sweepin sur des applications SmartCity et e-santé : apps Android, back-offices PHP/Symfony, APIs REST et interfaces SvelteKit. Depuis septembre 2025, je développe et je vends mes propres logiciels."
+      - "En dehors du code, je m'occupe aussi du matériel : serveur et NAS à la maison, réseau, domotique. J'aime comprendre comment les choses fonctionnent et les installer moi-même."
     "Compétences":
       - label: "Android"
         details: "Kotlin, Java, Jetpack Compose, Clean Architecture, Gradle"
@@ -78,14 +78,14 @@ cv:
         date: 2020
         location: Chalon-sur-Saône, France
     Projets:
+      - name: "Ultra Explorer"
+        summary: "Gestionnaire de fichiers multi-cloud commercialisé (abonnement Pro et licence à vie via Stripe), deuxième version de mon client rclone après Iridium (C++23/Qt 6) : cœur Rust partagé entre une application desktop Tauri 2 et un serveur Axum auto-hébergeable via Docker, interface SvelteKit, explorateur double panneau, file de transferts durable, synchronisations planifiées, plus de 1 300 tests Rust et CI multi-OS"
       - name: "KARA"
-        summary: "Écosystème de gestion et de valorisation de métaux précieux : application iOS Swift/SwiftUI et services web SvelteKit/TypeScript, avec APIs sécurisées, Redis, extraction assistée par IA, pipeline de données, tests automatisés et CI"
+        summary: "Application iPhone publiée sur l'App Store pour l'inventaire de métaux précieux : Swift/SwiftUI, SwiftData et iCloud, widgets, API SvelteKit/TypeScript sécurisée par App Attest avec Redis, extraction assistée par IA, tests automatisés et CI"
       - name: "MediaFlow"
-        summary: "Suite desktop de traitement multimédia : interface Svelte 5/TypeScript et backend Rust/Tauri 2 pour l'extraction, l'OCR, la transcription et le traitement par lots avec FFmpeg, tests automatisés et CI multi-OS"
-      - name: "Neptune"
-        summary: "Plateforme d'apprentissage en ligne : architecture PHP MVC, interface JavaScript et base PostgreSQL réunissant gestion des utilisateurs, cours, évaluations par QCM, forum communautaire et administration"
-      - name: "Iridium"
-        summary: "Gestionnaire desktop multi-cloud : client C++23/Qt 6 pilotant rclone pour explorer, rechercher et synchroniser des stockages distants, avec transferts asynchrones, progression en temps réel, packaging multiplateforme et releases GitHub"
+        summary: "Logiciel desktop de traitement multimédia distribué sur le Microsoft Store : backend Rust/Tauri 2 et interface Svelte 5/TypeScript pour l'extraction, l'OCR, la transcription, la traduction et le traitement par lots avec FFmpeg, crédits IA, tests automatisés et CI multi-OS"
+      - name: "Fractalium"
+        summary: "Calcul distribué de fractales sur un cluster de machines : C++23 et MPI (Boost.MPI) en architecture maître/travailleurs, interface Qt avec zoom interactif, précision de 100 décimales (Boost.Multiprecision), sauvegarde des sessions et reprise après plantage"
 design:
   theme: classic
   page:
