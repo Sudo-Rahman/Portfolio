@@ -2,7 +2,7 @@
 
 ![Iridium](https://raw.githubusercontent.com/Sudo-Rahman/Iridium/main/resources/preview.png)
 
-Iridium est un gestionnaire de fichiers pour le cloud : Google Drive, OneDrive, Dropbox, Mega, SFTP, SMB et d'autres, dans une seule fenêtre à deux panneaux. Il s'appuie sur rclone pour les transferts. C'est mon premier projet autour de rclone : la bibliothèque [rclone_cpp](/projects/rclone_cpp) en a été extraite, et [Ultra Explorer](/projects/UltraExplorer) en a pris la suite.
+Iridium est un gestionnaire de fichiers pour le cloud : Google Drive, OneDrive, Dropbox, Mega, SFTP, SMB et d'autres, dans une seule fenêtre à deux panneaux. Il s'appuie sur rclone pour les transferts. Toute la gestion de rclone passe par [rclone_cpp](/projects/rclone_cpp), une bibliothèque que j'ai écrite à part pour ne pas coupler l'application à rclone. [Ultra Explorer](/projects/UltraExplorer) en est la deuxième version, réécrite en Rust.
 
 ## En bref
 

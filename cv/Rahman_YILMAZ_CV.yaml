@@ -79,13 +79,13 @@ cv:
         location: Chalon-sur-Saône, France
     Projets:
       - name: "Ultra Explorer"
-        summary: "Gestionnaire de fichiers multi-cloud commercialisé (abonnement Pro et licence à vie via Stripe) : client graphique de rclone avec un cœur Rust partagé entre une application desktop Tauri 2 et un serveur Axum auto-hébergeable via Docker, interface SvelteKit, explorateur double panneau, file de transferts durable, synchronisations planifiées, plus de 1 300 tests Rust et CI multi-OS"
+        summary: "Gestionnaire de fichiers multi-cloud commercialisé (abonnement Pro et licence à vie via Stripe), deuxième version de mon client rclone après Iridium (C++23/Qt 6) : cœur Rust partagé entre une application desktop Tauri 2 et un serveur Axum auto-hébergeable via Docker, interface SvelteKit, explorateur double panneau, file de transferts durable, synchronisations planifiées, plus de 1 300 tests Rust et CI multi-OS"
       - name: "KARA"
         summary: "Application iPhone publiée sur l'App Store pour l'inventaire de métaux précieux : Swift/SwiftUI, SwiftData et iCloud, widgets, API SvelteKit/TypeScript sécurisée par App Attest avec Redis, extraction assistée par IA, tests automatisés et CI"
       - name: "MediaFlow"
         summary: "Logiciel desktop de traitement multimédia distribué sur le Microsoft Store : backend Rust/Tauri 2 et interface Svelte 5/TypeScript pour l'extraction, l'OCR, la transcription, la traduction et le traitement par lots avec FFmpeg, crédits IA, tests automatisés et CI multi-OS"
-      - name: "Iridium"
-        summary: "Gestionnaire desktop multi-cloud : client C++23/Qt 6 pilotant rclone pour explorer, rechercher et synchroniser des stockages distants, avec transferts asynchrones, progression en temps réel, packaging multiplateforme et releases GitHub"
+      - name: "Fractalium"
+        summary: "Calcul distribué de fractales sur un cluster de machines : C++23 et MPI (Boost.MPI) en architecture maître/travailleurs, interface Qt avec zoom interactif, précision de 100 décimales (Boost.Multiprecision), sauvegarde des sessions et reprise après plantage"
 design:
   theme: classic
   page:

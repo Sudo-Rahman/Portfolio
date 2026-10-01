@@ -23,7 +23,7 @@ rclone est extrêmement puissant mais s'utilise en ligne de commande : configure
 
 Le produit vise les utilisateurs qui manipulent de gros volumes répartis sur plusieurs clouds, ainsi que ceux qui veulent piloter leurs stockages depuis un NAS domestique, y compris depuis un téléphone.
 
-Ultra Explorer est la troisième itération de mon travail autour de rclone, après la bibliothèque [rclone_cpp](/projects/rclone_cpp) et le client desktop C++/Qt [Iridium](/projects/Iridium). Il reprend le même besoin avec une architecture repensée pour être distribuée, maintenue et vendue.
+Ultra Explorer est la deuxième version de mon client rclone, après [Iridium](/projects/Iridium), écrit en C++/Qt avec ma bibliothèque [rclone_cpp](/projects/rclone_cpp). Il reprend le même besoin avec une architecture repensée pour être distribuée, maintenue et vendue.
 
 ## Fonctionnalités principales
 

@@ -90,7 +90,7 @@ export const projects: Project[] = [
 			"Gestionnaire desktop multi-cloud : client C++23/Qt 6 pilotant rclone pour explorer, rechercher et synchroniser des stockages distants, avec transferts asynchrones, progression en temps réel, packaging multiplateforme et releases GitHub.",
 		technologies: ["C++23", "Qt 6", "rclone", "CMake", "Conan"],
 		url: "https://github.com/Sudo-Rahman/Iridium",
-		featured: true,
+		featured: false,
 	},
 	{
 		slug: "Nymbra",
@@ -176,7 +176,7 @@ export const projects: Project[] = [
 			"Application C++/Qt de calcul distribué de fractales via MPI : zoom interactif, précision 100 décimales, snapshots de session et exécution sur cluster.",
 		technologies: ["C++", "Qt", "MPI", "CMake"],
 		url: "https://github.com/Sudo-Rahman/Fractalium",
-		featured: false,
+		featured: true,
 	},
 	{
 		slug: "Lichess-Data",

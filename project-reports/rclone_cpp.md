@@ -1,6 +1,6 @@
 # rclone_cpp
 
-rclone_cpp est une bibliothèque C++ pour piloter [rclone](https://rclone.org/) depuis un programme : lister des fichiers, copier, synchroniser, lire la configuration, le tout avec des objets C++ typés au lieu de texte à analyser. Je l'ai écrite pour [Iridium](/projects/Iridium), mon client cloud en Qt, puis publiée séparément.
+rclone_cpp est une bibliothèque C++ pour piloter [rclone](https://rclone.org/) depuis un programme : lister des fichiers, copier, synchroniser, lire la configuration, le tout avec des objets C++ typés au lieu de texte à analyser. Je l'ai écrite pour [Iridium](/projects/Iridium), mon client cloud en Qt : toute la gestion des processus rclone vit dans la bibliothèque, ce qui évite de coupler l'application à rclone.
 
 ## En bref
 
@@ -41,4 +41,4 @@ rclone sait parler à plus de 70 services de stockage, mais il s'utilise en lign
 
 - La conception d'une bibliothèque C++ réutilisable, avec une API pensée pour ceux qui l'utilisent.
 - La gestion de processus externes et de threads en C++ moderne.
-- Un morceau d'Iridium rendu réutilisable par d'autres projets.
+- Une séparation nette entre une application et l'outil externe qu'elle pilote.

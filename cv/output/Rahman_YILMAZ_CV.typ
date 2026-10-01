@@ -241,7 +241,7 @@ En dehors du code, je m'occupe aussi du matériel : serveur et NAS à la maison,
   [
     #strong[Ultra Explorer]
 
-    #summary[Gestionnaire de fichiers multi-cloud commercialisé (abonnement Pro et licence à vie via Stripe) : client graphique de rclone avec un cœur Rust partagé entre une application desktop Tauri 2 et un serveur Axum auto-hébergeable via Docker, interface SvelteKit, explorateur double panneau, file de transferts durable, synchronisations planifiées, plus de 1 300 tests Rust et CI multi-OS]
+    #summary[Gestionnaire de fichiers multi-cloud commercialisé (abonnement Pro et licence à vie via Stripe), deuxième version de mon client rclone après Iridium (C++23\/Qt 6) : cœur Rust partagé entre une application desktop Tauri 2 et un serveur Axum auto-hébergeable via Docker, interface SvelteKit, explorateur double panneau, file de transferts durable, synchronisations planifiées, plus de 1 300 tests Rust et CI multi-OS]
 
   ],
   [
@@ -272,9 +272,9 @@ En dehors du code, je m'occupe aussi du matériel : serveur et NAS à la maison,
 
 #regular-entry(
   [
-    #strong[Iridium]
+    #strong[Fractalium]
 
-    #summary[Gestionnaire desktop multi-cloud : client C++23\/Qt 6 pilotant rclone pour explorer, rechercher et synchroniser des stockages distants, avec transferts asynchrones, progression en temps réel, packaging multiplateforme et releases GitHub]
+    #summary[Calcul distribué de fractales sur un cluster de machines : C++23 et MPI (Boost.MPI) en architecture maître\/travailleurs, interface Qt avec zoom interactif, précision de 100 décimales (Boost.Multiprecision), sauvegarde des sessions et reprise après plantage]
 
   ],
   [
