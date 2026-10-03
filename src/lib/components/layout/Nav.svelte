@@ -151,7 +151,6 @@
 	.nav.scrolled {
 		background: color-mix(in oklab, var(--color-ink) 65%, transparent);
 		backdrop-filter: blur(14px) saturate(1.3);
-		-webkit-backdrop-filter: blur(14px) saturate(1.3);
 	}
 	.nav.hidden {
 		transform: translateY(-100%);

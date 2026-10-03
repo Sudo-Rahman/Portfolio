@@ -196,7 +196,6 @@
 		opacity: 0;
 		background: color-mix(in oklab, var(--color-ink) 88%, transparent);
 		backdrop-filter: blur(18px) saturate(1.2);
-		-webkit-backdrop-filter: blur(18px) saturate(1.2);
 	}
 	img {
 		position: fixed;
