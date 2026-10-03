@@ -9,7 +9,8 @@
 	const links = [
 		{ href: "/projects", label: "Tableau", index: "01" },
 		{ href: "/cv", label: "Parcours", index: "02" },
-		{ href: "#contact", label: "Contact", index: "03" },
+		{ href: "/blog", label: "Labo", index: "03" },
+		{ href: "#contact", label: "Contact", index: "04" },
 	];
 
 	let time = $state("--:--:--");

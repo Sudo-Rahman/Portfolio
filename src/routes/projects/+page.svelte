@@ -31,6 +31,7 @@
 </script>
 
 <svelte:head>
+	<link rel="canonical" href="https://sudo-rahman.fr/projects" />
 	<title>Tableau périodique des projets — Rahman Yilmaz</title>
 	<meta
 		name="description"

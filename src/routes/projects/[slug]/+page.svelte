@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { familyById, stateLabels } from "#lib/data/elements.ts";
 	import { pad } from "#lib/data/projects.ts";
-	import { gsap, ScrollTrigger } from "#lib/motion/gsap.ts";
-	import { magnetic, reveal, splitLines } from "#lib/motion/attachments.ts";
+		import { magnetic, reveal, splitLines } from "#lib/motion/attachments.ts";
 	import { getLenis } from "#lib/motion/scroll.ts";
 	import BohrAtom from "#lib/components/element/BohrAtom.svelte";
+	import Prose from "#lib/components/ui/Prose.svelte";
 	import Icon, { type IconName } from "#lib/components/ui/Icon.svelte";
 
 	let { data } = $props();
@@ -28,47 +28,6 @@
 
 	let activeId = $state("");
 
-	/** Reveals report figures and tracks which section is being read. */
-	function proseEffects(prose: HTMLElement) {
-		activeId = "";
-		const figures = ScrollTrigger.batch(prose.querySelectorAll(".figure"), {
-			start: "top 90%",
-			once: true,
-			onEnter: (batch) =>
-				gsap.fromTo(
-					batch,
-					{ clipPath: "inset(18% 8% 18% 8% round 1rem)", opacity: 0.2 },
-					{ clipPath: "inset(0% 0% 0% 0% round 1rem)", opacity: 1, duration: 1.4, ease: "expo.out" },
-				),
-		});
-		const h2s = [...prose.querySelectorAll<HTMLElement>("h2[id]")];
-		const headings = h2s.map((h, i) =>
-			ScrollTrigger.create({
-				trigger: h,
-				start: "top 40%",
-				endTrigger: h2s[i + 1] ?? undefined,
-				end: h2s[i + 1] ? "top 40%" : "max",
-				onToggle: (self) => {
-					if (self.isActive) activeId = h.id;
-					else if (activeId === h.id && self.direction < 0 && i === 0) activeId = "";
-				},
-			}),
-		);
-		// Lazy images change the page height: re-measure once they arrive.
-		let pending = 0;
-		const remeasure = () => {
-			clearTimeout(pending);
-			pending = window.setTimeout(() => ScrollTrigger.refresh(), 150);
-		};
-		prose.addEventListener("load", remeasure, true);
-		return () => {
-			clearTimeout(pending);
-			prose.removeEventListener("load", remeasure, true);
-			figures.forEach((t) => t.kill());
-			headings.forEach((t) => t.kill());
-		};
-	}
-
 	function jump(e: MouseEvent, id: string) {
 		e.preventDefault();
 		getLenis()?.scrollTo(`#${CSS.escape(id)}`, { offset: -100, duration: 1.4 });
@@ -76,6 +35,7 @@
 </script>
 
 <svelte:head>
+	<link rel="canonical" href={`https://sudo-rahman.fr/projects/${project.slug}`} />
 	<title>{project.symbol} · {project.title} — Rahman Yilmaz</title>
 	<meta name="description" content={project.summary} />
 	<meta property="og:title" content={`${project.title} — Rahman Yilmaz`} />
@@ -161,9 +121,7 @@
 				</ol>
 			</aside>
 		{/if}
-		<div class="prose" {@attach proseEffects}>
-			{@html data.html}
-		</div>
+		<Prose html={data.html} onactive={(id) => (activeId = id)} />
 	</div>
 
 	<nav class="neighbours wrap" aria-label="Éléments voisins">
@@ -394,173 +352,6 @@
 	.toc a .label {
 		color: var(--c);
 		font-size: 0.55rem;
-	}
-
-	/* Report typography */
-	.prose {
-		min-width: 0;
-		max-width: 50rem;
-		font-size: clamp(1rem, 1.2vw, 1.1rem);
-		line-height: 1.7;
-		color: color-mix(in oklab, var(--color-bone) 82%, transparent);
-	}
-	.prose :global(h2) {
-		margin: 4.5rem 0 1.4rem;
-		padding-top: 1.4rem;
-		border-top: 1px solid var(--line);
-		font-size: clamp(1.8rem, 3.2vw, 2.7rem);
-		font-weight: 720;
-		font-stretch: 112%;
-		letter-spacing: -0.03em;
-		line-height: 1.05;
-		color: var(--color-bone);
-		scroll-margin-top: 6rem;
-	}
-	.prose :global(h2:first-child) {
-		margin-top: 0;
-	}
-	.prose :global(h3) {
-		margin: 2.6rem 0 0.9rem;
-		font-size: clamp(1.2rem, 1.8vw, 1.5rem);
-		font-weight: 650;
-		font-stretch: 106%;
-		color: var(--color-bone);
-	}
-	.prose :global(h4) {
-		margin: 2rem 0 0.6rem;
-		font-weight: 650;
-		color: var(--color-bone);
-	}
-	.prose :global(p) {
-		margin: 1rem 0;
-	}
-	.prose :global(strong) {
-		color: var(--color-bone);
-		font-weight: 650;
-	}
-	.prose :global(a) {
-		color: var(--color-bone);
-		text-decoration: underline;
-		text-decoration-color: var(--c);
-		text-underline-offset: 0.2em;
-		text-decoration-thickness: 1px;
-		transition: color 0.3s;
-	}
-	.prose :global(a:hover) {
-		color: var(--c);
-	}
-	.prose :global(ul),
-	.prose :global(ol) {
-		margin: 1rem 0;
-		padding-left: 1.3rem;
-	}
-	.prose :global(ul) {
-		list-style: none;
-		padding-left: 0;
-	}
-	.prose :global(ul > li) {
-		position: relative;
-		padding-left: 1.4rem;
-	}
-	.prose :global(ul > li::before) {
-		content: "";
-		position: absolute;
-		left: 0.2rem;
-		top: 0.72em;
-		width: 6px;
-		height: 6px;
-		border-radius: 50%;
-		background: var(--c);
-		box-shadow: 0 0 8px var(--c);
-	}
-	.prose :global(ol) {
-		list-style: decimal;
-	}
-	.prose :global(li) {
-		margin: 0.45rem 0;
-	}
-	.prose :global(code) {
-		font-family: var(--font-mono);
-		font-size: 0.8em;
-		padding: 0.12em 0.4em;
-		border-radius: 0.3rem;
-		background: var(--color-slate);
-		color: color-mix(in oklab, var(--c) 60%, var(--color-bone));
-	}
-	.prose :global(pre) {
-		margin: 1.5rem 0;
-		padding: 1.25rem 1.4rem;
-		border: 1px solid var(--line);
-		border-radius: 0.8rem;
-		background: var(--color-graphite);
-		overflow-x: auto;
-		font-size: 0.82rem;
-		line-height: 1.6;
-	}
-	.prose :global(pre code) {
-		padding: 0;
-		background: none;
-		color: var(--color-bone);
-	}
-	.prose :global(blockquote) {
-		margin: 1.5rem 0;
-		padding: 0.4rem 0 0.4rem 1.25rem;
-		border-left: 2px solid var(--c);
-		color: var(--color-bone);
-		font-style: italic;
-	}
-	.prose :global(.figure) {
-		display: block;
-		margin: 2.5rem 0;
-	}
-	.prose :global(.figure img) {
-		display: block;
-		width: 100%;
-		border-radius: 1rem;
-		border: 1px solid var(--line);
-	}
-	.prose :global(.caption) {
-		display: block;
-		margin-top: 0.7rem;
-		font-family: var(--font-mono);
-		font-size: 0.62rem;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		color: var(--color-dust);
-	}
-	.prose :global(.table-scroll) {
-		margin: 1.5rem 0;
-		overflow-x: auto;
-		border: 1px solid var(--line);
-		border-radius: 0.8rem;
-	}
-	.prose :global(table) {
-		width: 100%;
-		border-collapse: collapse;
-		font-size: 0.88rem;
-	}
-	.prose :global(th),
-	.prose :global(td) {
-		padding: 0.7rem 0.9rem;
-		text-align: left;
-		vertical-align: top;
-		border-bottom: 1px solid var(--line);
-	}
-	.prose :global(th) {
-		font-family: var(--font-mono);
-		font-size: 0.62rem;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		color: var(--color-dust);
-		background: var(--color-graphite);
-	}
-	.prose :global(tr:last-child td) {
-		border-bottom: 0;
-	}
-	.prose :global(hr) {
-		margin: 3rem 0;
-		border: 0;
-		border-top: 1px solid var(--line);
 	}
 
 	.neighbours {

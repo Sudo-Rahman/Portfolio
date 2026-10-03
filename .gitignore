@@ -29,3 +29,9 @@ interview/
 cv/Rahman_YILMAZ_CV_*
 # Private school documents
 _Ecole/
+
+# Remotion (sources kept, heavy media and renders ignored)
+video/node_modules/
+video/out/
+video/public/
+video/.remotion/

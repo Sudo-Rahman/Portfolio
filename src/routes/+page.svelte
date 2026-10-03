@@ -6,6 +6,7 @@
 </script>
 
 <svelte:head>
+	<link rel="canonical" href="https://sudo-rahman.fr/" />
 	<title>Rahman Yilmaz — Développeur Full Stack / Android</title>
 	<meta
 		name="description"
