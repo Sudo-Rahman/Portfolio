@@ -43,9 +43,10 @@ export function renderReport(markdown: string): { html: string; toc: TocEntry[] 
 				];
 				return `<a ${attrs.filter(Boolean).join(" ")}>${this.parser.parseInline(tokens)}</a>`;
 			},
-			image({ href, text }) {
+			image({ href, text, title }) {
 				const caption = text ? `<span class="caption">${text}</span>` : "";
-				return `<span class="figure"><img src="${escapeAttr(href)}" alt="${escapeAttr(text)}" loading="lazy" decoding="async" />${caption}</span>`;
+				// The optional markdown title doubles as a modifier class (e.g. "portrait").
+				return `<span class="figure${title ? ` ${escapeAttr(title)}` : ""}"><img src="${escapeAttr(href)}" alt="${escapeAttr(text)}" loading="lazy" decoding="async" />${caption}</span>`;
 			},
 		},
 	});

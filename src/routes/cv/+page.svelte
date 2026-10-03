@@ -33,6 +33,7 @@
 </script>
 
 <svelte:head>
+	<link rel="canonical" href="https://sudo-rahman.fr/cv" />
 	<title>Parcours — Rahman Yilmaz</title>
 	<meta
 		name="description"
