@@ -92,6 +92,28 @@ Il faut le dire clairement : **je n'ai pas testé la borne en 2,5 Gb/s**. Je ne 
 
 C'est là que la NWA50BE fait la différence. Je l'ai payée **77 €** sur Amazon. À ma connaissance, les concurrents équivalents (Wi-Fi 7 double bande avec un port 2,5 GbE) démarrent à **100 €** au minimum : **20 à 30 € d'écart**. Je n'ai pas trouvé mieux à ce tarif.
 
+## Questions fréquentes
+
+### Faut-il un switch PoE pour utiliser la NWA50BE ?
+
+Non. La borne est alimentée en **PoE+ (802.3at)**, mais un **adaptateur secteur 12 V** est fourni dans la boîte. Le PoE reste pratique pour une borne au plafond : un seul câble à tirer.
+
+### La NWA50BE fonctionne-t-elle avec un routeur Asus ?
+
+Oui, elle se comporte comme un simple point d'accès. Chez moi, elle complète un Asus RT-BE92U : je lui ai donné le même SSID et le même mot de passe que le routeur, et le téléphone passe d'une borne à l'autre.
+
+### Combien coûte la Zyxel NWA50BE ?
+
+Je l'ai payée **77 €** sur Amazon.
+
+### Faut-il passer par Nebula, le cloud de Zyxel ?
+
+Non. La borne se configure en **standalone** depuis son interface web, c'est ce que j'ai fait. Nebula est une option pour gérer plusieurs bornes à distance.
+
+### Le port 2,5 GbE a-t-il été testé ?
+
+Non. Mon switch PoE est gigabit : j'ai donc testé la borne en 1 Gb/s, et les débits mesurés sont proches de ce plafond.
+
 ## Verdict
 
 Le produit est excellent : installation facile, support propre, PoE, débits au rendez-vous, et un prix que je n'ai vu nulle part ailleurs pour du Wi-Fi 7 avec 2,5 GbE. Je lui mets **8,5 sur 10**. Elle perd son demi-point (voire plus) à cause de **l'interface web**, qui gâche un peu l'impression d'un produit moderne.

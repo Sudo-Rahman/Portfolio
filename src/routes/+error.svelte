@@ -4,6 +4,7 @@
 
 <svelte:head>
 	<title>{page.status} — Élément introuvable</title>
+	<meta name="robots" content="noindex" />
 </svelte:head>
 
 <section class="wrap err">
